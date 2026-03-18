@@ -1,0 +1,79 @@
+project:
+  name: adaptive_tracking_project
+
+simulation:
+  dt: 0.05
+  episode_duration: 12.0
+  control_limit: 10.0
+  nominal_mass: 1.0
+  nominal_friction: 0.18
+  observation_noise_std: 0.01
+  noise_burst_multiplier: 5.0
+  disturbance_force_base: 0.0
+  disturbance_force_max: 3.2
+  history_steps: 6
+  train_episodes: 72
+  val_episodes: 24
+  test_episodes: 36
+  train_seed: 123
+  val_seed: 456
+  test_seed: 789
+  trajectory_kinds:
+    - circle
+    - figure8
+    - spline
+    - lane_change
+    - sinusoid
+  shift_types:
+    - friction_shift
+    - mass_shift
+    - actuator_delay
+    - disturbance_burst
+  shift_intensities:
+    mild: 0.5
+    medium: 0.8
+    severe: 1.1
+  success_rmse_threshold: 0.45
+  success_final_error_threshold: 0.35
+  recovery_error_threshold: 0.28
+  recovery_consecutive_steps: 8
+
+controller:
+  kp: 2.6
+  kd: 1.8
+  ki: 0.05
+  integral_limit: 1.5
+  delay_lead_gain: 1.1
+  correction_blend: 0.18
+  disturbance_blend: 0.28
+  mass_ratio_clip: [0.65, 2.8]
+  friction_ratio_clip: [0.35, 4.5]
+
+training:
+  batch_size: 512
+  epochs: 20
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  hidden_dims: [128, 128, 64]
+  dropout: 0.05
+  early_stopping_patience: 5
+  grad_clip: 1.0
+  device: auto
+
+evaluation:
+  seeds: [2024, 2025, 2026]
+  episodes_per_condition: 4
+  unseen_fraction: 0.35
+
+figures:
+  dpi: 180
+  width: 10.5
+  height: 6.2
+
+videos:
+  fps: 30
+  width: 1920
+  height: 1080
+  dpi: 100
+  make_gif_previews: true
+  gif_stride: 3

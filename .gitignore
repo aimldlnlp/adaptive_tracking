@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Large generated artifacts
+outputs/datasets/
+outputs/checkpoints/
+outputs/metrics/rollouts/
+outputs/videos/*.mp4
+
+# Keep lightweight report artifacts
+!outputs/figures/
+!outputs/figures/*.png
+!outputs/videos/*.gif
+!outputs/metrics/*.csv
+!outputs/metrics/*.json

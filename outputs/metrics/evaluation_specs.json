@@ -1,0 +1,6159 @@
+[
+  {
+    "episode_id": "eval_2024_friction_shift_mild_00",
+    "episode_seed": 615797214,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.523563301841385,
+      "omega": 0.35407543377244544,
+      "phase": 0.3668681154540393,
+      "rotation": 0.20406878163540176,
+      "offset": [
+        -0.0034538435653108657,
+        -0.5669834718504319
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 3.7994229415029985,
+    "burst_duration": 1.9092013966979922,
+    "initial_offset": [
+      0.055733345448970795,
+      0.05134544149041176,
+      0.06544940918684006,
+      0.2662641108036041
+    ],
+    "pre_mass_ratio": 0.9856420272522148,
+    "post_mass_ratio": 0.9856420272522148,
+    "pre_friction_ratio": 0.9642654565000099,
+    "post_friction_ratio": 1.5669313668125162,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9450419102852103,
+    "post_lag_alpha": 0.9450419102852103,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4740340603104245,
+    "disturbance_angle": 0.12436444004842556
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_mild_01",
+    "episode_seed": 1453806764,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.270568382505064,
+      "omega": 0.527960898380654,
+      "phase": 5.07557004377708,
+      "rotation": 0.361135407932229,
+      "offset": [
+        -0.1617088652598061,
+        -0.4233901451965687
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 4.67527107394866,
+    "burst_duration": 1.7560771301553775,
+    "initial_offset": [
+      -0.4952479600906372,
+      -0.17728298902511597,
+      -0.314611554145813,
+      -0.22378872334957123
+    ],
+    "pre_mass_ratio": 1.0727861119892879,
+    "post_mass_ratio": 1.0727861119892879,
+    "pre_friction_ratio": 1.085536290934315,
+    "post_friction_ratio": 1.7639964727682618,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9869719595648281,
+    "post_lag_alpha": 0.9869719595648281,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4305407088499942,
+    "disturbance_angle": 2.185396618751729
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_mild_02",
+    "episode_seed": 488399032,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.02219560557016094,
+        1.797490293274277,
+        3.5011170257038473,
+        5.2637378668328445,
+        6.917569356689095,
+        8.79226577052479
+      ],
+      "y_points": [
+        -1.2522149107851726,
+        0.3233049394941365,
+        -1.0921308854482608,
+        -0.5653199382770396,
+        -0.7281015905738821,
+        -0.171079895295851
+      ],
+      "rotation": -0.2346002005677542,
+      "offset": [
+        -0.7255118585350676,
+        0.20754336884248992
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 7.808362605128902,
+    "burst_duration": 2.2157571873951687,
+    "initial_offset": [
+      -0.1523740440607071,
+      0.20159605145454407,
+      0.4031166136264801,
+      0.44191983342170715
+    ],
+    "pre_mass_ratio": 1.0455046436165207,
+    "post_mass_ratio": 1.0455046436165207,
+    "pre_friction_ratio": 0.8999753750491384,
+    "post_friction_ratio": 1.4624599844548498,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9712000942685042,
+    "post_lag_alpha": 0.9712000942685042,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.427966715800759,
+    "disturbance_angle": 3.792842897876432
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_mild_03",
+    "episode_seed": 704768981,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.8021569613264046,
+      "omega": 0.5225821383288232,
+      "phase": 4.287179026195642,
+      "rotation": -0.4601805180637679,
+      "offset": [
+        -0.2092895807589863,
+        -0.33196026649562155
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 4.6248974592706,
+    "burst_duration": 2.327846721329793,
+    "initial_offset": [
+      -0.3562735319137573,
+      0.0630437582731247,
+      0.37374165654182434,
+      -0.6005868911743164
+    ],
+    "pre_mass_ratio": 1.0579261158810893,
+    "post_mass_ratio": 1.0579261158810893,
+    "pre_friction_ratio": 0.9293355670981771,
+    "post_friction_ratio": 1.5101702965345378,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9450762003522235,
+    "post_lag_alpha": 0.9450762003522235,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.780583353145714,
+    "disturbance_angle": 6.048259108335211
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_medium_00",
+    "episode_seed": 1430717960,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.013383851647215813,
+        2.9202205649220274,
+        5.746257386749704,
+        8.280422074559404,
+        11.403332721655602,
+        13.738149058457042
+      ],
+      "y_points": [
+        -0.2115192800377701,
+        0.7571591530089585,
+        -1.4195165274561017,
+        -1.9969990096521575,
+        1.153719267021624,
+        0.7224081998106358
+      ],
+      "rotation": 0.4577263984101587,
+      "offset": [
+        -0.41575185069403253,
+        0.12380668535767958
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.390695846068521,
+    "burst_duration": 2.598490793172657,
+    "initial_offset": [
+      0.3000723421573639,
+      -0.14315985143184662,
+      0.6961444616317749,
+      0.2497233748435974
+    ],
+    "pre_mass_ratio": 1.0079968516718323,
+    "post_mass_ratio": 1.0079968516718323,
+    "pre_friction_ratio": 0.8914760610781635,
+    "post_friction_ratio": 1.782952122156327,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.978756208283525,
+    "post_lag_alpha": 0.978756208283525,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.726583133871858,
+    "disturbance_angle": 4.8225055063026385
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_medium_01",
+    "episode_seed": 1268642721,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.968705191267802,
+      "amplitude": 1.4346759157882234,
+      "sharpness": 0.725643884011642,
+      "midpoint": 6.385551064062168,
+      "rotation": -0.3299155149583136,
+      "offset": [
+        0.2715664026570004,
+        -0.7112001244023737
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 3.832625801644978,
+    "burst_duration": 1.6917238273588424,
+    "initial_offset": [
+      -0.44580456614494324,
+      0.13810503482818604,
+      -0.004171404521912336,
+      -0.014335316605865955
+    ],
+    "pre_mass_ratio": 0.9414856963628793,
+    "post_mass_ratio": 0.9414856963628793,
+    "pre_friction_ratio": 0.8275615692516127,
+    "post_friction_ratio": 1.6551231385032255,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9541189827342109,
+    "post_lag_alpha": 0.9541189827342109,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7037120885880639,
+    "disturbance_angle": 1.888358599127021
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_medium_02",
+    "episode_seed": 658685555,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.8651110049985198,
+      "omega": 0.6174586429492284,
+      "phase": 0.7331838750256513,
+      "rotation": -0.31169545588722425,
+      "offset": [
+        -0.41738490101151815,
+        0.14164525229353342
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 3.6044739513104505,
+    "burst_duration": 1.641317474728698,
+    "initial_offset": [
+      0.5891581177711487,
+      0.28143396973609924,
+      -0.44841328263282776,
+      0.22070161998271942
+    ],
+    "pre_mass_ratio": 0.9285402764910502,
+    "post_mass_ratio": 0.9285402764910502,
+    "pre_friction_ratio": 0.867284259813093,
+    "post_friction_ratio": 1.734568519626186,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9316953664442255,
+    "post_lag_alpha": 0.9316953664442255,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5190942095067437,
+    "disturbance_angle": 2.4810578379039185
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_medium_03",
+    "episode_seed": 1623806015,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.831214662740758,
+      "omega": 0.5302296565903858,
+      "phase": 2.6852165636150533,
+      "rotation": 0.029330443525158345,
+      "offset": [
+        -0.06810977224694115,
+        0.3154702315886653
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.554747841147665,
+    "burst_duration": 2.509064700822761,
+    "initial_offset": [
+      -0.20918914675712585,
+      -0.13596971333026886,
+      -0.22940312325954437,
+      0.12947577238082886
+    ],
+    "pre_mass_ratio": 0.9171174507837669,
+    "post_mass_ratio": 0.9171174507837669,
+    "pre_friction_ratio": 1.0398573876700175,
+    "post_friction_ratio": 2.079714775340035,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9305305828283237,
+    "post_lag_alpha": 0.9305305828283237,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.443181385474423,
+    "disturbance_angle": 4.209792875752858
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_severe_00",
+    "episode_seed": 689417355,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 1.0115972494151573,
+      "amplitude": 1.5306503079377316,
+      "omega": 0.3971584448133927,
+      "phase": 4.890571636516235,
+      "rotation": 0.37889724260338997,
+      "offset": [
+        -0.24219161325936422,
+        -0.03460934040846464
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 5.027802275261191,
+    "burst_duration": 2.402769744686651,
+    "initial_offset": [
+      -0.5839073061943054,
+      -0.23891133069992065,
+      0.07611603289842606,
+      0.21968701481819153
+    ],
+    "pre_mass_ratio": 0.9223118985533069,
+    "post_mass_ratio": 0.9223118985533069,
+    "pre_friction_ratio": 1.1828745852445721,
+    "post_friction_ratio": 2.8093271399558586,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9080746582271941,
+    "post_lag_alpha": 0.9080746582271941,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.09277115618503,
+    "disturbance_angle": 1.05152743621683
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_severe_01",
+    "episode_seed": 398361472,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.3683099403168568,
+      "omega": 0.7224926222147914,
+      "phase": 6.049089197450809,
+      "rotation": -0.23915991872466036,
+      "offset": [
+        0.6792821209121265,
+        0.3197297090206681
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 5.796823914562495,
+    "burst_duration": 2.5995153660380885,
+    "initial_offset": [
+      -0.5773757100105286,
+      -0.11177318543195724,
+      -0.2259298413991928,
+      0.10602004081010818
+    ],
+    "pre_mass_ratio": 0.9532919502776593,
+    "post_mass_ratio": 0.9532919502776593,
+    "pre_friction_ratio": 1.0051409177660653,
+    "post_friction_ratio": 2.387209679694405,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9194913685847889,
+    "post_lag_alpha": 0.9194913685847889,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6942536244366613,
+    "disturbance_angle": 2.035173012959426
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_severe_02",
+    "episode_seed": 684389379,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.035845480712172965,
+        2.0175020511815873,
+        4.248593274774781,
+        6.481309117592405,
+        8.507246512629312,
+        10.56477169578264
+      ],
+      "y_points": [
+        -0.23197329244091658,
+        -0.062331504121430736,
+        0.6426494843930426,
+        -0.17106132207308788,
+        -1.278428028293858,
+        -0.3651726121085739
+      ],
+      "rotation": -0.2884683880736344,
+      "offset": [
+        0.21066995002985356,
+        0.1535708377130609
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 3.4369653407146354,
+    "burst_duration": 2.3772148989547266,
+    "initial_offset": [
+      0.12997907400131226,
+      0.20476819574832916,
+      -0.07544536143541336,
+      0.28461334109306335
+    ],
+    "pre_mass_ratio": 1.0164439554778084,
+    "post_mass_ratio": 1.0164439554778084,
+    "pre_friction_ratio": 0.906422386548425,
+    "post_friction_ratio": 2.1527531680525094,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9153895145990047,
+    "post_lag_alpha": 0.9153895145990047,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2769992378308128,
+    "disturbance_angle": 0.7037242830799453
+  },
+  {
+    "episode_id": "eval_2024_friction_shift_severe_03",
+    "episode_seed": 186614677,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.4572158856856268,
+      "omega": 0.47948353202908545,
+      "phase": 3.981736688608171,
+      "rotation": -0.35899216979092985,
+      "offset": [
+        0.4302697034633194,
+        0.2543773304002195
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 7.6242361191771435,
+    "burst_duration": 2.554801305978876,
+    "initial_offset": [
+      -0.4545443654060364,
+      0.6341625452041626,
+      0.03148551285266876,
+      0.18153579533100128
+    ],
+    "pre_mass_ratio": 0.9147555617218294,
+    "post_mass_ratio": 0.9147555617218294,
+    "pre_friction_ratio": 1.0384477934503513,
+    "post_friction_ratio": 2.4663135094445843,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9657667688242966,
+    "post_lag_alpha": 0.9657667688242966,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.735767255917494,
+    "disturbance_angle": 1.9358696530852013
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_mild_00",
+    "episode_seed": 953865652,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.3171706133943498,
+        2.669185123268916,
+        5.639100744114932,
+        7.979901488739315,
+        10.991371417361018,
+        13.973216113134262
+      ],
+      "y_points": [
+        -1.4758702257998144,
+        0.3322996864463681,
+        1.6823942043410351,
+        -1.019884092390667,
+        -1.6768346763413224,
+        -1.0894682800441502
+      ],
+      "rotation": 0.06706558603714974,
+      "offset": [
+        0.5880359795223924,
+        0.3430470990219294
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 4.924225408548401,
+    "burst_duration": 2.158704018781072,
+    "initial_offset": [
+      -0.4685031473636627,
+      0.2085869461297989,
+      -0.33132416009902954,
+      -0.1354663372039795
+    ],
+    "pre_mass_ratio": 1.0215633746814319,
+    "post_mass_ratio": 1.6089623151232553,
+    "pre_friction_ratio": 0.9277335733118401,
+    "post_friction_ratio": 0.9277335733118401,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9711472118037145,
+    "post_lag_alpha": 0.9711472118037145,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3884037003520096,
+    "disturbance_angle": 0.9378145925097476
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_mild_01",
+    "episode_seed": 1718268489,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8581584049393189,
+      "amplitude": 1.2496478121684134,
+      "sharpness": 1.0148858500786533,
+      "midpoint": 7.05886305002918,
+      "rotation": -0.35329961836867285,
+      "offset": [
+        -0.054741470069800124,
+        0.5315854129875852
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 7.373592483821904,
+    "burst_duration": 2.4909577205989626,
+    "initial_offset": [
+      0.2960342466831207,
+      0.0890352800488472,
+      0.08084222674369812,
+      -0.26678359508514404
+    ],
+    "pre_mass_ratio": 0.9653239985977291,
+    "post_mass_ratio": 1.5203852977914234,
+    "pre_friction_ratio": 0.8045672188532782,
+    "post_friction_ratio": 0.8045672188532782,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9588278718640242,
+    "post_lag_alpha": 0.9588278718640242,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5290876149949324,
+    "disturbance_angle": 4.728685227855148
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_mild_02",
+    "episode_seed": 852706297,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.05292081310204971,
+        1.630193930754445,
+        3.3002452815084515,
+        4.826340085299167,
+        6.450674055788389,
+        8.200469423139086
+      ],
+      "y_points": [
+        -0.649488248337494,
+        0.5411965995552779,
+        -0.0007003259803783912,
+        0.33986982416866285,
+        0.20906105772457573,
+        -0.38715659113596734
+      ],
+      "rotation": 0.4319902783811945,
+      "offset": [
+        0.3499895063500067,
+        -0.22654770669966084
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 5.651134714777991,
+    "burst_duration": 2.4185799989572914,
+    "initial_offset": [
+      -0.2943129539489746,
+      0.12015695124864578,
+      -0.3783878684043884,
+      0.038585446774959564
+    ],
+    "pre_mass_ratio": 0.9650435818799452,
+    "post_mass_ratio": 1.5199436414609138,
+    "pre_friction_ratio": 1.0463569851505603,
+    "post_friction_ratio": 1.0463569851505603,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9769694420558487,
+    "post_lag_alpha": 0.9769694420558487,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4357014694233474,
+    "disturbance_angle": 1.2146518065688623
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_mild_03",
+    "episode_seed": 2065493099,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6748194980677175,
+      "amplitude": 1.349215831165945,
+      "omega": 0.6187527975949947,
+      "phase": 1.5394569598365941,
+      "rotation": -0.4039001990388011,
+      "offset": [
+        0.7186608892227717,
+        0.09437882678425269
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 7.0206524633174086,
+    "burst_duration": 1.6511754382899986,
+    "initial_offset": [
+      0.2778948247432709,
+      -0.007173607591539621,
+      -0.2663586437702179,
+      -0.032550107687711716
+    ],
+    "pre_mass_ratio": 0.9614800627145543,
+    "post_mass_ratio": 1.514331098775423,
+    "pre_friction_ratio": 0.9120222697893816,
+    "post_friction_ratio": 0.9120222697893816,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.931346992751853,
+    "post_lag_alpha": 0.931346992751853,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6524306706743483,
+    "disturbance_angle": 4.6092502009128165
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_medium_00",
+    "episode_seed": 241277765,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.9874620366459368,
+      "amplitude": 1.5988944331289543,
+      "omega": 0.39984650299988,
+      "phase": 2.8045075303717355,
+      "rotation": 0.4277520223325778,
+      "offset": [
+        -0.6581135908740872,
+        -0.09226714478950027
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.277332053891092,
+    "burst_duration": 2.576424556832846,
+    "initial_offset": [
+      0.09155422449111938,
+      0.6516437530517578,
+      -0.015309600159525871,
+      -0.32444941997528076
+    ],
+    "pre_mass_ratio": 0.981669809913285,
+    "post_mass_ratio": 1.8848060350335072,
+    "pre_friction_ratio": 1.1707490017184237,
+    "post_friction_ratio": 1.1707490017184237,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9065571797509595,
+    "post_lag_alpha": 0.9065571797509595,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.486475048098152,
+    "disturbance_angle": 5.37220324596996
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_medium_01",
+    "episode_seed": 776282102,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6271301444958818,
+      "amplitude": 1.0466472688318422,
+      "omega": 0.8021376373450169,
+      "phase": 1.5023311710276743,
+      "rotation": 0.4585687410892043,
+      "offset": [
+        -0.6284244543748642,
+        0.6938077368333719
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.518815720664928,
+    "burst_duration": 2.014081173846153,
+    "initial_offset": [
+      0.11190325021743774,
+      0.3239942789077759,
+      0.30398038029670715,
+      -0.293891042470932
+    ],
+    "pre_mass_ratio": 1.0716210627463325,
+    "post_mass_ratio": 2.0575124404729586,
+    "pre_friction_ratio": 0.8034188410485497,
+    "post_friction_ratio": 0.8034188410485497,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9357039669478556,
+    "post_lag_alpha": 0.9357039669478556,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6856296547783844,
+    "disturbance_angle": 1.756951822488175
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_medium_02",
+    "episode_seed": 1963325914,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.81522445125364,
+      "omega": 0.7800133203691115,
+      "phase": 2.2920238879458363,
+      "rotation": 0.5421586093750721,
+      "offset": [
+        -0.2701146914103172,
+        0.4258787037842753
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.909779017891188,
+    "burst_duration": 2.1011789734939104,
+    "initial_offset": [
+      0.09245233237743378,
+      0.06358614563941956,
+      0.09515088051557541,
+      -0.15526923537254333
+    ],
+    "pre_mass_ratio": 0.9584061853488689,
+    "post_mass_ratio": 1.8401398758698282,
+    "pre_friction_ratio": 0.9426851825609419,
+    "post_friction_ratio": 0.9426851825609419,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.969558863081054,
+    "post_lag_alpha": 0.969558863081054,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.9477001993630512,
+    "disturbance_angle": 5.846892920343434
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_medium_03",
+    "episode_seed": 1642596679,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6129269586854871,
+      "amplitude": 0.8480965763122426,
+      "omega": 0.5685265040745868,
+      "phase": 5.49116454709296,
+      "rotation": -0.25226603297100203,
+      "offset": [
+        -0.43351206759244554,
+        0.4230355578124896
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.97905704271211,
+    "burst_duration": 2.281421780618257,
+    "initial_offset": [
+      -0.5350340604782104,
+      0.060802359133958817,
+      -0.24334366619586945,
+      0.2906038463115692
+    ],
+    "pre_mass_ratio": 0.900120418195865,
+    "post_mass_ratio": 1.7282312029360607,
+    "pre_friction_ratio": 1.196719163795589,
+    "post_friction_ratio": 1.196719163795589,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9387905449282767,
+    "post_lag_alpha": 0.9387905449282767,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8938002084682477,
+    "disturbance_angle": 1.0471438008116234
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_severe_00",
+    "episode_seed": 886655760,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.821892367357977,
+      "omega": 0.3329148017412654,
+      "phase": 2.954140194891588,
+      "rotation": -0.1545540590092565,
+      "offset": [
+        -0.3062200278324374,
+        0.6527750434836319
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 6.776865092562028,
+    "burst_duration": 1.8906138312417085,
+    "initial_offset": [
+      0.2806118130683899,
+      0.022460870444774628,
+      0.39848223328590393,
+      -0.049582164734601974
+    ],
+    "pre_mass_ratio": 0.9220043697907848,
+    "post_mass_ratio": 2.088339897576127,
+    "pre_friction_ratio": 0.828900263979814,
+    "post_friction_ratio": 0.828900263979814,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9611598818296908,
+    "post_lag_alpha": 0.9611598818296908,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.094421655603343,
+    "disturbance_angle": 3.6556875898221812
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_severe_01",
+    "episode_seed": 58205704,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.6758512462892986,
+      "amplitude": 1.311263134633311,
+      "sharpness": 0.9268554442365831,
+      "midpoint": 7.27646124056502,
+      "rotation": -0.4878728597684481,
+      "offset": [
+        0.36538252709479613,
+        0.361088745538642
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 7.6324732113878495,
+    "burst_duration": 2.2480103884854814,
+    "initial_offset": [
+      0.288699746131897,
+      0.13758815824985504,
+      0.218282088637352,
+      -0.03278269246220589
+    ],
+    "pre_mass_ratio": 0.9529237145333477,
+    "post_mass_ratio": 2.158372213418032,
+    "pre_friction_ratio": 1.1278812418862056,
+    "post_friction_ratio": 1.1278812418862056,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9501888692103041,
+    "post_lag_alpha": 0.9501888692103041,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2889223285242384,
+    "disturbance_angle": 3.9669838952192005
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_severe_02",
+    "episode_seed": 499074245,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.7934707923629556,
+      "omega": 0.46351800251638975,
+      "phase": 3.3662454105084114,
+      "rotation": -0.5478286576911857,
+      "offset": [
+        0.4342295112681196,
+        0.6751157409190109
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 6.462831404961143,
+    "burst_duration": 2.2071083817423274,
+    "initial_offset": [
+      -0.19860735535621643,
+      0.08096601814031601,
+      -0.22827908396720886,
+      0.3129630386829376
+    ],
+    "pre_mass_ratio": 1.0053706173252144,
+    "post_mass_ratio": 2.2771644482416105,
+    "pre_friction_ratio": 1.1874019162308782,
+    "post_friction_ratio": 1.1874019162308782,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9866254647414915,
+    "post_lag_alpha": 0.9866254647414915,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.87386820310607,
+    "disturbance_angle": 4.637762243446395
+  },
+  {
+    "episode_id": "eval_2024_mass_shift_severe_03",
+    "episode_seed": 109030314,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.2221506182727624,
+      "omega": 0.5416626030796375,
+      "phase": 3.859256116223409,
+      "rotation": -0.3367767864052873,
+      "offset": [
+        0.4312934791434637,
+        0.5138870834435216
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 6.110827173946726,
+    "burst_duration": 1.8415136767987232,
+    "initial_offset": [
+      0.022807085886597633,
+      0.05733058601617813,
+      0.25862592458724976,
+      -0.3976830542087555
+    ],
+    "pre_mass_ratio": 1.0345539550484404,
+    "post_mass_ratio": 2.343264708184717,
+    "pre_friction_ratio": 1.0938044845321147,
+    "post_friction_ratio": 1.0938044845321147,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9804814500731917,
+    "post_lag_alpha": 0.9804814500731917,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.691914727719862,
+    "disturbance_angle": 5.016073719916283
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_mild_00",
+    "episode_seed": 599347092,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.025202037098343722,
+        2.3079743187318202,
+        4.954641828442236,
+        6.892927680470477,
+        9.507003949004082,
+        11.946029377169754
+      ],
+      "y_points": [
+        0.3041637700287687,
+        0.5212064018998559,
+        0.42649904041378095,
+        1.0773650256303107,
+        -0.005458021368967891,
+        0.15222390941913133
+      ],
+      "rotation": 0.02944963599530037,
+      "offset": [
+        -0.10831830912273499,
+        0.2147312577333933
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 5.066012913904611,
+    "burst_duration": 1.7049721385433907,
+    "initial_offset": [
+      0.3227042257785797,
+      -0.40461042523384094,
+      -0.36393532156944275,
+      0.6077926158905029
+    ],
+    "pre_mass_ratio": 0.9646614274338483,
+    "post_mass_ratio": 0.9646614274338483,
+    "pre_friction_ratio": 1.1928496223328675,
+    "post_friction_ratio": 1.1928496223328675,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9439548951593091,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8669443305514724,
+    "disturbance_angle": 0.9493342070496129
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_mild_01",
+    "episode_seed": 1198692747,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.864003648044294,
+      "amplitude": 0.8528577021079882,
+      "omega": 0.9013341862386433,
+      "phase": 4.149881128977434,
+      "rotation": 0.22212282321758492,
+      "offset": [
+        -0.15803315135385032,
+        -0.047227392582667616
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 7.426732725632322,
+    "burst_duration": 1.6039590076012016,
+    "initial_offset": [
+      0.1574365794658661,
+      0.11511443555355072,
+      -0.14620758593082428,
+      -0.2050754278898239
+    ],
+    "pre_mass_ratio": 1.0282982978482285,
+    "post_mass_ratio": 1.0282982978482285,
+    "pre_friction_ratio": 0.8933317343302662,
+    "post_friction_ratio": 0.8933317343302662,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9758427491755965,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4392129782275158,
+    "disturbance_angle": 2.7253895390347376
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_mild_02",
+    "episode_seed": 1235739714,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.9937849479117462,
+      "amplitude": 1.1487121585403748,
+      "sharpness": 0.7420807809414481,
+      "midpoint": 7.5205403940484405,
+      "rotation": -0.30307990274820285,
+      "offset": [
+        -0.018318600142983588,
+        0.0654816538595393
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 4.542818359875364,
+    "burst_duration": 2.13989230312802,
+    "initial_offset": [
+      0.20833955705165863,
+      -0.31697478890419006,
+      -0.4587687849998474,
+      0.2679249048233032
+    ],
+    "pre_mass_ratio": 1.0509531605403817,
+    "post_mass_ratio": 1.0509531605403817,
+    "pre_friction_ratio": 1.0645063605684344,
+    "post_friction_ratio": 1.0645063605684344,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9717876785101952,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2617734730441768,
+    "disturbance_angle": 3.243653142824317
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_mild_03",
+    "episode_seed": 1851796955,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.2250090625870365,
+      "omega": 0.6815963876251544,
+      "phase": 5.47899887046177,
+      "rotation": 0.3008037597069446,
+      "offset": [
+        0.4326907811436316,
+        0.7463332562734468
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 4.907499809561948,
+    "burst_duration": 2.03637368040987,
+    "initial_offset": [
+      0.24920547008514404,
+      0.09531047940254211,
+      0.12558777630329132,
+      0.30982255935668945
+    ],
+    "pre_mass_ratio": 1.0058776450694995,
+    "post_mass_ratio": 1.0058776450694995,
+    "pre_friction_ratio": 1.099960190855338,
+    "post_friction_ratio": 1.099960190855338,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9901324319931437,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3516592866959196,
+    "disturbance_angle": 1.5518862101083795
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_medium_00",
+    "episode_seed": 782732129,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 1.0039773797675957,
+      "amplitude": 1.5960984616435274,
+      "omega": 0.40615925214707616,
+      "phase": 4.011861277615707,
+      "rotation": -0.29622237556757736,
+      "offset": [
+        0.4553420645714559,
+        0.15978961325774965
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 3.678042900147788,
+    "burst_duration": 2.0389384086635287,
+    "initial_offset": [
+      0.009436548687517643,
+      0.08412589877843857,
+      -0.5411391258239746,
+      -0.06558842957019806
+    ],
+    "pre_mass_ratio": 1.05705249521303,
+    "post_mass_ratio": 1.05705249521303,
+    "pre_friction_ratio": 1.051055589072861,
+    "post_friction_ratio": 1.051055589072861,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.949640030250365,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6800395375022343,
+    "disturbance_angle": 2.255027100230576
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_medium_01",
+    "episode_seed": 240495062,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.816072663060901,
+      "omega": 0.5499437002468208,
+      "phase": 1.0539563533781418,
+      "rotation": 0.09612786028849452,
+      "offset": [
+        -0.5590154220114127,
+        0.43826857200852
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 5.3610510910962,
+    "burst_duration": 1.7895386108411053,
+    "initial_offset": [
+      -0.06230098009109497,
+      -0.42345502972602844,
+      -0.15017099678516388,
+      0.3765296936035156
+    ],
+    "pre_mass_ratio": 1.0071833509682306,
+    "post_mass_ratio": 1.0071833509682306,
+    "pre_friction_ratio": 1.113283098230357,
+    "post_friction_ratio": 1.113283098230357,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9181891069722586,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.536557923111323,
+    "disturbance_angle": 0.8223314632951058
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_medium_02",
+    "episode_seed": 989940311,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.8624899017969103,
+      "amplitude": 0.890317980753186,
+      "omega": 0.7324520327124635,
+      "phase": 6.243368078134268,
+      "rotation": -0.3131716190889279,
+      "offset": [
+        -0.0006206199438785198,
+        0.07804684180227683
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 7.473288303496755,
+    "burst_duration": 1.8234739950729795,
+    "initial_offset": [
+      -0.1610880047082901,
+      0.030103333294391632,
+      0.3062974512577057,
+      0.2955288887023926
+    ],
+    "pre_mass_ratio": 0.9123457906976977,
+    "post_mass_ratio": 0.9123457906976977,
+    "pre_friction_ratio": 1.0198040592428894,
+    "post_friction_ratio": 1.0198040592428894,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9013714955932594,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8361787961380545,
+    "disturbance_angle": 3.1485092955810288
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_medium_03",
+    "episode_seed": 1964313477,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.5670366898654504,
+      "amplitude": 1.091083017805823,
+      "omega": 0.6933471257500798,
+      "phase": 3.7601541621861205,
+      "rotation": 0.14117373102730146,
+      "offset": [
+        -0.4122159107594152,
+        -0.6289129869913559
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 7.95743622822451,
+    "burst_duration": 1.8328541209720162,
+    "initial_offset": [
+      0.37017932534217834,
+      -0.18092463910579681,
+      0.3463186025619507,
+      0.020475560799241066
+    ],
+    "pre_mass_ratio": 0.9851817441256332,
+    "post_mass_ratio": 0.9851817441256332,
+    "pre_friction_ratio": 0.9587115231258492,
+    "post_friction_ratio": 0.9587115231258492,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9538678311346316,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6890446289180208,
+    "disturbance_angle": 1.2493407406116244
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_severe_00",
+    "episode_seed": 1532669573,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 3.2709477539941743,
+      "omega": 0.36481340094851444,
+      "phase": 2.4642593340862673,
+      "rotation": 0.18153701320626625,
+      "offset": [
+        -0.7246935870445543,
+        -0.27477928850561417
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 4.486702108471301,
+    "burst_duration": 1.6307961922663612,
+    "initial_offset": [
+      -0.08666898310184479,
+      -0.2877088785171509,
+      -0.2574935257434845,
+      0.06709065288305283
+    ],
+    "pre_mass_ratio": 0.9133071820892013,
+    "post_mass_ratio": 0.9133071820892013,
+    "pre_friction_ratio": 0.982247464091147,
+    "post_friction_ratio": 0.982247464091147,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9325053657866755,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.512077093537169,
+    "disturbance_angle": 1.752406135401003
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_severe_01",
+    "episode_seed": 1267551810,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.87269675683127,
+      "omega": 0.6076559582288055,
+      "phase": 4.617059032340651,
+      "rotation": -0.34924145078107377,
+      "offset": [
+        -0.3158648282320071,
+        0.2286747098285169
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 6.16723205517321,
+    "burst_duration": 1.825292999552568,
+    "initial_offset": [
+      -0.24520815908908844,
+      -0.31772977113723755,
+      0.043991122394800186,
+      -0.1212904155254364
+    ],
+    "pre_mass_ratio": 0.96287132679682,
+    "post_mass_ratio": 0.96287132679682,
+    "pre_friction_ratio": 0.8528470376978138,
+    "post_friction_ratio": 0.8528470376978138,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9379591108530465,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3239492204619643,
+    "disturbance_angle": 2.9258266684932583
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_severe_02",
+    "episode_seed": 1174639252,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6363945487620922,
+      "amplitude": 1.0700136850271467,
+      "omega": 0.9268803464543727,
+      "phase": 5.978850033379335,
+      "rotation": -0.1788929399506522,
+      "offset": [
+        0.10704042641192191,
+        -0.15426021004870072
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 5.828341635969963,
+    "burst_duration": 2.577783977762018,
+    "initial_offset": [
+      0.18159782886505127,
+      -0.1835220605134964,
+      -0.028858914971351624,
+      0.06384884566068649
+    ],
+    "pre_mass_ratio": 0.9579319748209935,
+    "post_mass_ratio": 0.9579319748209935,
+    "pre_friction_ratio": 1.1783010439069261,
+    "post_friction_ratio": 1.1783010439069261,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9993548578532312,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0134245453756594,
+    "disturbance_angle": 2.3451403837321476
+  },
+  {
+    "episode_id": "eval_2024_actuator_delay_severe_03",
+    "episode_seed": 571238679,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8029063475593408,
+      "amplitude": 1.2972289925222316,
+      "sharpness": 1.1325064714931181,
+      "midpoint": 5.537837887263306,
+      "rotation": -0.3564381464984536,
+      "offset": [
+        0.03607507060045434,
+        -0.10670525828674526
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 6.900646995199559,
+    "burst_duration": 2.5589530299587397,
+    "initial_offset": [
+      -0.012004478834569454,
+      0.6011449694633484,
+      -0.22536969184875488,
+      0.015707578510046005
+    ],
+    "pre_mass_ratio": 1.0718389456592958,
+    "post_mass_ratio": 1.0718389456592958,
+    "pre_friction_ratio": 1.132511498164737,
+    "post_friction_ratio": 1.132511498164737,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.972962225774529,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3125641937057237,
+    "disturbance_angle": 0.37795029328625257
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_mild_00",
+    "episode_seed": 750909793,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 1.0274463935906692,
+      "amplitude": 1.6781689216652134,
+      "omega": 0.28949999480961935,
+      "phase": 0.23199038035622552,
+      "rotation": 0.102125461951313,
+      "offset": [
+        -0.28434829830945135,
+        0.12348739557863797
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 4.933100559687324,
+    "burst_duration": 1.7655656963560382,
+    "initial_offset": [
+      -0.12880729138851166,
+      -0.12129639089107513,
+      -0.287129282951355,
+      -0.10158064216375351
+    ],
+    "pre_mass_ratio": 0.9365034661116449,
+    "post_mass_ratio": 0.9365034661116449,
+    "pre_friction_ratio": 0.8029612477199676,
+    "post_friction_ratio": 0.8029612477199676,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9218991658801952,
+    "post_lag_alpha": 0.9218991658801952,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.2861380293977946,
+    "disturbance_angle": 2.7280042769906543
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_mild_01",
+    "episode_seed": 1029834211,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.7055951327269683,
+      "omega": 0.5742628824821066,
+      "phase": 1.3279121848774562,
+      "rotation": -0.26107128486863473,
+      "offset": [
+        0.6007647541553904,
+        0.22658536624037606
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 4.605226347692287,
+    "burst_duration": 1.8483656287051553,
+    "initial_offset": [
+      0.10767968744039536,
+      0.1482214778661728,
+      0.33705660700798035,
+      0.08251029998064041
+    ],
+    "pre_mass_ratio": 0.9175299408206276,
+    "post_mass_ratio": 0.9175299408206276,
+    "pre_friction_ratio": 1.0329439913390335,
+    "post_friction_ratio": 1.0329439913390335,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9749433758379271,
+    "post_lag_alpha": 0.9749433758379271,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.3563179428758778,
+    "disturbance_angle": 2.701445611783021
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_mild_02",
+    "episode_seed": 107939220,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.8053643081299207,
+      "amplitude": 0.9502435933657678,
+      "omega": 0.9584237861989815,
+      "phase": 5.921887038120965,
+      "rotation": -0.11763101397157988,
+      "offset": [
+        -0.603902829913418,
+        0.17453779940139136
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 4.7294117020379645,
+    "burst_duration": 2.4341478684771216,
+    "initial_offset": [
+      0.32465261220932007,
+      -0.23466697335243225,
+      -0.11900995671749115,
+      -0.2963199019432068
+    ],
+    "pre_mass_ratio": 1.0462949916268287,
+    "post_mass_ratio": 1.0462949916268287,
+    "pre_friction_ratio": 1.072568430981603,
+    "post_friction_ratio": 1.072568430981603,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9848485075587534,
+    "post_lag_alpha": 0.9848485075587534,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.3633808369998999,
+    "disturbance_angle": 0.19317048446282684
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_mild_03",
+    "episode_seed": 1200086757,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.7082498403380802,
+      "amplitude": 1.2302320420838186,
+      "omega": 0.6156879822129953,
+      "phase": 5.608061173777049,
+      "rotation": 0.31621069902924237,
+      "offset": [
+        -0.4896755842541201,
+        0.5114411942170702
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 7.59097541764464,
+    "burst_duration": 2.0758059873183017,
+    "initial_offset": [
+      0.20931226015090942,
+      0.022552018985152245,
+      -0.1562969982624054,
+      0.48528867959976196
+    ],
+    "pre_mass_ratio": 0.9077631111091988,
+    "post_mass_ratio": 0.9077631111091988,
+    "pre_friction_ratio": 0.9782247460051807,
+    "post_friction_ratio": 0.9782247460051807,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9569422186708904,
+    "post_lag_alpha": 0.9569422186708904,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.9513723732882537,
+    "disturbance_angle": 0.3742479824439308
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_medium_00",
+    "episode_seed": 1231858456,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.6691819345916263,
+      "omega": 0.2675621592963687,
+      "phase": 1.4081451142994277,
+      "rotation": 0.021479003616489356,
+      "offset": [
+        -0.018366969242529785,
+        0.6903367044864559
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 6.097631772482402,
+    "burst_duration": 2.416595345951608,
+    "initial_offset": [
+      -0.43553343415260315,
+      -0.17635691165924072,
+      0.6985126733779907,
+      0.11218225955963135
+    ],
+    "pre_mass_ratio": 1.0099437818965868,
+    "post_mass_ratio": 1.0099437818965868,
+    "pre_friction_ratio": 0.9637456946589809,
+    "post_friction_ratio": 0.9637456946589809,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9535870107616738,
+    "post_lag_alpha": 0.9535870107616738,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.5269512381840245,
+    "disturbance_angle": 4.819474039239208
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_medium_01",
+    "episode_seed": 316643475,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.8038194364224376,
+      "omega": 0.7750369045531365,
+      "phase": 4.329629482326665,
+      "rotation": -0.10292945429826383,
+      "offset": [
+        0.5706841990081553,
+        -0.5795951289981629
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 8.071859589892142,
+    "burst_duration": 2.5623150923245426,
+    "initial_offset": [
+      0.16223633289337158,
+      -0.019334344193339348,
+      0.07530656456947327,
+      -0.11058995127677917
+    ],
+    "pre_mass_ratio": 0.9493631215350474,
+    "post_mass_ratio": 0.9493631215350474,
+    "pre_friction_ratio": 0.917233032698312,
+    "post_friction_ratio": 0.917233032698312,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9240536479239929,
+    "post_lag_alpha": 0.9240536479239929,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.2787232353816644,
+    "disturbance_angle": 4.797648300541298
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_medium_02",
+    "episode_seed": 1274169936,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.7353269000616958,
+      "amplitude": 1.4489964940212507,
+      "sharpness": 0.7941786287025197,
+      "midpoint": 4.476835114695569,
+      "rotation": -0.23094544328937444,
+      "offset": [
+        0.5588656361079862,
+        0.011524643604817753
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 4.267256216483231,
+    "burst_duration": 2.3708048714215324,
+    "initial_offset": [
+      0.4129412770271301,
+      -0.3380545675754547,
+      0.0936165526509285,
+      0.08883921802043915
+    ],
+    "pre_mass_ratio": 0.9042916897889047,
+    "post_mass_ratio": 0.9042916897889047,
+    "pre_friction_ratio": 0.9688382217058954,
+    "post_friction_ratio": 0.9688382217058954,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9940039781709737,
+    "post_lag_alpha": 0.9940039781709737,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.6017744967368375,
+    "disturbance_angle": 5.4340083384721
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_medium_03",
+    "episode_seed": 279585613,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.043118834708191195,
+        2.1940465290064544,
+        4.004871581903928,
+        6.04215659250228,
+        8.096354752784244,
+        10.094594984391183
+      ],
+      "y_points": [
+        -0.81324245177096,
+        1.3512706046077203,
+        0.39300760782464206,
+        -0.5277857349849085,
+        -0.43637408570383884,
+        -0.07317252407469188
+      ],
+      "rotation": -0.30319845216193764,
+      "offset": [
+        0.6069833798969246,
+        0.504185270289299
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 7.534092907011387,
+    "burst_duration": 2.0864331305962542,
+    "initial_offset": [
+      0.02862069010734558,
+      -0.044438693672418594,
+      -0.1161712110042572,
+      -0.37473347783088684
+    ],
+    "pre_mass_ratio": 1.0599927149718151,
+    "post_mass_ratio": 1.0599927149718151,
+    "pre_friction_ratio": 0.9398044404360644,
+    "post_friction_ratio": 0.9398044404360644,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9759159338818565,
+    "post_lag_alpha": 0.9759159338818565,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.9833017975164156,
+    "disturbance_angle": 0.8690325974927058
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_severe_00",
+    "episode_seed": 1543681234,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 1.130154247323992,
+      "amplitude": 2.197555338194829,
+      "sharpness": 1.3863074837575569,
+      "midpoint": 4.774021804460972,
+      "rotation": -0.5378004302320423,
+      "offset": [
+        -0.3361005519672482,
+        -0.442228671337181
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 5.950470236070746,
+    "burst_duration": 1.6131191602132817,
+    "initial_offset": [
+      -0.10857618600130081,
+      0.32046812772750854,
+      -0.04475834593176842,
+      -0.6357082724571228
+    ],
+    "pre_mass_ratio": 0.9489482120015738,
+    "post_mass_ratio": 0.9489482120015738,
+    "pre_friction_ratio": 1.0735664978712354,
+    "post_friction_ratio": 1.0735664978712354,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9524736638437967,
+    "post_lag_alpha": 0.9524736638437967,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.596919081900832,
+    "disturbance_angle": 6.01654137138324
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_severe_01",
+    "episode_seed": 193003646,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8016306573270076,
+      "amplitude": 1.2143608096067084,
+      "sharpness": 1.0379899729975104,
+      "midpoint": 5.839589418994763,
+      "rotation": 0.20546243164792,
+      "offset": [
+        0.48873584897092526,
+        -0.42545313297067733
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 4.4714119624766235,
+    "burst_duration": 1.7382323442864802,
+    "initial_offset": [
+      0.40500837564468384,
+      0.21161989867687225,
+      -0.44087284803390503,
+      -0.28593310713768005
+    ],
+    "pre_mass_ratio": 0.9311894529425918,
+    "post_mass_ratio": 0.9311894529425918,
+    "pre_friction_ratio": 1.071677489432009,
+    "post_friction_ratio": 1.071677489432009,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9714025494797494,
+    "post_lag_alpha": 0.9714025494797494,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.80826178310125,
+    "disturbance_angle": 0.5289238554810007
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_severe_02",
+    "episode_seed": 663926834,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.9302124536281247,
+      "amplitude": 0.8935495301239214,
+      "sharpness": 0.7297673918821691,
+      "midpoint": 6.823525950539335,
+      "rotation": -0.09557053016442602,
+      "offset": [
+        0.7397983911949009,
+        0.5156501589064164
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 7.5112529074229695,
+    "burst_duration": 1.6664676876123274,
+    "initial_offset": [
+      -0.2039138823747635,
+      0.11235401779413223,
+      -0.18629050254821777,
+      0.0660233274102211
+    ],
+    "pre_mass_ratio": 0.9989072610937567,
+    "post_mass_ratio": 0.9989072610937567,
+    "pre_friction_ratio": 1.0995015520107574,
+    "post_friction_ratio": 1.0995015520107574,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9111304938358248,
+    "post_lag_alpha": 0.9111304938358248,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.4234359440669493,
+    "disturbance_angle": 5.146760689148058
+  },
+  {
+    "episode_id": "eval_2024_disturbance_burst_severe_03",
+    "episode_seed": 1663954684,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.595743503204384,
+      "amplitude": 1.3893082699120458,
+      "omega": 0.8242802454126408,
+      "phase": 5.034936144554027,
+      "rotation": -0.36637252528693254,
+      "offset": [
+        -0.359990905014203,
+        -0.7011669954674804
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 6.974691916847835,
+    "burst_duration": 2.2444452846218637,
+    "initial_offset": [
+      0.02155931666493416,
+      -0.2743038237094879,
+      -0.11998961865901947,
+      0.4150874614715576
+    ],
+    "pre_mass_ratio": 1.0751780633164598,
+    "post_mass_ratio": 1.0751780633164598,
+    "pre_friction_ratio": 1.1514010034021394,
+    "post_friction_ratio": 1.1514010034021394,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9278333253395127,
+    "post_lag_alpha": 0.9278333253395127,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.6975621437320947,
+    "disturbance_angle": 4.73550306363364
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_mild_00",
+    "episode_seed": 256378436,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.010352479429590103,
+        2.2288651436206592,
+        4.7591760454017225,
+        7.370934794732116,
+        9.76479882889196,
+        11.935223292453513
+      ],
+      "y_points": [
+        0.5208324422391559,
+        0.7218624594223928,
+        1.6968512334488755,
+        -1.21933264132112,
+        0.08975106140434352,
+        -1.9092451681691054
+      ],
+      "rotation": -0.5235034300152545,
+      "offset": [
+        -0.6505210693178234,
+        0.3537778080945033
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 6.8894383771049075,
+    "burst_duration": 2.142158765831753,
+    "initial_offset": [
+      0.11142449826002121,
+      -0.31720757484436035,
+      0.3800661563873291,
+      0.547305166721344
+    ],
+    "pre_mass_ratio": 1.067580344658727,
+    "post_mass_ratio": 1.067580344658727,
+    "pre_friction_ratio": 1.1760750824419501,
+    "post_friction_ratio": 1.911122008968169,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9949195738472575,
+    "post_lag_alpha": 0.9949195738472575,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7929514048465878,
+    "disturbance_angle": 3.5405728369857945
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_mild_01",
+    "episode_seed": 126621097,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.6962155931143306,
+      "omega": 0.5798017588687765,
+      "phase": 1.496801902478284,
+      "rotation": 0.24593043835120354,
+      "offset": [
+        -0.20552579139378246,
+        -0.744978017962636
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 6.8425137367871995,
+    "burst_duration": 1.8042929117857565,
+    "initial_offset": [
+      0.20123451948165894,
+      -0.5318280458450317,
+      -0.1062847375869751,
+      0.4625445604324341
+    ],
+    "pre_mass_ratio": 0.9279114325505341,
+    "post_mass_ratio": 0.9279114325505341,
+    "pre_friction_ratio": 0.9058025750045345,
+    "post_friction_ratio": 1.4719291843823685,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9569107212562875,
+    "post_lag_alpha": 0.9569107212562875,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3166985174142711,
+    "disturbance_angle": 0.24506956768692809
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_mild_02",
+    "episode_seed": 1973278745,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.6381051570578214,
+      "amplitude": 1.4143263705865543,
+      "sharpness": 0.910387883674517,
+      "midpoint": 4.5469462359835084,
+      "rotation": -0.1854860001265891,
+      "offset": [
+        -0.050159792505076295,
+        0.10496712689579346
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 8.15149847529994,
+    "burst_duration": 1.7440610222777697,
+    "initial_offset": [
+      -0.08241995424032211,
+      -0.1280592381954193,
+      0.7452870607376099,
+      -0.048940982669591904
+    ],
+    "pre_mass_ratio": 0.9642708565321447,
+    "post_mass_ratio": 0.9642708565321447,
+    "pre_friction_ratio": 1.008465733100845,
+    "post_friction_ratio": 1.6387568162888733,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9869067287611284,
+    "post_lag_alpha": 0.9869067287611284,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6331715805532778,
+    "disturbance_angle": 5.219072766541335
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_mild_03",
+    "episode_seed": 636056597,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6620298861116445,
+      "amplitude": 1.1538182361337417,
+      "omega": 0.8514490705398247,
+      "phase": 2.27167348229238,
+      "rotation": -0.16512453686531098,
+      "offset": [
+        -0.3100390441658869,
+        0.2313204433636653
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 7.526758740788915,
+    "burst_duration": 2.1197117012020796,
+    "initial_offset": [
+      -0.8127830028533936,
+      -0.5686079263687134,
+      0.049905359745025635,
+      0.49629703164100647
+    ],
+    "pre_mass_ratio": 0.9772343971942813,
+    "post_mass_ratio": 0.9772343971942813,
+    "pre_friction_ratio": 0.8974661286753804,
+    "post_friction_ratio": 1.4583824590974932,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9086144974822166,
+    "post_lag_alpha": 0.9086144974822166,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8603420238146195,
+    "disturbance_angle": 2.9366433383016846
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_medium_00",
+    "episode_seed": 69280365,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.936589805706996,
+      "omega": 0.2781409904713326,
+      "phase": 3.2889955985337425,
+      "rotation": -0.02230314801024269,
+      "offset": [
+        -0.023339721658775958,
+        0.6527130692779097
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.33946324267878,
+    "burst_duration": 1.9280433175741063,
+    "initial_offset": [
+      -0.014435986988246441,
+      0.24357585608959198,
+      -0.13341303169727325,
+      0.03267187997698784
+    ],
+    "pre_mass_ratio": 0.9195755402720157,
+    "post_mass_ratio": 0.9195755402720157,
+    "pre_friction_ratio": 0.9568281690467546,
+    "post_friction_ratio": 1.9136563380935092,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9336271129657348,
+    "post_lag_alpha": 0.9336271129657348,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4242454574047452,
+    "disturbance_angle": 3.4151212297898397
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_medium_01",
+    "episode_seed": 441699421,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.00032764061624034963,
+        1.6253156734771672,
+        3.325570392912352,
+        5.07222657021967,
+        6.7572908857035365,
+        8.441341989739872
+      ],
+      "y_points": [
+        0.28126023440942727,
+        0.5638987199836307,
+        0.8555568829550695,
+        0.6368347375319918,
+        1.1525843571893208,
+        -1.0934815528969044
+      ],
+      "rotation": 0.18900008632130316,
+      "offset": [
+        0.43228303965481496,
+        0.653337153374737
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 6.906347636782948,
+    "burst_duration": 1.756339366139641,
+    "initial_offset": [
+      0.025469793006777763,
+      -0.009116759523749352,
+      -0.47166669368743896,
+      0.03499028831720352
+    ],
+    "pre_mass_ratio": 0.9225797142710933,
+    "post_mass_ratio": 0.9225797142710933,
+    "pre_friction_ratio": 1.0068177879437579,
+    "post_friction_ratio": 2.0136355758875157,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9019369657602331,
+    "post_lag_alpha": 0.9019369657602331,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4817938622126663,
+    "disturbance_angle": 4.911450113006382
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_medium_02",
+    "episode_seed": 1800473377,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8032138274943158,
+      "amplitude": 1.1525172766568663,
+      "sharpness": 0.9365130853318986,
+      "midpoint": 5.7838497043900166,
+      "rotation": -0.11677570312196922,
+      "offset": [
+        0.39071803849683984,
+        -0.5699036137011625
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.780455708974332,
+    "burst_duration": 1.9909401241148341,
+    "initial_offset": [
+      -0.5643196702003479,
+      0.35842615365982056,
+      0.31023600697517395,
+      0.6109494566917419
+    ],
+    "pre_mass_ratio": 1.0735298148915606,
+    "post_mass_ratio": 1.0735298148915606,
+    "pre_friction_ratio": 0.9169558343307624,
+    "post_friction_ratio": 1.8339116686615249,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9399806142359538,
+    "post_lag_alpha": 0.9399806142359538,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2491993637310175,
+    "disturbance_angle": 3.910271123079531
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_medium_03",
+    "episode_seed": 807375463,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.8144871498129495,
+      "amplitude": 1.2954540064500444,
+      "omega": 0.958041037845335,
+      "phase": 3.418371477487048,
+      "rotation": -0.4587089149255399,
+      "offset": [
+        0.3887962558616693,
+        -0.5898883473226733
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.9861067437392155,
+    "burst_duration": 1.857770301017224,
+    "initial_offset": [
+      -0.24089810252189636,
+      -0.42235133051872253,
+      -0.5502269864082336,
+      -0.13901162147521973
+    ],
+    "pre_mass_ratio": 0.9793279808570597,
+    "post_mass_ratio": 0.9793279808570597,
+    "pre_friction_ratio": 1.077786589471791,
+    "post_friction_ratio": 2.155573178943582,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9367168016304481,
+    "post_lag_alpha": 0.9367168016304481,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0831870112584774,
+    "disturbance_angle": 6.260530119379577
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_severe_00",
+    "episode_seed": 1949029458,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.7450570801451084,
+      "omega": 0.2982930320133885,
+      "phase": 4.6458639911497475,
+      "rotation": 0.5000351557213407,
+      "offset": [
+        -0.2094520891960936,
+        0.43379155136098824
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 3.557828013143357,
+    "burst_duration": 2.239220575103948,
+    "initial_offset": [
+      -0.0355190709233284,
+      0.39675381779670715,
+      0.4822407364845276,
+      -0.3574247360229492
+    ],
+    "pre_mass_ratio": 0.9208987720553948,
+    "post_mass_ratio": 0.9208987720553948,
+    "pre_friction_ratio": 1.1528862199923648,
+    "post_friction_ratio": 2.7381047724818663,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9891243751444856,
+    "post_lag_alpha": 0.9891243751444856,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3841128912051421,
+    "disturbance_angle": 4.907761226169933
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_severe_01",
+    "episode_seed": 1095707540,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.7409177105338705,
+      "omega": 0.5632139600656856,
+      "phase": 0.3355252466506488,
+      "rotation": 0.0905297831567573,
+      "offset": [
+        -0.10184097676974146,
+        -0.4384923554157322
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 5.454756276264584,
+    "burst_duration": 2.0561153425029968,
+    "initial_offset": [
+      -0.19495762884616852,
+      0.09658148884773254,
+      0.33152902126312256,
+      0.13604235649108887
+    ],
+    "pre_mass_ratio": 0.9736167980274704,
+    "post_mass_ratio": 0.9736167980274704,
+    "pre_friction_ratio": 0.8008782188658554,
+    "post_friction_ratio": 1.9020857698064066,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9645948904371906,
+    "post_lag_alpha": 0.9645948904371906,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6833502322590674,
+    "disturbance_angle": 0.06670638080383448
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_severe_02",
+    "episode_seed": 792970754,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.07809280246824861,
+        1.9305104822976524,
+        3.9451467697216693,
+        6.074086835839432,
+        8.086517013310022,
+        10.250189614247807
+      ],
+      "y_points": [
+        -1.1339673122207263,
+        0.7277269872152661,
+        -0.4406617724228957,
+        1.1145036049596122,
+        -0.03950008845508668,
+        1.042805503509463
+      ],
+      "rotation": -0.029365652822331723,
+      "offset": [
+        0.7039401980515261,
+        -0.6939357670509447
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 4.132360936373553,
+    "burst_duration": 1.880160452796099,
+    "initial_offset": [
+      0.40507209300994873,
+      -0.5858685970306396,
+      -0.016668446362018585,
+      0.4879395365715027
+    ],
+    "pre_mass_ratio": 0.9038643885967514,
+    "post_mass_ratio": 0.9038643885967514,
+    "pre_friction_ratio": 0.9853354095841353,
+    "post_friction_ratio": 2.3401715977623216,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9140597900133205,
+    "post_lag_alpha": 0.9140597900133205,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0698680156029736,
+    "disturbance_angle": 2.6083971037807276
+  },
+  {
+    "episode_id": "eval_2025_friction_shift_severe_03",
+    "episode_seed": 1522139560,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.01319052778567311,
+        1.7544947270567866,
+        3.7345597291012087,
+        5.524644084221204,
+        7.207892710385772,
+        9.116537641429701
+      ],
+      "y_points": [
+        0.9300120138797134,
+        -0.31692631862124654,
+        0.8892213021724342,
+        1.2839213045774476,
+        0.5178964688186367,
+        -0.7015054479906977
+      ],
+      "rotation": -0.011520660492794987,
+      "offset": [
+        0.16948903617968136,
+        0.5315179324582628
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 5.663124182204214,
+    "burst_duration": 1.693296558652082,
+    "initial_offset": [
+      -0.4507904648780823,
+      -0.08332202583551407,
+      -0.42176541686058044,
+      0.46037694811820984
+    ],
+    "pre_mass_ratio": 0.9466954079772012,
+    "post_mass_ratio": 0.9466954079772012,
+    "pre_friction_ratio": 0.814484089707477,
+    "post_friction_ratio": 1.934399713055258,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9672855621048639,
+    "post_lag_alpha": 0.9672855621048639,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.261029895586977,
+    "disturbance_angle": 1.655648174703543
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_mild_00",
+    "episode_seed": 2059808597,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 3.246470089688721,
+      "omega": 0.27321177069918173,
+      "phase": 5.666107356963995,
+      "rotation": 0.24121748590162795,
+      "offset": [
+        -0.3288712629799097,
+        0.2528183759610838
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 4.586020602497556,
+    "burst_duration": 1.6320794519281787,
+    "initial_offset": [
+      0.08518369495868683,
+      -0.39559364318847656,
+      -0.08809313923120499,
+      -0.0952446311712265
+    ],
+    "pre_mass_ratio": 0.9533002566828255,
+    "post_mass_ratio": 1.50144790427545,
+    "pre_friction_ratio": 0.8127747484309883,
+    "post_friction_ratio": 0.8127747484309883,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9274518964076187,
+    "post_lag_alpha": 0.9274518964076187,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2456794111429927,
+    "disturbance_angle": 0.7557793608425714
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_mild_01",
+    "episode_seed": 3827724,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.0985836579525016,
+        1.4268688917698384,
+        2.8421379647467773,
+        4.200355920856166,
+        5.677662971256622,
+        6.990068298656053
+      ],
+      "y_points": [
+        -0.9930088003462094,
+        -0.6980736832365806,
+        -1.1675945475133411,
+        0.7115588231157033,
+        -0.8656144077122007,
+        1.1840786891803625
+      ],
+      "rotation": -0.49807148547002467,
+      "offset": [
+        -0.45679012696587273,
+        -0.3612883506836268
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 6.798745798476926,
+    "burst_duration": 2.01183276833534,
+    "initial_offset": [
+      -0.37495914101600647,
+      0.29910507798194885,
+      0.14693583548069,
+      0.032373733818531036
+    ],
+    "pre_mass_ratio": 0.9765104790780228,
+    "post_mass_ratio": 1.5380040045478858,
+    "pre_friction_ratio": 1.0997980839030987,
+    "post_friction_ratio": 1.0997980839030987,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9027470343158838,
+    "post_lag_alpha": 0.9027470343158838,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0514647614093984,
+    "disturbance_angle": 4.49036019244692
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_mild_02",
+    "episode_seed": 1377964226,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.0408924925294922,
+        1.8872221333794978,
+        3.6886572698284508,
+        5.549297983703467,
+        7.246731682837592,
+        9.265094193222408
+      ],
+      "y_points": [
+        0.4420079439254956,
+        -0.47410298385947536,
+        0.7211947373480561,
+        -1.3838449927611445,
+        0.8496518252741354,
+        -1.0553364478344127
+      ],
+      "rotation": 0.15516226489873475,
+      "offset": [
+        0.04340995200703501,
+        -0.07943412712146936
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 4.2627093667726115,
+    "burst_duration": 2.494437572489342,
+    "initial_offset": [
+      0.07758478075265884,
+      -0.2336328774690628,
+      0.12773817777633667,
+      -0.5666632652282715
+    ],
+    "pre_mass_ratio": 0.9211198011163313,
+    "post_mass_ratio": 1.4507636867582216,
+    "pre_friction_ratio": 0.8106370199823798,
+    "post_friction_ratio": 0.8106370199823798,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9013337959359431,
+    "post_lag_alpha": 0.9013337959359431,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7754549766380754,
+    "disturbance_angle": 4.501607188487591
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_mild_03",
+    "episode_seed": 285793723,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.8351557935830276,
+      "omega": 0.6587088625605229,
+      "phase": 0.35535345898350856,
+      "rotation": -0.34084813853551393,
+      "offset": [
+        -0.2784448204910451,
+        -0.09540472664731336
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 7.957854498448114,
+    "burst_duration": 1.9438312420349657,
+    "initial_offset": [
+      0.04113355651497841,
+      -0.39102980494499207,
+      0.08644535392522812,
+      0.21149379014968872
+    ],
+    "pre_mass_ratio": 0.9805812232988982,
+    "post_mass_ratio": 1.5444154266957646,
+    "pre_friction_ratio": 0.9568441910181817,
+    "post_friction_ratio": 0.9568441910181817,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9775754591057076,
+    "post_lag_alpha": 0.9775754591057076,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.9347653552965796,
+    "disturbance_angle": 0.6780239402553364
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_medium_00",
+    "episode_seed": 1012158744,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.814652195090333,
+      "omega": 0.355865140372755,
+      "phase": 1.7703376741236583,
+      "rotation": -0.36630735028948425,
+      "offset": [
+        -0.654149382193955,
+        0.3737120584792939
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.171510461388692,
+    "burst_duration": 1.7611714289149023,
+    "initial_offset": [
+      -0.13457158207893372,
+      0.13481882214546204,
+      0.009020300582051277,
+      -0.24982844293117523
+    ],
+    "pre_mass_ratio": 0.9851910712249284,
+    "post_mass_ratio": 1.8915668567518624,
+    "pre_friction_ratio": 0.8258836729157645,
+    "post_friction_ratio": 0.8258836729157645,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9470176038286906,
+    "post_lag_alpha": 0.9470176038286906,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2223635837664713,
+    "disturbance_angle": 2.9429413918216762
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_medium_01",
+    "episode_seed": 1521585090,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.858157814420474,
+      "omega": 0.5380569606456271,
+      "phase": 6.067070113957269,
+      "rotation": -0.013404590712417841,
+      "offset": [
+        0.22900416356705744,
+        -0.6707820433828178
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 6.598261853855898,
+    "burst_duration": 1.7429755205287596,
+    "initial_offset": [
+      -0.18319648504257202,
+      -0.2921239137649536,
+      -0.1811773031949997,
+      -0.07465972751379013
+    ],
+    "pre_mass_ratio": 1.0188286834040108,
+    "post_mass_ratio": 1.9561510721357007,
+    "pre_friction_ratio": 0.8121881566883844,
+    "post_friction_ratio": 0.8121881566883844,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9913925862883639,
+    "post_lag_alpha": 0.9913925862883639,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2399153420944897,
+    "disturbance_angle": 3.6834120945039226
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_medium_02",
+    "episode_seed": 542074625,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.07768427299473998,
+        1.7074913830844236,
+        3.6861534100931905,
+        5.418116599973173,
+        7.28548187232295,
+        9.040777853560009
+      ],
+      "y_points": [
+        1.0166910679153465,
+        -0.6304557555414989,
+        -0.8059509143399762,
+        0.4568072470369473,
+        -0.6133513259084181,
+        0.17268304945326496
+      ],
+      "rotation": -0.3485028394509633,
+      "offset": [
+        0.6503300517842672,
+        0.6175055638823292
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 4.644685974633748,
+    "burst_duration": 2.4970808196725853,
+    "initial_offset": [
+      -0.24483518302440643,
+      -0.6052466630935669,
+      -0.3828447759151459,
+      -0.06264524161815643
+    ],
+    "pre_mass_ratio": 1.0048537857167577,
+    "post_mass_ratio": 1.9293192685761746,
+    "pre_friction_ratio": 1.1168086727312267,
+    "post_friction_ratio": 1.1168086727312267,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9580816971763635,
+    "post_lag_alpha": 0.9580816971763635,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.9414137306524974,
+    "disturbance_angle": 5.829062654751943
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_medium_03",
+    "episode_seed": 588943758,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.11718587616331727,
+        2.054910623051738,
+        3.781081078133596,
+        5.940920960370544,
+        7.750706379289261,
+        9.852354379400264
+      ],
+      "y_points": [
+        -0.5320890346253585,
+        -0.22770311745963356,
+        -0.7432941715093049,
+        -0.8188738159573525,
+        1.2878439479861492,
+        -1.0934267529301884
+      ],
+      "rotation": -0.29341876943971684,
+      "offset": [
+        0.3770247306889263,
+        0.18377391192165882
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.4188932680776825,
+    "burst_duration": 2.2230927781710106,
+    "initial_offset": [
+      0.19348455965518951,
+      -0.026579782366752625,
+      -0.2866060435771942,
+      0.4708901345729828
+    ],
+    "pre_mass_ratio": 1.0270262074334557,
+    "post_mass_ratio": 1.971890318272235,
+    "pre_friction_ratio": 1.1949727333743465,
+    "post_friction_ratio": 1.1949727333743465,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9187320206370991,
+    "post_lag_alpha": 0.9187320206370991,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3321597544765873,
+    "disturbance_angle": 0.3058210781708244
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_severe_00",
+    "episode_seed": 885391860,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 1.1997800639005602,
+      "amplitude": 1.6484620275375395,
+      "sharpness": 1.4851187859850505,
+      "midpoint": 5.02735694324345,
+      "rotation": 0.3590260872526726,
+      "offset": [
+        -0.6863097435425235,
+        -0.16461121386267719
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 5.890987253879892,
+    "burst_duration": 1.7564334001779776,
+    "initial_offset": [
+      0.37694239616394043,
+      0.01152851339429617,
+      -0.2974705100059509,
+      -0.10963515937328339
+    ],
+    "pre_mass_ratio": 0.9409787662484841,
+    "post_mass_ratio": 2.1313169055528163,
+    "pre_friction_ratio": 0.9660759871818037,
+    "post_friction_ratio": 0.9660759871818037,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9017587498516852,
+    "post_lag_alpha": 0.9017587498516852,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8230016230793007,
+    "disturbance_angle": 4.7074026172296985
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_severe_01",
+    "episode_seed": 1786823838,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.38495458847197,
+      "omega": 0.48637444406467406,
+      "phase": 3.2342119212614024,
+      "rotation": -0.10741334891361598,
+      "offset": [
+        0.5873298703988121,
+        0.11630607259072978
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 5.152638702470261,
+    "burst_duration": 2.198928670644417,
+    "initial_offset": [
+      -0.09399256110191345,
+      -0.06461282819509506,
+      -0.21928787231445312,
+      -0.46456870436668396
+    ],
+    "pre_mass_ratio": 1.0269475970268218,
+    "post_mass_ratio": 2.3260363072657513,
+    "pre_friction_ratio": 0.8511073767730102,
+    "post_friction_ratio": 0.8511073767730102,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9656348511107441,
+    "post_lag_alpha": 0.9656348511107441,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6773071254117125,
+    "disturbance_angle": 5.621850621186793
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_severe_02",
+    "episode_seed": 1134864241,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8488028942587492,
+      "amplitude": 1.2439327705732364,
+      "sharpness": 1.0012037826498648,
+      "midpoint": 4.256817581009669,
+      "rotation": 0.22294366364538065,
+      "offset": [
+        0.6508119718637129,
+        0.34865362873717465
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 4.461226334629911,
+    "burst_duration": 2.2110505232992077,
+    "initial_offset": [
+      0.1920476257801056,
+      0.07561986148357391,
+      0.07922706753015518,
+      0.07982958853244781
+    ],
+    "pre_mass_ratio": 1.0158669798899562,
+    "post_mass_ratio": 2.3009387094507505,
+    "pre_friction_ratio": 1.1053020900995225,
+    "post_friction_ratio": 1.1053020900995225,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9662665323162808,
+    "post_lag_alpha": 0.9662665323162808,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5925724283115321,
+    "disturbance_angle": 3.979226461073306
+  },
+  {
+    "episode_id": "eval_2025_mass_shift_severe_03",
+    "episode_seed": 387617524,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8682446106471,
+      "amplitude": 0.9775198786833761,
+      "sharpness": 0.9703784141799416,
+      "midpoint": 5.193124809538485,
+      "rotation": 0.40307425345609227,
+      "offset": [
+        0.30136401049615347,
+        -0.12647212775861472
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 4.468562491772769,
+    "burst_duration": 2.3018644414200993,
+    "initial_offset": [
+      -0.5148881673812866,
+      -0.35693010687828064,
+      -0.25902172923088074,
+      -0.2578938901424408
+    ],
+    "pre_mass_ratio": 0.9361394517396042,
+    "post_mass_ratio": 2.1203558581902033,
+    "pre_friction_ratio": 0.8958799915429784,
+    "post_friction_ratio": 0.8958799915429784,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9430552175988973,
+    "post_lag_alpha": 0.9430552175988973,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5374543377867966,
+    "disturbance_angle": 2.0958677357504745
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_mild_00",
+    "episode_seed": 1765934122,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.08462499036116342,
+        2.982038371515428,
+        5.489111128899542,
+        8.588579710661378,
+        11.550035676579249,
+        14.24670127362956
+      ],
+      "y_points": [
+        -0.3549225456591898,
+        0.009257247619973707,
+        -0.794789580951921,
+        -0.1130146552908109,
+        -1.2119562304625076,
+        -0.06200855585014553
+      ],
+      "rotation": 0.050045740336590816,
+      "offset": [
+        0.5125223219073867,
+        0.5824590007006492
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 5.713899710267819,
+    "burst_duration": 2.2945965312051237,
+    "initial_offset": [
+      -0.13905513286590576,
+      0.003656976856291294,
+      -0.16767610609531403,
+      -0.5527857542037964
+    ],
+    "pre_mass_ratio": 1.0290115945617202,
+    "post_mass_ratio": 1.0290115945617202,
+    "pre_friction_ratio": 1.0460119527049967,
+    "post_friction_ratio": 1.0460119527049967,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9460702815496276,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4303403656627376,
+    "disturbance_angle": 1.5143794539558262
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_mild_01",
+    "episode_seed": 1736967542,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.761404355024267,
+      "omega": 0.45340922592174665,
+      "phase": 5.104443255138354,
+      "rotation": -0.13370861399581202,
+      "offset": [
+        0.6423501650590491,
+        0.1717088161683078
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 8.091183920153203,
+    "burst_duration": 2.4827796560104756,
+    "initial_offset": [
+      -0.2152320146560669,
+      -0.19068372249603271,
+      0.44868147373199463,
+      -0.4479219913482666
+    ],
+    "pre_mass_ratio": 1.0605509457804403,
+    "post_mass_ratio": 1.0605509457804403,
+    "pre_friction_ratio": 1.1807795327475383,
+    "post_friction_ratio": 1.1807795327475383,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9983910495291171,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5715034096505733,
+    "disturbance_angle": 3.197165532988387
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_mild_02",
+    "episode_seed": 642656662,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.08199684994976572,
+        1.8362824137726945,
+        3.308574004522265,
+        5.088818575595622,
+        6.567457690172847,
+        8.178293598432823
+      ],
+      "y_points": [
+        -0.36933778286133423,
+        1.3860922086244525,
+        0.12368887108715887,
+        1.0342508247594062,
+        0.4557789698131691,
+        -0.4178536402501981
+      ],
+      "rotation": 0.4528230214142299,
+      "offset": [
+        0.3425615390591721,
+        0.4722477612180398
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 7.722943475259305,
+    "burst_duration": 1.878720163973675,
+    "initial_offset": [
+      -0.3066602945327759,
+      0.3049941956996918,
+      0.1929301619529724,
+      -0.03053922764956951
+    ],
+    "pre_mass_ratio": 0.9434853053547813,
+    "post_mass_ratio": 0.9434853053547813,
+    "pre_friction_ratio": 0.8373616938719928,
+    "post_friction_ratio": 0.8373616938719928,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9391916495493661,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.545386981215732,
+    "disturbance_angle": 4.030573636720028
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_mild_03",
+    "episode_seed": 1981188822,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.12465501258398198,
+        1.8502318224256382,
+        3.296464400058541,
+        5.28624241540018,
+        6.93856217456259,
+        8.73146602850021
+      ],
+      "y_points": [
+        -0.037031470081349216,
+        1.164912914013728,
+        0.7243424537806065,
+        -0.7292086955114266,
+        0.9272313631901059,
+        0.7432746652798481
+      ],
+      "rotation": 0.07099472807505391,
+      "offset": [
+        -0.024964668500005782,
+        0.2626628500840624
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 6.6641387401977665,
+    "burst_duration": 1.922500584451008,
+    "initial_offset": [
+      -0.12313833087682724,
+      -0.3626043200492859,
+      -0.32878580689430237,
+      -0.038537316024303436
+    ],
+    "pre_mass_ratio": 0.9591284162966114,
+    "post_mass_ratio": 0.9591284162966114,
+    "pre_friction_ratio": 0.9339066514977256,
+    "post_friction_ratio": 0.9339066514977256,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9961510060263511,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6811269168580583,
+    "disturbance_angle": 2.8930567833362972
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_medium_00",
+    "episode_seed": 1757496864,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.8314413107039433,
+      "omega": 0.2728416613999543,
+      "phase": 3.5480000249037085,
+      "rotation": -0.4311105579425975,
+      "offset": [
+        0.24078959304095493,
+        0.13709435983252494
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 7.937893670738321,
+    "burst_duration": 1.6619848389309428,
+    "initial_offset": [
+      0.21419405937194824,
+      -0.009156696498394012,
+      0.01569787971675396,
+      0.4690370559692383
+    ],
+    "pre_mass_ratio": 1.0402326610743402,
+    "post_mass_ratio": 1.0402326610743402,
+    "pre_friction_ratio": 0.9510072843554147,
+    "post_friction_ratio": 0.9510072843554147,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9087649979652288,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6921369524078198,
+    "disturbance_angle": 6.166363922122918
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_medium_01",
+    "episode_seed": 161852860,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.9830245592773832,
+      "omega": 0.6856073190658848,
+      "phase": 4.0041379288345125,
+      "rotation": 0.05440582306860409,
+      "offset": [
+        -0.7424116778775696,
+        0.23788034629181398
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 4.274921494363141,
+    "burst_duration": 2.5544486123007983,
+    "initial_offset": [
+      -0.17176033556461334,
+      0.2973557710647583,
+      -0.0021948448847979307,
+      0.12331453710794449
+    ],
+    "pre_mass_ratio": 0.9557958383843416,
+    "post_mass_ratio": 0.9557958383843416,
+    "pre_friction_ratio": 1.1924097617538223,
+    "post_friction_ratio": 1.1924097617538223,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9078030200424624,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0508144904888916,
+    "disturbance_angle": 3.034109422100638
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_medium_02",
+    "episode_seed": 1213362968,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.4123277404812722,
+      "omega": 0.49865421583204206,
+      "phase": 0.012342975066021724,
+      "rotation": 0.3879320983490925,
+      "offset": [
+        -0.6464087631383555,
+        0.709647550426644
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 4.150435653845764,
+    "burst_duration": 2.540756066532915,
+    "initial_offset": [
+      -0.07255414873361588,
+      -0.05761684477329254,
+      0.24451546370983124,
+      -0.016464391723275185
+    ],
+    "pre_mass_ratio": 0.9034581928199324,
+    "post_mass_ratio": 0.9034581928199324,
+    "pre_friction_ratio": 0.9725535801160494,
+    "post_friction_ratio": 0.9725535801160494,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9655838824259487,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8610920786241203,
+    "disturbance_angle": 1.6628011848867261
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_medium_03",
+    "episode_seed": 1129967765,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.7486429043281415,
+      "amplitude": 1.3560311878795557,
+      "sharpness": 1.098286516422139,
+      "midpoint": 7.020920472069709,
+      "rotation": -0.3790745273802091,
+      "offset": [
+        0.6908918766069905,
+        -0.4983393358605136
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 7.520169707829968,
+    "burst_duration": 1.990696927633758,
+    "initial_offset": [
+      -0.008638504892587662,
+      -0.13384121656417847,
+      -0.046654146164655685,
+      0.04329616203904152
+    ],
+    "pre_mass_ratio": 0.9268131007260522,
+    "post_mass_ratio": 0.9268131007260522,
+    "pre_friction_ratio": 1.094026982012295,
+    "post_friction_ratio": 1.094026982012295,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9975429645232581,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2879284461747977,
+    "disturbance_angle": 1.6677575983592474
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_severe_00",
+    "episode_seed": 326191471,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 1.095726577084081,
+      "amplitude": 1.9200795974958527,
+      "omega": 0.47181112454089236,
+      "phase": 0.8279530184752076,
+      "rotation": 0.4797396358150898,
+      "offset": [
+        -0.2535096181826206,
+        -0.0998966616370639
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 6.489380437025267,
+    "burst_duration": 1.8440660819417674,
+    "initial_offset": [
+      -0.13984251022338867,
+      0.36793622374534607,
+      -0.7948354482650757,
+      -0.2001039683818817
+    ],
+    "pre_mass_ratio": 1.0581083984466322,
+    "post_mass_ratio": 1.0581083984466322,
+    "pre_friction_ratio": 0.8973914397928794,
+    "post_friction_ratio": 0.8973914397928794,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.92390735005341,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.610224341496143,
+    "disturbance_angle": 0.5105754698693681
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_severe_01",
+    "episode_seed": 1930810305,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8081779870099284,
+      "amplitude": 1.3633381978312131,
+      "sharpness": 0.7979812373448818,
+      "midpoint": 5.010912054114025,
+      "rotation": 0.26309905798476807,
+      "offset": [
+        -0.5406484983116686,
+        0.5218493589206363
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 3.605068967186215,
+    "burst_duration": 2.050330493237513,
+    "initial_offset": [
+      0.2965385913848877,
+      -0.44514378905296326,
+      0.15005524456501007,
+      0.028086910024285316
+    ],
+    "pre_mass_ratio": 1.0664926834740405,
+    "post_mass_ratio": 1.0664926834740405,
+    "pre_friction_ratio": 0.8171861382358201,
+    "post_friction_ratio": 0.8171861382358201,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9873105280626082,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5292619243591306,
+    "disturbance_angle": 4.235116489685939
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_severe_02",
+    "episode_seed": 2142586430,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.836959593861716,
+      "amplitude": 1.3653632628121142,
+      "sharpness": 1.0236024397767585,
+      "midpoint": 7.632380575809071,
+      "rotation": -0.21194814254001598,
+      "offset": [
+        -0.13492793404270775,
+        -0.04038707452593082
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 6.892933630426645,
+    "burst_duration": 2.058963092471091,
+    "initial_offset": [
+      0.21860750019550323,
+      -0.21350260078907013,
+      0.30708783864974976,
+      0.12390317767858505
+    ],
+    "pre_mass_ratio": 0.9974982733058716,
+    "post_mass_ratio": 0.9974982733058716,
+    "pre_friction_ratio": 0.8712969069591455,
+    "post_friction_ratio": 0.8712969069591455,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9339803570715388,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.274828073300709,
+    "disturbance_angle": 1.2813330870178017
+  },
+  {
+    "episode_id": "eval_2025_actuator_delay_severe_03",
+    "episode_seed": 1998786567,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.904834479401786,
+      "amplitude": 1.2799873909983166,
+      "sharpness": 1.0544684887843219,
+      "midpoint": 5.545058251858545,
+      "rotation": -0.06205174573250444,
+      "offset": [
+        0.30479016637450274,
+        0.656058417703014
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 6.257844639376997,
+    "burst_duration": 2.588824486122827,
+    "initial_offset": [
+      0.5046241879463196,
+      -0.15390995144844055,
+      0.29981788992881775,
+      0.07433048635721207
+    ],
+    "pre_mass_ratio": 0.9431907214465652,
+    "post_mass_ratio": 0.9431907214465652,
+    "pre_friction_ratio": 1.1163991175233723,
+    "post_friction_ratio": 1.1163991175233723,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9246601028281117,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7287623677208468,
+    "disturbance_angle": 2.152238466221773
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_mild_00",
+    "episode_seed": 846926928,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.9622308403298048,
+      "amplitude": 1.8800794957428233,
+      "omega": 0.32450021230206083,
+      "phase": 5.7213316259321845,
+      "rotation": -0.24403598653976843,
+      "offset": [
+        0.5928994338330753,
+        0.11178289663608032
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 3.5147657636806313,
+    "burst_duration": 1.6020400361697482,
+    "initial_offset": [
+      -0.12210118025541306,
+      -0.5780913829803467,
+      -0.33016616106033325,
+      0.1395595222711563
+    ],
+    "pre_mass_ratio": 0.9054520342626023,
+    "post_mass_ratio": 0.9054520342626023,
+    "pre_friction_ratio": 1.075918064688161,
+    "post_friction_ratio": 1.075918064688161,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9620190652525331,
+    "post_lag_alpha": 0.9620190652525331,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.6246100253342681,
+    "disturbance_angle": 5.52559760291176
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_mild_01",
+    "episode_seed": 1910766700,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6936826886069699,
+      "amplitude": 0.8742268970881802,
+      "omega": 0.9284694017029038,
+      "phase": 5.200761163238575,
+      "rotation": 0.40930519586227654,
+      "offset": [
+        -0.654935049248248,
+        0.39730524386020205
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 6.320994445384316,
+    "burst_duration": 2.226622457002843,
+    "initial_offset": [
+      -0.2698129117488861,
+      0.07728421688079834,
+      -0.1388169825077057,
+      -0.16140004992485046
+    ],
+    "pre_mass_ratio": 1.0682892726575106,
+    "post_mass_ratio": 1.0682892726575106,
+    "pre_friction_ratio": 0.9492048799212097,
+    "post_friction_ratio": 0.9492048799212097,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9428604301184801,
+    "post_lag_alpha": 0.9428604301184801,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.2178051774000156,
+    "disturbance_angle": 2.186203034297043
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_mild_02",
+    "episode_seed": 154392432,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.4922600889196338,
+      "omega": 0.6437739682313435,
+      "phase": 1.3734551241761015,
+      "rotation": 0.01987903923089429,
+      "offset": [
+        -0.10111156213802386,
+        -0.16285113654254946
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 7.936387951601262,
+    "burst_duration": 2.161785028079869,
+    "initial_offset": [
+      -0.3451557159423828,
+      -0.20125381648540497,
+      -0.3797650933265686,
+      -0.17374810576438904
+    ],
+    "pre_mass_ratio": 0.9656589231524301,
+    "post_mass_ratio": 0.9656589231524301,
+    "pre_friction_ratio": 0.973162849046302,
+    "post_friction_ratio": 0.973162849046302,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9340725974027283,
+    "post_lag_alpha": 0.9340725974027283,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.8654574040107685,
+    "disturbance_angle": 6.039013201882283
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_mild_03",
+    "episode_seed": 1681612910,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.8793498301658833,
+      "amplitude": 1.221359518904415,
+      "sharpness": 0.7442432328366955,
+      "midpoint": 5.314791151136037,
+      "rotation": -0.2013484052813851,
+      "offset": [
+        -0.6470242049691834,
+        0.04648193570878567
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 5.67824984570286,
+    "burst_duration": 1.8381320262555159,
+    "initial_offset": [
+      0.31957513093948364,
+      -0.19455689191818237,
+      -0.1245693564414978,
+      0.01793324202299118
+    ],
+    "pre_mass_ratio": 0.9047729827788384,
+    "post_mass_ratio": 0.9047729827788384,
+    "pre_friction_ratio": 1.1228261552814296,
+    "post_friction_ratio": 1.1228261552814296,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9346505947613124,
+    "post_lag_alpha": 0.9346505947613124,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.6764614493413883,
+    "disturbance_angle": 0.011952050387813625
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_medium_00",
+    "episode_seed": 1339758028,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 1.0257171027324727,
+      "amplitude": 1.4695826918580508,
+      "omega": 0.40843966519034025,
+      "phase": 5.825819414648655,
+      "rotation": 0.20439378534564612,
+      "offset": [
+        0.6733954828525486,
+        0.1728617571308224
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 7.933797263996703,
+    "burst_duration": 1.8668324807133025,
+    "initial_offset": [
+      0.18818385899066925,
+      0.16897353529930115,
+      -0.03690840303897858,
+      -0.27605605125427246
+    ],
+    "pre_mass_ratio": 0.9342567129195333,
+    "post_mass_ratio": 0.9342567129195333,
+    "pre_friction_ratio": 0.8182902006061232,
+    "post_friction_ratio": 0.8182902006061232,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9005137436376841,
+    "post_lag_alpha": 0.9005137436376841,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.5502010204487902,
+    "disturbance_angle": 1.783137918947035
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_medium_01",
+    "episode_seed": 2125676521,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.8459687613740592,
+      "amplitude": 1.3376325141796217,
+      "omega": 0.6818055669325981,
+      "phase": 2.5521006182245967,
+      "rotation": 0.36933020715396736,
+      "offset": [
+        0.49881232303903666,
+        -0.08316022645354182
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 7.832512235716881,
+    "burst_duration": 2.0418104702316233,
+    "initial_offset": [
+      0.04132798686623573,
+      -0.1245349645614624,
+      -0.330732136964798,
+      -0.12490545958280563
+    ],
+    "pre_mass_ratio": 1.0086836635432062,
+    "post_mass_ratio": 1.0086836635432062,
+    "pre_friction_ratio": 1.0448254733365476,
+    "post_friction_ratio": 1.0448254733365476,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9911610662434064,
+    "post_lag_alpha": 0.9911610662434064,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.9476681177182242,
+    "disturbance_angle": 5.081484351400688
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_medium_02",
+    "episode_seed": 1723095741,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.2581596251600895,
+      "omega": 0.7124522012644634,
+      "phase": 1.5440586852359668,
+      "rotation": 0.2551539121197671,
+      "offset": [
+        -0.1770155858889817,
+        -0.5165404555836258
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 7.456206634076961,
+    "burst_duration": 1.7621776272232463,
+    "initial_offset": [
+      0.12797558307647705,
+      0.07908007502555847,
+      0.25116583704948425,
+      -0.1559789925813675
+    ],
+    "pre_mass_ratio": 0.9192534693775218,
+    "post_mass_ratio": 0.9192534693775218,
+    "pre_friction_ratio": 0.8545448039881818,
+    "post_friction_ratio": 0.8545448039881818,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9955566827578067,
+    "post_lag_alpha": 0.9955566827578067,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.8403844823081466,
+    "disturbance_angle": 5.892813016546751
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_medium_03",
+    "episode_seed": 611929742,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.135138343649908,
+      "omega": 0.5045598588768452,
+      "phase": 2.7944972354568893,
+      "rotation": 0.34457368817980183,
+      "offset": [
+        0.17556792038595637,
+        0.1985681263692577
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 5.176976097000468,
+    "burst_duration": 1.7019352710997813,
+    "initial_offset": [
+      -0.4156446158885956,
+      0.3858776092529297,
+      0.5508304834365845,
+      -0.1736992448568344
+    ],
+    "pre_mass_ratio": 1.050855076722812,
+    "post_mass_ratio": 1.050855076722812,
+    "pre_friction_ratio": 1.0558148592061778,
+    "post_friction_ratio": 1.0558148592061778,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9316590154887748,
+    "post_lag_alpha": 0.9316590154887748,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.4415178718087232,
+    "disturbance_angle": 5.481624807770014
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_severe_00",
+    "episode_seed": 288777075,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 1.168975475679541,
+      "amplitude": 1.8000164261280704,
+      "sharpness": 1.4854218304663482,
+      "midpoint": 6.520561483253237,
+      "rotation": 0.12217015526879182,
+      "offset": [
+        -0.20342502170773824,
+        -0.3837678439271774
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 5.914882940510166,
+    "burst_duration": 1.990940662334392,
+    "initial_offset": [
+      0.38256174325942993,
+      -0.3628978431224823,
+      -0.7652628421783447,
+      0.145763099193573
+    ],
+    "pre_mass_ratio": 0.9831557082093859,
+    "post_mass_ratio": 0.9831557082093859,
+    "pre_friction_ratio": 1.1285259324507744,
+    "post_friction_ratio": 1.1285259324507744,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9131420476892959,
+    "post_lag_alpha": 0.9131420476892959,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.8129195814320829,
+    "disturbance_angle": 1.6031168285705604
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_severe_01",
+    "episode_seed": 2047750272,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.035256036784166715,
+        2.025110571110983,
+        4.367316267134703,
+        6.380736926293033,
+        8.446052731334817,
+        10.636177693554052
+      ],
+      "y_points": [
+        1.0007202597143587,
+        -0.6362632598843999,
+        0.5204811702873937,
+        -0.9241988201068441,
+        1.2246746158461423,
+        -0.10692516297588117
+      ],
+      "rotation": 0.4521269696194983,
+      "offset": [
+        0.579591959962134,
+        0.6674712905470794
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 7.673078371370083,
+    "burst_duration": 1.8774224267588608,
+    "initial_offset": [
+      -0.3265646994113922,
+      -0.15985633432865143,
+      -0.15258212387561798,
+      -0.08320087194442749
+    ],
+    "pre_mass_ratio": 1.002806327989597,
+    "post_mass_ratio": 1.002806327989597,
+    "pre_friction_ratio": 1.1446703464225914,
+    "post_friction_ratio": 1.1446703464225914,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.908516588481959,
+    "post_lag_alpha": 0.908516588481959,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 2.0958008632124168,
+    "disturbance_angle": 1.308645532061077
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_severe_02",
+    "episode_seed": 489471924,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.8752503115580297,
+      "omega": 0.6507595768894066,
+      "phase": 4.474283237814473,
+      "rotation": 0.2648706960254483,
+      "offset": [
+        0.5657975382710201,
+        -0.6772151319209849
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 4.54409380347901,
+    "burst_duration": 2.568271948152011,
+    "initial_offset": [
+      -0.23289066553115845,
+      -0.17218901216983795,
+      -0.1271136850118637,
+      -0.17161448299884796
+    ],
+    "pre_mass_ratio": 1.021960152916603,
+    "post_mass_ratio": 1.021960152916603,
+    "pre_friction_ratio": 0.9553112011802366,
+    "post_friction_ratio": 0.9553112011802366,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9499531300246984,
+    "post_lag_alpha": 0.9499531300246984,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.2822844909779543,
+    "disturbance_angle": 3.6807232350902845
+  },
+  {
+    "episode_id": "eval_2025_disturbance_burst_severe_03",
+    "episode_seed": 1732093562,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.13636350946197134,
+        2.0500468852353597,
+        3.5771614096773026,
+        5.862064312528434,
+        7.584375430055382,
+        9.7848535877282
+      ],
+      "y_points": [
+        1.0644773756845738,
+        1.0656741084551977,
+        -0.6209516216612492,
+        1.2830490024585441,
+        0.22761979565157198,
+        -0.4603499180854551
+      ],
+      "rotation": 0.45730550594530506,
+      "offset": [
+        -0.5395644563868591,
+        -0.6962261621212498
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 5.533570445791907,
+    "burst_duration": 1.6743474056985317,
+    "initial_offset": [
+      0.22258582711219788,
+      -0.14199304580688477,
+      -0.13710269331932068,
+      -0.1656953990459442
+    ],
+    "pre_mass_ratio": 1.075411636041817,
+    "post_mass_ratio": 1.075411636041817,
+    "pre_friction_ratio": 1.1132478135210098,
+    "post_friction_ratio": 1.1132478135210098,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9209901780578279,
+    "post_lag_alpha": 0.9209901780578279,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.4855732802858632,
+    "disturbance_angle": 3.091539501413018
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_mild_00",
+    "episode_seed": 1513725887,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.09823392784605434,
+        2.8828875722947567,
+        5.426585225038936,
+        8.44386965905734,
+        11.3546985397565,
+        14.070959722806709
+      ],
+      "y_points": [
+        0.6936874567090463,
+        -1.7435176872905687,
+        1.1668452568584353,
+        -0.6766918057115996,
+        -0.9327913181562251,
+        -1.7513642764585509
+      ],
+      "rotation": 0.38852170678539255,
+      "offset": [
+        0.2824480914707883,
+        -0.08211560177088384
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 7.698434073107828,
+    "burst_duration": 1.666182245822519,
+    "initial_offset": [
+      -0.11191005259752274,
+      0.04954784736037254,
+      0.42465198040008545,
+      -0.8000249862670898
+    ],
+    "pre_mass_ratio": 1.0507418981628247,
+    "post_mass_ratio": 1.0507418981628247,
+    "pre_friction_ratio": 1.0344164813371521,
+    "post_friction_ratio": 1.6809267821728722,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.901364008801282,
+    "post_lag_alpha": 0.901364008801282,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.008769212695266,
+    "disturbance_angle": 2.6213201320876753
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_mild_01",
+    "episode_seed": 1714042066,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.7790445720480954,
+      "omega": 0.5877479495245856,
+      "phase": 4.288928125952709,
+      "rotation": -0.20555785806917953,
+      "offset": [
+        0.5955290927526224,
+        0.5211360769183762
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 3.793142060294959,
+    "burst_duration": 2.0054407146148048,
+    "initial_offset": [
+      -0.08211585879325867,
+      0.04179752990603447,
+      0.32738664746284485,
+      -0.39395833015441895
+    ],
+    "pre_mass_ratio": 1.031568479440521,
+    "post_mass_ratio": 1.031568479440521,
+    "pre_friction_ratio": 0.9985642337132669,
+    "post_friction_ratio": 1.6226668797840587,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9739006425214172,
+    "post_lag_alpha": 0.9739006425214172,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5964788219746044,
+    "disturbance_angle": 5.887348113258045
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_mild_02",
+    "episode_seed": 710247114,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.931559111127977,
+      "omega": 0.6993225984889416,
+      "phase": 3.5982615502801334,
+      "rotation": 0.33039075757108216,
+      "offset": [
+        -0.48648391310135486,
+        -0.5043011966454848
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 5.125286705235169,
+    "burst_duration": 1.632965590360297,
+    "initial_offset": [
+      0.1300906538963318,
+      -0.16539153456687927,
+      0.2684348523616791,
+      -0.16079002618789673
+    ],
+    "pre_mass_ratio": 1.0583147605471208,
+    "post_mass_ratio": 1.0583147605471208,
+    "pre_friction_ratio": 1.1068001978936963,
+    "post_friction_ratio": 1.7985503215772565,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9407613994012253,
+    "post_lag_alpha": 0.9407613994012253,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0100277371320554,
+    "disturbance_angle": 3.820072674802567
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_mild_03",
+    "episode_seed": 1030970024,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.7617681163117885,
+      "amplitude": 0.8865913697190189,
+      "sharpness": 1.0692017247038748,
+      "midpoint": 6.206245253577778,
+      "rotation": -0.13102547707753426,
+      "offset": [
+        0.5664173733031452,
+        -0.2727054732609329
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "mild",
+    "shift_time": 5.291563046978458,
+    "burst_duration": 2.5597408537229263,
+    "initial_offset": [
+      -0.16418763995170593,
+      -0.3379601538181305,
+      -0.41762611269950867,
+      0.05137640982866287
+    ],
+    "pre_mass_ratio": 1.0296203975046159,
+    "post_mass_ratio": 1.0296203975046159,
+    "pre_friction_ratio": 0.935114525630327,
+    "post_friction_ratio": 1.5195611041492814,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.97150263256497,
+    "post_lag_alpha": 0.97150263256497,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.4945097070665874,
+    "disturbance_angle": 5.190510217146684
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_medium_00",
+    "episode_seed": 475279263,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 1.1054370273757652,
+      "amplitude": 1.7943841813420607,
+      "sharpness": 1.5127075783615491,
+      "midpoint": 7.1058003874947016,
+      "rotation": -0.4139815068492163,
+      "offset": [
+        -0.5986704208620457,
+        -0.0052515169288720465
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 3.4462189702995936,
+    "burst_duration": 2.2004191750821653,
+    "initial_offset": [
+      0.23323780298233032,
+      0.04169945791363716,
+      -0.16041147708892822,
+      -0.15216884016990662
+    ],
+    "pre_mass_ratio": 1.0124826360892418,
+    "post_mass_ratio": 1.0124826360892418,
+    "pre_friction_ratio": 1.0166385422309234,
+    "post_friction_ratio": 2.033277084461847,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9485469777571269,
+    "post_lag_alpha": 0.9485469777571269,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5414255217579027,
+    "disturbance_angle": 0.6259574861738277
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_medium_01",
+    "episode_seed": 498860592,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.18704127414601032,
+        1.9063020957754098,
+        3.951745896281948,
+        5.927053796153598,
+        7.741319837622817,
+        9.909036398208741
+      ],
+      "y_points": [
+        -0.5071968513362881,
+        -0.47039869629714637,
+        0.3083012334605819,
+        0.4671717167214964,
+        -0.6648596067599669,
+        -0.18371979136794958
+      ],
+      "rotation": 0.18236226294294,
+      "offset": [
+        -0.38559428422451725,
+        0.42653320695601105
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.334907455576461,
+    "burst_duration": 1.9556407089321786,
+    "initial_offset": [
+      0.15453113615512848,
+      -0.2869662940502167,
+      0.13595592975616455,
+      -0.1964188516139984
+    ],
+    "pre_mass_ratio": 0.9950344829378227,
+    "post_mass_ratio": 0.9950344829378227,
+    "pre_friction_ratio": 1.1622411717166172,
+    "post_friction_ratio": 2.3244823434332345,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9167562546531612,
+    "post_lag_alpha": 0.9167562546531612,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8621802714341236,
+    "disturbance_angle": 5.68806891007191
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_medium_02",
+    "episode_seed": 740257117,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.0071132586877924,
+      "omega": 0.601353031651098,
+      "phase": 1.5937083778590133,
+      "rotation": 0.19860866501248087,
+      "offset": [
+        -0.6085976891472471,
+        -0.3923795698649374
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.394072944675645,
+    "burst_duration": 2.5705338315859763,
+    "initial_offset": [
+      -0.5694332718849182,
+      0.6386899352073669,
+      -0.248512864112854,
+      -0.0018315344350412488
+    ],
+    "pre_mass_ratio": 0.9338817388867943,
+    "post_mass_ratio": 0.9338817388867943,
+    "pre_friction_ratio": 0.8532360835911716,
+    "post_friction_ratio": 1.7064721671823433,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9491445656174001,
+    "post_lag_alpha": 0.9491445656174001,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2466734761219769,
+    "disturbance_angle": 3.5293693893572193
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_medium_03",
+    "episode_seed": 651464587,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.02173320431056236,
+        1.5383872226237905,
+        2.941913441710618,
+        4.442462252922947,
+        5.816823333142035,
+        7.2113132060507175
+      ],
+      "y_points": [
+        -1.2344187522503869,
+        1.0162220478420005,
+        -0.2807121435078441,
+        0.2489422403827939,
+        -1.0265845748322697,
+        0.19403020221754463
+      ],
+      "rotation": 0.46221572408117506,
+      "offset": [
+        -0.5078577133236575,
+        0.7407867111006121
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.384673717410805,
+    "burst_duration": 2.4130323550290216,
+    "initial_offset": [
+      -0.2519494891166687,
+      -0.4620612561702728,
+      0.03999282792210579,
+      -0.3589096963405609
+    ],
+    "pre_mass_ratio": 0.9367197051213545,
+    "post_mass_ratio": 0.9367197051213545,
+    "pre_friction_ratio": 0.8590860546785102,
+    "post_friction_ratio": 1.7181721093570204,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9583414866087503,
+    "post_lag_alpha": 0.9583414866087503,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0580198213897476,
+    "disturbance_angle": 2.4786033193182533
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_severe_00",
+    "episode_seed": 1714497231,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 1.1051031026197264,
+      "amplitude": 1.9661416759031034,
+      "sharpness": 1.3268968930968081,
+      "midpoint": 4.98077673359609,
+      "rotation": 0.16712596690870996,
+      "offset": [
+        0.062184156749876984,
+        -0.16446524974189036
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 4.080931109945382,
+    "burst_duration": 1.8969182145325352,
+    "initial_offset": [
+      -0.14753833413124084,
+      -0.24010194838047028,
+      0.07583803683519363,
+      -0.2951117157936096
+    ],
+    "pre_mass_ratio": 0.917804674239621,
+    "post_mass_ratio": 0.917804674239621,
+    "pre_friction_ratio": 0.8920314864842948,
+    "post_friction_ratio": 2.1185747804002,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9454512689456488,
+    "post_lag_alpha": 0.9454512689456488,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2922685159457639,
+    "disturbance_angle": 1.1947014059922723
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_severe_01",
+    "episode_seed": 650172619,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.026076360045406,
+      "omega": 0.48442117142730784,
+      "phase": 5.312423658331579,
+      "rotation": -0.35948254761755905,
+      "offset": [
+        -0.2551557780263108,
+        0.42284981049592707
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 7.2834449316928955,
+    "burst_duration": 1.6381772424243728,
+    "initial_offset": [
+      -0.1404317170381546,
+      0.37029173970222473,
+      -0.034608181565999985,
+      -0.10950446873903275
+    ],
+    "pre_mass_ratio": 0.9612801356143493,
+    "post_mass_ratio": 0.9612801356143493,
+    "pre_friction_ratio": 1.19748925996608,
+    "post_friction_ratio": 2.84403699241944,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9315802249373366,
+    "post_lag_alpha": 0.9315802249373366,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.9577289094749473,
+    "disturbance_angle": 4.304189561888082
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_severe_02",
+    "episode_seed": 1138826167,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.0127766377538987,
+        1.7700619969295464,
+        4.0407333606563425,
+        6.098561568305701,
+        8.030756918101366,
+        9.966339522306017
+      ],
+      "y_points": [
+        0.9394482726355173,
+        0.24126741107166416,
+        -0.22548170589077388,
+        -0.4250167115641873,
+        0.6323985789608635,
+        0.8836022488499089
+      ],
+      "rotation": -0.26111086909699327,
+      "offset": [
+        0.34992167753907744,
+        -0.7280942945127702
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 5.324660846801308,
+    "burst_duration": 2.2863665819105816,
+    "initial_offset": [
+      0.059211309999227524,
+      0.16014693677425385,
+      0.25737664103507996,
+      0.03934023529291153
+    ],
+    "pre_mass_ratio": 0.9688564070184025,
+    "post_mass_ratio": 0.9688564070184025,
+    "pre_friction_ratio": 0.804791345743159,
+    "post_friction_ratio": 1.9113794461400027,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9478327474384962,
+    "post_lag_alpha": 0.9478327474384962,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.81753086618708,
+    "disturbance_angle": 3.452753551286943
+  },
+  {
+    "episode_id": "eval_2026_friction_shift_severe_03",
+    "episode_seed": 1705251212,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.793038239590627,
+      "amplitude": 1.408064676352717,
+      "sharpness": 1.0974815786152394,
+      "midpoint": 7.436873032513702,
+      "rotation": 0.13050462702354704,
+      "offset": [
+        0.27278472153112165,
+        0.11814329868397788
+      ]
+    },
+    "shift_type": "friction_shift",
+    "shift_intensity": "severe",
+    "shift_time": 7.8094762866805425,
+    "burst_duration": 1.8361166069552857,
+    "initial_offset": [
+      0.0648508369922638,
+      -0.0553896501660347,
+      0.0007865972584113479,
+      0.2926656901836395
+    ],
+    "pre_mass_ratio": 0.9205051204150336,
+    "post_mass_ratio": 0.9205051204150336,
+    "pre_friction_ratio": 0.817188131669195,
+    "post_friction_ratio": 1.9408218127143382,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9205163765654424,
+    "post_lag_alpha": 0.9205163765654424,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6807488897283318,
+    "disturbance_angle": 5.467521115950973
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_mild_00",
+    "episode_seed": 84086715,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 3.2109461440039477,
+      "omega": 0.35232618449934244,
+      "phase": 4.607742901933518,
+      "rotation": -0.4839717032719322,
+      "offset": [
+        0.5806040669480639,
+        0.7000890728370659
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 6.407315111295247,
+    "burst_duration": 1.6433761855685485,
+    "initial_offset": [
+      -0.11195532977581024,
+      0.10791504383087158,
+      0.3868914246559143,
+      0.038281042128801346
+    ],
+    "pre_mass_ratio": 0.9417375136906734,
+    "post_mass_ratio": 1.4832365840628106,
+    "pre_friction_ratio": 0.9312026472215162,
+    "post_friction_ratio": 0.9312026472215162,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9098100784010955,
+    "post_lag_alpha": 0.9098100784010955,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.829556110454004,
+    "disturbance_angle": 3.6337487354821247
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_mild_01",
+    "episode_seed": 1376328124,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.8272567757729188,
+      "omega": 0.5823819954311045,
+      "phase": 5.475638109212472,
+      "rotation": 0.41119254228460866,
+      "offset": [
+        -0.1501053707545983,
+        -0.07875128456461367
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 7.1679383247774355,
+    "burst_duration": 1.9739973261720691,
+    "initial_offset": [
+      0.11370998620986938,
+      -0.00421869195997715,
+      0.5790088772773743,
+      0.08974449336528778
+    ],
+    "pre_mass_ratio": 0.9083581848674894,
+    "post_mass_ratio": 1.4306641411662957,
+    "pre_friction_ratio": 1.0543201397548418,
+    "post_friction_ratio": 1.0543201397548418,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9317816022692708,
+    "post_lag_alpha": 0.9317816022692708,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6895345688502157,
+    "disturbance_angle": 0.8698560935458355
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_mild_02",
+    "episode_seed": 299481255,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.8581147366326579,
+      "amplitude": 1.1969468883816374,
+      "omega": 0.7879197995286984,
+      "phase": 6.218645892088307,
+      "rotation": -0.2681132299310276,
+      "offset": [
+        0.10174855269449656,
+        0.295045561703954
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 3.85206434649697,
+    "burst_duration": 2.189906081886645,
+    "initial_offset": [
+      0.19216419756412506,
+      -0.07094986736774445,
+      0.7034729719161987,
+      -0.0642230212688446
+    ],
+    "pre_mass_ratio": 0.9388827903104944,
+    "post_mass_ratio": 1.4787403947390285,
+    "pre_friction_ratio": 1.1101534929321701,
+    "post_friction_ratio": 1.1101534929321701,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9918313963636423,
+    "post_lag_alpha": 0.9918313963636423,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.8072706950711848,
+    "disturbance_angle": 3.4641945813981105
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_mild_03",
+    "episode_seed": 1350305315,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.4008412590920891,
+      "omega": 0.7994039477917357,
+      "phase": 2.9637830248594352,
+      "rotation": 0.2574771932065374,
+      "offset": [
+        -0.6045885685989087,
+        -0.29909778600502585
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "mild",
+    "shift_time": 5.996866813384074,
+    "burst_duration": 2.2484719070268455,
+    "initial_offset": [
+      -0.3636932373046875,
+      -0.2770542502403259,
+      0.17891232669353485,
+      0.27148011326789856
+    ],
+    "pre_mass_ratio": 0.9597165280578649,
+    "post_mass_ratio": 1.5115535316911373,
+    "pre_friction_ratio": 1.0582611950037957,
+    "post_friction_ratio": 1.0582611950037957,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9984235154007766,
+    "post_lag_alpha": 0.9984235154007766,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.568877501513625,
+    "disturbance_angle": 1.9482347020070565
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_medium_00",
+    "episode_seed": 577999463,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.726984274687541,
+      "omega": 0.2696933947332026,
+      "phase": 3.695387973196976,
+      "rotation": 0.08256798431585366,
+      "offset": [
+        0.029869041392054485,
+        0.09440511558848419
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 6.192678246710589,
+    "burst_duration": 2.2344750515815366,
+    "initial_offset": [
+      0.004102391190826893,
+      -0.22551214694976807,
+      -0.21548326313495636,
+      -0.01615687645971775
+    ],
+    "pre_mass_ratio": 0.978495931730225,
+    "post_mass_ratio": 1.878712188922032,
+    "pre_friction_ratio": 1.1510758322166956,
+    "post_friction_ratio": 1.1510758322166956,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9699390035433642,
+    "post_lag_alpha": 0.9699390035433642,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.249418655844706,
+    "disturbance_angle": 4.762718207500304
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_medium_01",
+    "episode_seed": 1270388439,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.010155431429748812,
+        1.6389176043887057,
+        3.319807787229518,
+        4.705266528850699,
+        6.210931746313586,
+        7.963628549601206
+      ],
+      "y_points": [
+        0.829075975600682,
+        0.32256221902278415,
+        0.6168943442700421,
+        0.016260845804914492,
+        -0.8820301532564162,
+        0.6502653478189626
+      ],
+      "rotation": -0.07274732820129426,
+      "offset": [
+        -0.3751724990873007,
+        -0.2986496070678206
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.078478879077881,
+    "burst_duration": 1.8655353944659054,
+    "initial_offset": [
+      0.23289424180984497,
+      0.2447531372308731,
+      0.06502611190080643,
+      0.5555899143218994
+    ],
+    "pre_mass_ratio": 0.9871070831180538,
+    "post_mass_ratio": 1.8952455995866633,
+    "pre_friction_ratio": 1.194627004220564,
+    "post_friction_ratio": 1.194627004220564,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9135941141556667,
+    "post_lag_alpha": 0.9135941141556667,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2009393582090773,
+    "disturbance_angle": 3.2565955878478445
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_medium_02",
+    "episode_seed": 1458129677,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.6882332602268847,
+      "amplitude": 0.9697496255992953,
+      "sharpness": 0.8916964894213802,
+      "midpoint": 7.7189746267087544,
+      "rotation": 0.040545169586289176,
+      "offset": [
+        0.24669123097117218,
+        0.0016357700874045644
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 5.420244688260372,
+    "burst_duration": 2.5447128354141677,
+    "initial_offset": [
+      -0.39055249094963074,
+      0.10759386420249939,
+      0.3923504650592804,
+      0.01708820089697838
+    ],
+    "pre_mass_ratio": 1.0474308337061262,
+    "post_mass_ratio": 2.0110672007157624,
+    "pre_friction_ratio": 1.1321827725537768,
+    "post_friction_ratio": 1.1321827725537768,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9398082536180329,
+    "post_lag_alpha": 0.9398082536180329,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3659831261019044,
+    "disturbance_angle": 3.307735923130641
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_medium_03",
+    "episode_seed": 1854384496,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.0232796454521367,
+      "omega": 0.5481933278458684,
+      "phase": 5.662475920669407,
+      "rotation": 0.33099506645520915,
+      "offset": [
+        -0.38631982377152607,
+        -0.08759631271506718
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "medium",
+    "shift_time": 7.518436052456282,
+    "burst_duration": 2.272719173644467,
+    "initial_offset": [
+      -0.03703256696462631,
+      -0.10804954916238785,
+      -0.33980947732925415,
+      -0.09448149800300598
+    ],
+    "pre_mass_ratio": 0.9663127215901222,
+    "post_mass_ratio": 1.8553204254530344,
+    "pre_friction_ratio": 1.1873621586131504,
+    "post_friction_ratio": 1.1873621586131504,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9935748850029633,
+    "post_lag_alpha": 0.9935748850029633,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.613744472219176,
+    "disturbance_angle": 6.0481329322781585
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_severe_00",
+    "episode_seed": 1300129287,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 1.1875869826534797,
+      "amplitude": 1.677048380181026,
+      "sharpness": 1.220774758028589,
+      "midpoint": 7.549377324208152,
+      "rotation": 0.14780855272413607,
+      "offset": [
+        -0.09338008615020055,
+        -0.25896364667031774
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 6.132872737247993,
+    "burst_duration": 1.754884222538289,
+    "initial_offset": [
+      -0.6361312866210938,
+      -0.25044503808021545,
+      -0.13080783188343048,
+      0.09659310430288315
+    ],
+    "pre_mass_ratio": 1.0768478254584268,
+    "post_mass_ratio": 2.439060324663336,
+    "pre_friction_ratio": 1.198181017184217,
+    "post_friction_ratio": 1.198181017184217,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9501932794539562,
+    "post_lag_alpha": 0.9501932794539562,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7472830836346671,
+    "disturbance_angle": 0.3099112904687256
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_severe_01",
+    "episode_seed": 1431606922,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.06522128764120394,
+        1.568169463683486,
+        3.065840309335503,
+        4.670144665871302,
+        6.207434564399945,
+        7.854474577322096
+      ],
+      "y_points": [
+        -0.23097998413140153,
+        0.6069468699365728,
+        0.09153153746186726,
+        -0.5759444435199378,
+        -0.43222324023692116,
+        -0.2252889205190014
+      ],
+      "rotation": 0.0024941576804835552,
+      "offset": [
+        -0.6281473858144727,
+        -0.38611475193647965
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 3.6296610725269325,
+    "burst_duration": 2.0955954709643123,
+    "initial_offset": [
+      0.1859024614095688,
+      -0.2832575738430023,
+      -0.21372726559638977,
+      -0.1898398995399475
+    ],
+    "pre_mass_ratio": 0.9699398797930481,
+    "post_mass_ratio": 2.1969138277312537,
+    "pre_friction_ratio": 0.9413263814834515,
+    "post_friction_ratio": 0.9413263814834515,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9623084827287542,
+    "post_lag_alpha": 0.9623084827287542,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3394258638551984,
+    "disturbance_angle": 2.2061199922081225
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_severe_02",
+    "episode_seed": 811612006,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.4413898870442536,
+      "omega": 0.5366377405432964,
+      "phase": 3.359446345990821,
+      "rotation": -0.024521079847914296,
+      "offset": [
+        -0.06903941827820426,
+        0.4078460698887454
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 4.126312551179131,
+    "burst_duration": 2.330206965667532,
+    "initial_offset": [
+      -0.5347101092338562,
+      -0.2684367895126343,
+      -0.24849620461463928,
+      -0.1684015840291977
+    ],
+    "pre_mass_ratio": 0.9137591036419239,
+    "post_mass_ratio": 2.069664369748957,
+    "pre_friction_ratio": 1.1262250451845812,
+    "post_friction_ratio": 1.1262250451845812,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9368612588653912,
+    "post_lag_alpha": 0.9368612588653912,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6117768145416005,
+    "disturbance_angle": 0.02042727327339583
+  },
+  {
+    "episode_id": "eval_2026_mass_shift_severe_03",
+    "episode_seed": 1799160328,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6955778484283079,
+      "amplitude": 0.8692130841971216,
+      "omega": 0.8866811416600338,
+      "phase": 3.2399763634308187,
+      "rotation": 0.18979188890835041,
+      "offset": [
+        0.02782842981635092,
+        -0.33864796135044917
+      ]
+    },
+    "shift_type": "mass_shift",
+    "shift_intensity": "severe",
+    "shift_time": 6.241662024310415,
+    "burst_duration": 2.525535078949181,
+    "initial_offset": [
+      -0.6000580191612244,
+      -0.051617156714200974,
+      0.1121281236410141,
+      0.2920236587524414
+    ],
+    "pre_mass_ratio": 0.933539688059669,
+    "post_mass_ratio": 2.11446739345515,
+    "pre_friction_ratio": 0.9447288347830887,
+    "post_friction_ratio": 0.9447288347830887,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9533752156011025,
+    "post_lag_alpha": 0.9533752156011025,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.2271318164845544,
+    "disturbance_angle": 0.13984632718467419
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_mild_00",
+    "episode_seed": 1329284403,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.826311734679417,
+      "omega": 0.3892055028191185,
+      "phase": 0.9812733855708192,
+      "rotation": 0.32811966088569033,
+      "offset": [
+        -0.19137151972109723,
+        0.25059721621915765
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 5.56638578199199,
+    "burst_duration": 2.0281916155007647,
+    "initial_offset": [
+      0.17915524542331696,
+      -0.25879985094070435,
+      0.11289598792791367,
+      0.32275545597076416
+    ],
+    "pre_mass_ratio": 0.9002673148895258,
+    "post_mass_ratio": 0.9002673148895258,
+    "pre_friction_ratio": 1.1880927366088143,
+    "post_friction_ratio": 1.1880927366088143,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9951519895964378,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.3120848221593562,
+    "disturbance_angle": 1.062452412763624
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_mild_01",
+    "episode_seed": 823731262,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.10681097982528112,
+        1.312723495631412,
+        2.9091203288850846,
+        4.570069865644046,
+        6.01138302587868,
+        7.476719357809259
+      ],
+      "y_points": [
+        1.2727352624009352,
+        -0.6082232909619743,
+        -0.24498439606020717,
+        -1.2677186061738088,
+        0.34581348172724247,
+        0.8463742956424447
+      ],
+      "rotation": -0.27511305514026196,
+      "offset": [
+        -0.3478417825886701,
+        0.6132795611711155
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 4.675905542167262,
+    "burst_duration": 1.8508355974279365,
+    "initial_offset": [
+      0.5741790533065796,
+      0.44301337003707886,
+      0.38629674911499023,
+      0.10120775550603867
+    ],
+    "pre_mass_ratio": 1.0083282460154124,
+    "post_mass_ratio": 1.0083282460154124,
+    "pre_friction_ratio": 1.1971807070446792,
+    "post_friction_ratio": 1.1971807070446792,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9256165158792293,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.6545595991690607,
+    "disturbance_angle": 0.5855005794696697
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_mild_02",
+    "episode_seed": 673959053,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "lane_change",
+    "trajectory_params": {
+      "speed": 0.6252314593313527,
+      "amplitude": 0.8171459403969541,
+      "sharpness": 0.8925646046360809,
+      "midpoint": 6.628821255023519,
+      "rotation": 0.3291730777465487,
+      "offset": [
+        0.5788927271729134,
+        0.5938836559239968
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 5.3988782570510025,
+    "burst_duration": 2.147892629289324,
+    "initial_offset": [
+      -0.5934749841690063,
+      -0.13605955243110657,
+      0.30434295535087585,
+      0.17883022129535675
+    ],
+    "pre_mass_ratio": 1.0644102780498343,
+    "post_mass_ratio": 1.0644102780498343,
+    "pre_friction_ratio": 0.867283347541668,
+    "post_friction_ratio": 0.867283347541668,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9752882676114946,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0743258619908356,
+    "disturbance_angle": 0.9877890376386773
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_mild_03",
+    "episode_seed": 782615521,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        -0.03953884706661462,
+        1.6688150704472227,
+        3.4095602612959905,
+        5.113949749158206,
+        6.878942380452802,
+        8.320668185374812
+      ],
+      "y_points": [
+        0.18478167339569662,
+        -0.787799257310113,
+        0.7912145323870994,
+        -0.4853403546864612,
+        -1.2593590768341878,
+        0.6772536930952238
+      ],
+      "rotation": 0.41016557361116834,
+      "offset": [
+        0.37865920892950333,
+        0.02407474302155177
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "mild",
+    "shift_time": 4.093721944590875,
+    "burst_duration": 2.5297076561223455,
+    "initial_offset": [
+      -0.04872406646609306,
+      0.6652970314025879,
+      0.0694994404911995,
+      0.4469144642353058
+    ],
+    "pre_mass_ratio": 1.0703375228012744,
+    "post_mass_ratio": 1.0703375228012744,
+    "pre_friction_ratio": 1.0105898435310137,
+    "post_friction_ratio": 1.0105898435310137,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 2,
+    "pre_lag_alpha": 0.9641717311799463,
+    "post_lag_alpha": 0.68,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.622085532798744,
+    "disturbance_angle": 5.812659963105185
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_medium_00",
+    "episode_seed": 444932941,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 3.004078899967781,
+      "omega": 0.37936091687311246,
+      "phase": 4.559086389472733,
+      "rotation": 0.3337383175348734,
+      "offset": [
+        0.1068235912183575,
+        -0.514743006130216
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 5.208251249636598,
+    "burst_duration": 2.094086134232343,
+    "initial_offset": [
+      0.17107900977134705,
+      0.09877011179924011,
+      0.12211910635232925,
+      0.16075117886066437
+    ],
+    "pre_mass_ratio": 0.9157805143139632,
+    "post_mass_ratio": 0.9157805143139632,
+    "pre_friction_ratio": 0.8487518764461957,
+    "post_friction_ratio": 0.8487518764461957,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9298853995169599,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.068320938717518,
+    "disturbance_angle": 2.2784759541525093
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_medium_01",
+    "episode_seed": 1280283709,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.984270975778699,
+      "omega": 0.7169678714002838,
+      "phase": 3.2291663625857754,
+      "rotation": 0.006998183662573099,
+      "offset": [
+        0.43859963295735893,
+        0.5044156992988644
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 5.670629585264706,
+    "burst_duration": 1.6549643112128387,
+    "initial_offset": [
+      0.466482937335968,
+      0.18820999562740326,
+      0.44364452362060547,
+      0.16109177470207214
+    ],
+    "pre_mass_ratio": 1.024401858226514,
+    "post_mass_ratio": 1.024401858226514,
+    "pre_friction_ratio": 0.8481725912327143,
+    "post_friction_ratio": 0.8481725912327143,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9800025418526277,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0036239075540627,
+    "disturbance_angle": 0.8440741102538952
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_medium_02",
+    "episode_seed": 889835237,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6523424527192893,
+      "amplitude": 1.3355700958051897,
+      "omega": 0.7134920848934099,
+      "phase": 0.6050966698306107,
+      "rotation": -0.2955385000206596,
+      "offset": [
+        0.6273882805183115,
+        0.13888590909102705
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 8.017001446907233,
+    "burst_duration": 2.448883570340066,
+    "initial_offset": [
+      -0.003149516647681594,
+      -0.26840150356292725,
+      0.008295256644487381,
+      -0.2688707709312439
+    ],
+    "pre_mass_ratio": 0.9501714186630265,
+    "post_mass_ratio": 0.9501714186630265,
+    "pre_friction_ratio": 1.1521855695646281,
+    "post_friction_ratio": 1.1521855695646281,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9776244544935632,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.9044644798485484,
+    "disturbance_angle": 5.878453097290892
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_medium_03",
+    "episode_seed": 323659285,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.715608321778415,
+      "omega": 0.5403094598229508,
+      "phase": 4.339794244776639,
+      "rotation": 0.1366883726634901,
+      "offset": [
+        0.2905968144417632,
+        -0.16641759303338277
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "medium",
+    "shift_time": 7.47382127260205,
+    "burst_duration": 2.3050039464525165,
+    "initial_offset": [
+      -0.6005971431732178,
+      0.2115146368741989,
+      0.06161648407578468,
+      0.5304622054100037
+    ],
+    "pre_mass_ratio": 1.041705322503669,
+    "post_mass_ratio": 1.041705322503669,
+    "pre_friction_ratio": 0.8836079337058104,
+    "post_friction_ratio": 0.8836079337058104,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9230028273072003,
+    "post_lag_alpha": 0.536,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7997988874875208,
+    "disturbance_angle": 0.22230625144014976
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_severe_00",
+    "episode_seed": 1945156175,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 3.1245626988840525,
+      "omega": 0.25908600210665267,
+      "phase": 2.459044607765553,
+      "rotation": -0.2980817806950759,
+      "offset": [
+        -0.09162379019588451,
+        -0.18803650932491411
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 8.022937378690976,
+    "burst_duration": 1.6763018424574483,
+    "initial_offset": [
+      -0.27092817425727844,
+      -0.03913137689232826,
+      -0.5820512175559998,
+      0.09876041859388351
+    ],
+    "pre_mass_ratio": 0.9079196258651662,
+    "post_mass_ratio": 0.9079196258651662,
+    "pre_friction_ratio": 0.8297318247270874,
+    "post_friction_ratio": 0.8297318247270874,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9981188486641833,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.5967700175455917,
+    "disturbance_angle": 0.6690118534639399
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_severe_01",
+    "episode_seed": 707994696,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.12425155458834705,
+        1.7767929418420545,
+        3.4389432545979663,
+        4.991349813971041,
+        6.840598039776503,
+        8.425510318644854
+      ],
+      "y_points": [
+        -0.2759461259328213,
+        0.20815324339029706,
+        -1.3252280452800749,
+        -0.558246166765805,
+        1.0967356766935392,
+        0.7147470111783218
+      ],
+      "rotation": 0.5148288309539599,
+      "offset": [
+        -0.4497510167897978,
+        0.21028267219425034
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 6.126281487919394,
+    "burst_duration": 1.6151520220981548,
+    "initial_offset": [
+      0.12534530460834503,
+      -0.19350294768810272,
+      -0.4168604016304016,
+      -0.16305208206176758
+    ],
+    "pre_mass_ratio": 1.0356773829266823,
+    "post_mass_ratio": 1.0356773829266823,
+    "pre_friction_ratio": 0.9051722709700951,
+    "post_friction_ratio": 0.9051722709700951,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9258468607587544,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7741488722857643,
+    "disturbance_angle": 4.420414695957066
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_severe_02",
+    "episode_seed": 1666861342,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.6195939038239047,
+      "omega": 0.7242492133502829,
+      "phase": 1.5359427742321694,
+      "rotation": -0.03747396140938397,
+      "offset": [
+        -0.6463573970188947,
+        0.43837362446526407
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 7.379230062227739,
+    "burst_duration": 2.489102252499246,
+    "initial_offset": [
+      0.49802517890930176,
+      0.10970840603113174,
+      0.16824255883693695,
+      0.021060997620224953
+    ],
+    "pre_mass_ratio": 1.0014280471741799,
+    "post_mass_ratio": 1.0014280471741799,
+    "pre_friction_ratio": 0.9563923904101055,
+    "post_friction_ratio": 0.9563923904101055,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9549854637460313,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 2.0944353168923646,
+    "disturbance_angle": 0.8350901666546395
+  },
+  {
+    "episode_id": "eval_2026_actuator_delay_severe_03",
+    "episode_seed": 1887254513,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.6929783664726986,
+      "amplitude": 1.0301027343602618,
+      "omega": 0.772378606942324,
+      "phase": 1.3687562607242778,
+      "rotation": 0.41486133132544367,
+      "offset": [
+        -0.6512121079172921,
+        0.4288720814198128
+      ]
+    },
+    "shift_type": "actuator_delay",
+    "shift_intensity": "severe",
+    "shift_time": 5.111961972889771,
+    "burst_duration": 2.140324744638524,
+    "initial_offset": [
+      -0.15267115831375122,
+      -0.08971897512674332,
+      0.3901284635066986,
+      0.2737470269203186
+    ],
+    "pre_mass_ratio": 0.9494421727299636,
+    "post_mass_ratio": 0.9494421727299636,
+    "pre_friction_ratio": 0.9392140534343569,
+    "post_friction_ratio": 0.9392140534343569,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 3,
+    "pre_lag_alpha": 0.9906622493908637,
+    "post_lag_alpha": 0.392,
+    "disturbance_amplitude": 0.0,
+    "disturbance_frequency": 1.7784327539704652,
+    "disturbance_angle": 2.7343426253978214
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_mild_00",
+    "episode_seed": 639236777,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 3.0751948722401776,
+      "omega": 0.2741485604850859,
+      "phase": 3.640491086404692,
+      "rotation": -0.053284068914407956,
+      "offset": [
+        0.5932868277775287,
+        0.016877302493784052
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 6.530431433163062,
+    "burst_duration": 1.8173072547135813,
+    "initial_offset": [
+      -0.26668670773506165,
+      0.025240367278456688,
+      -0.14529570937156677,
+      0.19197121262550354
+    ],
+    "pre_mass_ratio": 0.981321028048697,
+    "post_mass_ratio": 0.981321028048697,
+    "pre_friction_ratio": 1.1013994097303221,
+    "post_friction_ratio": 1.1013994097303221,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9636475610659228,
+    "post_lag_alpha": 0.9636475610659228,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.604822266513052,
+    "disturbance_angle": 6.2146646542666275
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_mild_01",
+    "episode_seed": 920571042,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 2.1957921929639572,
+      "omega": 0.6085681457951337,
+      "phase": 5.4515186341479795,
+      "rotation": 0.374151283233758,
+      "offset": [
+        0.5917027658844787,
+        0.7343188830204959
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 3.3912257599718183,
+    "burst_duration": 1.9750101686596544,
+    "initial_offset": [
+      -0.07345851510763168,
+      -0.17928005754947662,
+      -0.4527343213558197,
+      0.18459227681159973
+    ],
+    "pre_mass_ratio": 1.036582715730843,
+    "post_mass_ratio": 1.036582715730843,
+    "pre_friction_ratio": 0.9009932364653427,
+    "post_friction_ratio": 0.9009932364653427,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9258252503244057,
+    "post_lag_alpha": 0.9258252503244057,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.521645450618048,
+    "disturbance_angle": 4.084974565602842
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_mild_02",
+    "episode_seed": 584840964,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.6593081242017724,
+      "omega": 0.6888888307384984,
+      "phase": 2.9499723757028917,
+      "rotation": -0.4314404471528843,
+      "offset": [
+        -0.21596321209148295,
+        0.7332478038677532
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 8.015674391335999,
+    "burst_duration": 1.9495923429720499,
+    "initial_offset": [
+      0.05259409174323082,
+      0.07607477158308029,
+      0.1949184089899063,
+      -0.10843458026647568
+    ],
+    "pre_mass_ratio": 0.9329612504733542,
+    "post_mass_ratio": 0.9329612504733542,
+    "pre_friction_ratio": 1.061344855526439,
+    "post_friction_ratio": 1.061344855526439,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9938538383145561,
+    "post_lag_alpha": 0.9938538383145561,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.6463438628361629,
+    "disturbance_angle": 4.509352070613184
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_mild_03",
+    "episode_seed": 730388036,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "figure8",
+    "trajectory_params": {
+      "amplitude": 1.9238598378013332,
+      "omega": 0.7432105746878621,
+      "phase": 6.155706249568346,
+      "rotation": -0.40058583032899703,
+      "offset": [
+        0.5476903265240052,
+        -0.7369531152334283
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "mild",
+    "shift_time": 5.035831670063738,
+    "burst_duration": 2.4695988532950572,
+    "initial_offset": [
+      -0.19040337204933167,
+      0.016168320551514626,
+      -0.26797154545783997,
+      0.057055555284023285
+    ],
+    "pre_mass_ratio": 0.9734339358836555,
+    "post_mass_ratio": 0.9734339358836555,
+    "pre_friction_ratio": 0.8439499147901494,
+    "post_friction_ratio": 0.8439499147901494,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9098359900201687,
+    "post_lag_alpha": 0.9098359900201687,
+    "disturbance_amplitude": 1.9,
+    "disturbance_frequency": 1.6736200986235497,
+    "disturbance_angle": 1.9525641769974655
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_medium_00",
+    "episode_seed": 1663494130,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.9630352981930703,
+      "amplitude": 1.8785452536381464,
+      "omega": 0.33401205690983365,
+      "phase": 0.484399001255839,
+      "rotation": -0.4865034506355091,
+      "offset": [
+        -0.6168439578017819,
+        -0.05233138347632016
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 5.664199673336604,
+    "burst_duration": 2.4584659924173726,
+    "initial_offset": [
+      -0.004804625175893307,
+      0.001997458515688777,
+      -0.21345342695713043,
+      -0.4668973684310913
+    ],
+    "pre_mass_ratio": 1.0729166771109835,
+    "post_mass_ratio": 1.0729166771109835,
+    "pre_friction_ratio": 0.9879520872805934,
+    "post_friction_ratio": 0.9879520872805934,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9063787375139225,
+    "post_lag_alpha": 0.9063787375139225,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.6502806633013947,
+    "disturbance_angle": 4.67112298454277
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_medium_01",
+    "episode_seed": 635449069,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.8493617948126821,
+      "omega": 0.6541355100296298,
+      "phase": 6.255685534680868,
+      "rotation": 0.4668373124487888,
+      "offset": [
+        -0.6703763446228299,
+        -0.10157917770129332
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 4.643452026231547,
+    "burst_duration": 1.7960637336722463,
+    "initial_offset": [
+      -0.22308248281478882,
+      -0.3063603639602661,
+      0.31902652978897095,
+      -0.37212738394737244
+    ],
+    "pre_mass_ratio": 0.9606810913446052,
+    "post_mass_ratio": 0.9606810913446052,
+    "pre_friction_ratio": 0.9797071640886594,
+    "post_friction_ratio": 0.9797071640886594,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9947522765672263,
+    "post_lag_alpha": 0.9947522765672263,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.6407898858804115,
+    "disturbance_angle": 4.213519334342575
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_medium_02",
+    "episode_seed": 740582919,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "spline",
+    "trajectory_params": {
+      "knot_times": [
+        0.0,
+        2.4,
+        4.8,
+        7.199999999999999,
+        9.6,
+        12.0
+      ],
+      "x_points": [
+        0.013537257994473384,
+        1.4840283359513913,
+        3.1739342709940024,
+        4.616372712055097,
+        6.332134853759194,
+        7.5614783769876
+      ],
+      "y_points": [
+        -0.49616712823836184,
+        0.27851936855692716,
+        1.2646529958675234,
+        1.03354445794151,
+        -0.05574075952211377,
+        0.7385133604732732
+      ],
+      "rotation": 0.28196885546238437,
+      "offset": [
+        -0.40958483649597377,
+        -0.18047909930339967
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 8.0016608270323,
+    "burst_duration": 2.0144166795378307,
+    "initial_offset": [
+      -0.5840574502944946,
+      0.3974524736404419,
+      0.553553581237793,
+      -0.612653374671936
+    ],
+    "pre_mass_ratio": 0.9066153035254496,
+    "post_mass_ratio": 0.9066153035254496,
+    "pre_friction_ratio": 1.1465220243061447,
+    "post_friction_ratio": 1.1465220243061447,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.91091608148445,
+    "post_lag_alpha": 0.91091608148445,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.2418695055848958,
+    "disturbance_angle": 3.0611329168351142
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_medium_03",
+    "episode_seed": 1995195693,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 1.9033646191757487,
+      "omega": 0.6459904409965498,
+      "phase": 5.418672067321321,
+      "rotation": 0.04651401790130272,
+      "offset": [
+        0.6035233263116675,
+        -0.6422166086604715
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "medium",
+    "shift_time": 8.11409387453961,
+    "burst_duration": 1.6958074355929318,
+    "initial_offset": [
+      -0.2905866205692291,
+      -0.21453729271888733,
+      0.16043636202812195,
+      -0.06014753878116608
+    ],
+    "pre_mass_ratio": 0.9411060898631503,
+    "post_mass_ratio": 0.9411060898631503,
+    "pre_friction_ratio": 0.9874325083905647,
+    "post_friction_ratio": 0.9874325083905647,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9757399398572428,
+    "post_lag_alpha": 0.9757399398572428,
+    "disturbance_amplitude": 2.4400000000000004,
+    "disturbance_frequency": 1.30803047344607,
+    "disturbance_angle": 0.7595657130281068
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_severe_00",
+    "episode_seed": 678660910,
+    "split": "test",
+    "unseen": true,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.7619261209368937,
+      "omega": 0.3935508439918636,
+      "phase": 0.6954450557337372,
+      "rotation": 0.25099415240516676,
+      "offset": [
+        -0.21562561480175257,
+        -0.21397276968150702
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 6.848892513144918,
+    "burst_duration": 1.870983039968491,
+    "initial_offset": [
+      -0.49390873312950134,
+      -0.32132193446159363,
+      0.1942800134420395,
+      0.1278635859489441
+    ],
+    "pre_mass_ratio": 1.0305010289178576,
+    "post_mass_ratio": 1.0305010289178576,
+    "pre_friction_ratio": 1.0649521283455257,
+    "post_friction_ratio": 1.0649521283455257,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9525397057712961,
+    "post_lag_alpha": 0.9525397057712961,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.920264873674962,
+    "disturbance_angle": 3.1751739760763975
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_severe_01",
+    "episode_seed": 398225938,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "circle",
+    "trajectory_params": {
+      "radius": 2.3608069514305696,
+      "omega": 0.5575657479978187,
+      "phase": 3.3127062520683324,
+      "rotation": 0.3748483327298572,
+      "offset": [
+        0.5587492748209657,
+        -0.4560405741176461
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 5.375586587102325,
+    "burst_duration": 1.724319227858675,
+    "initial_offset": [
+      -0.1214117780327797,
+      0.23394815623760223,
+      0.09208666533231735,
+      0.16664981842041016
+    ],
+    "pre_mass_ratio": 1.0382654123060113,
+    "post_mass_ratio": 1.0382654123060113,
+    "pre_friction_ratio": 0.8012782808774586,
+    "post_friction_ratio": 0.8012782808774586,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.967929313307991,
+    "post_lag_alpha": 0.967929313307991,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.5441784538208356,
+    "disturbance_angle": 0.118012863034726
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_severe_02",
+    "episode_seed": 1676192831,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.8141747747533209,
+      "amplitude": 1.125851563914356,
+      "omega": 0.8733048243893933,
+      "phase": 2.9195665431456828,
+      "rotation": -0.12038164397362938,
+      "offset": [
+        0.3168343654706962,
+        -0.21324738078768346
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 8.016374569878035,
+    "burst_duration": 2.555102749449502,
+    "initial_offset": [
+      -0.04791216179728508,
+      -0.06528882682323456,
+      0.2709043323993683,
+      -0.13524915277957916
+    ],
+    "pre_mass_ratio": 1.0704264853511298,
+    "post_mass_ratio": 1.0704264853511298,
+    "pre_friction_ratio": 0.9656907449320717,
+    "post_friction_ratio": 0.9656907449320717,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9862269644290431,
+    "post_lag_alpha": 0.9862269644290431,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.4773302879154626,
+    "disturbance_angle": 2.441308237328567
+  },
+  {
+    "episode_id": "eval_2026_disturbance_burst_severe_03",
+    "episode_seed": 1054906793,
+    "split": "test",
+    "unseen": false,
+    "trajectory_kind": "sinusoid",
+    "trajectory_params": {
+      "speed": 0.8532837618197678,
+      "amplitude": 1.1519716969775935,
+      "omega": 0.6138904334465377,
+      "phase": 1.5029629833424762,
+      "rotation": -0.23494016449915828,
+      "offset": [
+        0.17296039114004524,
+        0.020879265361042232
+      ]
+    },
+    "shift_type": "disturbance_burst",
+    "shift_intensity": "severe",
+    "shift_time": 4.6900069119500145,
+    "burst_duration": 2.4875512832945326,
+    "initial_offset": [
+      -0.13788092136383057,
+      0.2517250180244446,
+      -0.15084262192249298,
+      0.38394033908843994
+    ],
+    "pre_mass_ratio": 0.9367949712467727,
+    "post_mass_ratio": 0.9367949712467727,
+    "pre_friction_ratio": 1.1770653186499582,
+    "post_friction_ratio": 1.1770653186499582,
+    "pre_delay_steps": 0,
+    "post_delay_steps": 0,
+    "pre_lag_alpha": 0.9599541572597853,
+    "post_lag_alpha": 0.9599541572597853,
+    "disturbance_amplitude": 2.9800000000000004,
+    "disturbance_frequency": 1.2745277773914692,
+    "disturbance_angle": 4.503097143922639
+  }
+]

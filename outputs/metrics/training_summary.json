@@ -1,0 +1,12 @@
+{
+  "best_val_loss": 0.2950111661379433,
+  "device": "cuda",
+  "epochs_ran": 20,
+  "target_names": [
+    "mass_ratio",
+    "friction_ratio",
+    "delay_severity",
+    "disturbance_x",
+    "disturbance_y"
+  ]
+}

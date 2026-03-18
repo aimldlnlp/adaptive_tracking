@@ -101,7 +101,7 @@ Primary metrics files:
 ## Run
 
 ```bash
-cd /home/aimldl/adaptive-trajectory-tracking-changing-dynamics/adaptive_tracking_project
+cd adaptive_tracking_project
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip

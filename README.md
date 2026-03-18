@@ -34,39 +34,6 @@ Videos:
 - [outputs/videos/04_unseen_trajectory_generalization.mp4](outputs/videos/04_unseen_trajectory_generalization.mp4)
 - [outputs/videos/05_failure_to_recovery.mp4](outputs/videos/05_failure_to_recovery.mp4)
 
-## Setup
-
-| Component | Choice |
-|---|---|
-| State | `[x, y, vx, vy]` |
-| Control | `[ux, uy]` |
-| Trajectories | circle, figure-8, spline, lane change, sinusoid |
-| Shift modes | friction shift, mass shift, actuator delay, disturbance burst |
-| Training | supervised regression on synthetic rollouts |
-| Outputs | figures, videos, CSV metrics, checkpoint |
-
-Plant update:
-
-`v_{t+1} = v_t + dt * ((u_t^applied + d_t - c_t v_t) / m_t)`
-
-`p_{t+1} = p_t + dt * v_{t+1}`
-
-Baseline controller:
-
-`u_base = m_nom * a_des + c_nom * v`
-
-Adaptive controller:
-
-`u_adapt = m_hat * a_des + c_hat * v - d_hat + k_lead * severity_hat * (u_base - u_prev)`
-
-The estimator predicts:
-
-- `mass_ratio`
-- `friction_ratio`
-- `delay_severity`
-- `disturbance_x`
-- `disturbance_y`
-
 ## Results
 
 | Metric | Baseline | Adaptive | Change |

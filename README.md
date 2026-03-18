@@ -24,7 +24,7 @@
 |---|---|
 | ![Trajectory Comparison](outputs/figures/trajectory_comparison.png) | ![Tracking Error vs Time](outputs/figures/tracking_error_vs_time.png) |
 | ![Control Signal vs Time](outputs/figures/control_signal_vs_time.png) | ![Robustness Under Dynamics Shift](outputs/figures/robustness_under_dynamics_shift.png) |
-| ![RMSE Boxplot Across Conditions](outputs/figures/rmse_boxplot_across_conditions.png) | ![Results Table](outputs/figures/results_table.png) |
+| ![RMSE Boxplot Across Conditions](outputs/figures/rmse_boxplot_across_conditions.png) | 
 
 Videos:
 

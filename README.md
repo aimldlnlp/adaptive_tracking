@@ -1,4 +1,4 @@
-# Adaptive Trajectory Tracking under Changing Dynamics
+# Adaptive Trajectory Tracking under Dynamic Shifts
 
 Research benchmark for 2D trajectory tracking under mid-episode dynamics shifts. The repo now keeps one canonical result bundle, `outputs/research/paper_best`, which captures the strongest full-suite run and all final visuals.
 

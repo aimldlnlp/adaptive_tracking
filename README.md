@@ -1,121 +1,172 @@
 # Adaptive Trajectory Tracking under Changing Dynamics
 
-<p align="center">
-  <img src="outputs/videos/01_baseline_vs_adaptive.gif" alt="Baseline vs adaptive rollout preview" width="48%" />
-  <img src="outputs/videos/05_failure_to_recovery.gif" alt="Failure to recovery rollout preview" width="48%" />
-</p>
+Research benchmark for 2D trajectory tracking under mid-episode dynamics shifts. The repo now keeps one canonical result bundle, `outputs/research/paper_best`, which captures the strongest full-suite run and all final visuals.
 
-2D trajectory-tracking benchmark with mid-episode dynamics shifts. A nominal tracker is compared against a learned adaptive controller under friction, mass, actuator-delay, and disturbance changes.
+The controller set is:
 
-| Quick fact | Value |
+- `baseline`
+- `adaptive_mlp`
+- `adaptive_gru_nominal`
+- `adaptive_gru_uncertainty`
+
+`adaptive_gru_nominal` is the current overall RMSE winner in the canonical bundle, while `adaptive_gru_uncertainty` remains the main uncertainty-aware method and hits the intended gain band.
+
+## Snapshot
+
+| Item | Value |
 |---|---:|
 | Plant | 2D point mass |
-| Baseline | Feedforward + PD + I |
-| Adaptive method | MLP estimator + analytic correction |
-| Shift modes | 4 |
-| Trajectory families | 5 |
-| RMSE change | `-18.5%` |
-| Final position error change | `-37.6%` |
-| Success rate | `97.92%` adaptive vs `93.75%` baseline |
+| Baseline controller | Feedforward + PD + I |
+| Learned estimators | `MLP`, `GRU + Gaussian NLL`, `GRU + uncertainty gating` |
+| Shift modes | 4 single-shift modes + 4 compound OOD combinations |
+| Trajectory families | 5 with hard unseen holdout |
+| Canonical suite config | `configs/experiments/paper_best.yaml` |
+| Canonical result bundle | `outputs/research/paper_best/` |
 
-## Visuals
+## Canonical Results
 
-| | |
-|---|---|
-| ![Trajectory Comparison](outputs/figures/trajectory_comparison.png) | ![Tracking Error vs Time](outputs/figures/tracking_error_vs_time.png) |
-| ![Control Signal vs Time](outputs/figures/control_signal_vs_time.png) | ![Robustness Under Dynamics Shift](outputs/figures/robustness_under_dynamics_shift.png) |
-| ![RMSE Boxplot Across Conditions](outputs/figures/rmse_boxplot_across_conditions.png) | 
+Source files:
 
-Videos:
+- `outputs/research/paper_best/metrics/controller_summary.csv`
+- `outputs/research/paper_best/metrics/controller_comparison.csv`
+- `outputs/research/paper_best/metrics/bootstrap_intervals.csv`
+- `outputs/research/paper_best/metrics/condition_breakdown.csv`
+- `outputs/research/paper_best/metrics/suite_summary.csv`
 
-- [outputs/videos/01_baseline_vs_adaptive.mp4](outputs/videos/01_baseline_vs_adaptive.mp4)
-- [outputs/videos/02_adaptive_rollout_single_episode.mp4](outputs/videos/02_adaptive_rollout_single_episode.mp4)
-- [outputs/videos/03_dynamics_shift_showcase.mp4](outputs/videos/03_dynamics_shift_showcase.mp4)
-- [outputs/videos/04_unseen_trajectory_generalization.mp4](outputs/videos/04_unseen_trajectory_generalization.mp4)
-- [outputs/videos/05_failure_to_recovery.mp4](outputs/videos/05_failure_to_recovery.mp4)
+Headline numbers from the canonical run:
 
-## Results
-
-| Metric | Baseline | Adaptive | Change |
+| Controller | RMSE | Success Rate | Mean Disturbance Gain |
 |---|---:|---:|---:|
-| RMSE | 0.1587 | 0.1294 | -18.5% |
-| MAE | 0.1034 | 0.0824 | -20.3% |
-| Final position error | 0.0856 | 0.0534 | -37.6% |
-| Heading error | 0.0825 | 0.0667 | -19.2% |
-| Success rate | 93.75% | 97.92% | +4.17 pp |
-| Control smoothness | 0.0786 | 0.0951 | higher variation |
-| Control energy proxy | 1.1028 | 1.0914 | -1.03% |
+| `adaptive_gru_nominal` | `0.1257` | `99.60%` | `1.0000` |
+| `adaptive_gru_uncertainty` | `0.1278` | `98.81%` | `0.9682` |
+| `adaptive_mlp` | `0.1426` | `97.62%` | `1.0000` |
+| `baseline` | `0.2008` | `86.51%` | `1.0000` |
 
-Matched-episode summary:
-
-- lower RMSE in `92.36%` of evaluation episodes
-- lower final position error in `81.25%` of evaluation episodes
-- success improved on `6` episodes and decreased on `0`
-
-Shift-wise summary:
-
-- `disturbance_burst`: largest RMSE reduction
-- `mass_shift`: lower RMSE at all intensities
-- `friction_shift`: consistent improvement
-- `actuator_delay`: smaller but positive gain
-
-Primary metrics files:
-
-- [outputs/metrics/controller_summary.csv](outputs/metrics/controller_summary.csv)
-- [outputs/metrics/aggregate_metrics.csv](outputs/metrics/aggregate_metrics.csv)
-- [outputs/metrics/per_episode_metrics.csv](outputs/metrics/per_episode_metrics.csv)
-
-## Run
+## Reproduce
 
 ```bash
-cd adaptive_tracking_project
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+python scripts/install_torch.py --mode auto --require-cuda-if-available
+python scripts/check_cuda_env.py
 ```
 
-Full pipeline:
+Run the canonical suite:
+
+```bash
+python scripts/run_suite.py --suite configs/experiments/paper_best.yaml
+```
+
+Run with progress logging:
+
+```bash
+python scripts/run_suite_with_progress.py --suite configs/experiments/paper_best.yaml
+```
+
+Run in `tmux`:
+
+```bash
+bash scripts/run_suite_tmux.sh --suite configs/experiments/paper_best.yaml
+```
+
+Focus-case analysis for the canonical suite:
+
+```bash
+python scripts/analyze_focus_cases.py --suite configs/experiments/paper_best.yaml
+```
+
+Legacy single-model pipeline remains available:
 
 ```bash
 python scripts/run_all.py --config configs/default.yaml
 ```
 
-Step-by-step:
+## Visual Gallery
 
-```bash
-python scripts/generate_data.py --config configs/default.yaml
-python scripts/train.py --config configs/default.yaml
-python scripts/evaluate.py --config configs/default.yaml
-python scripts/make_figures.py --config configs/default.yaml
-python scripts/make_videos.py --config configs/default.yaml
-```
+All visuals below are served directly from the canonical `paper_best` bundle.
 
-## Layout
+### Trajectory Comparison
 
-```text
-adaptive_tracking_project/
-├── configs/default.yaml
-├── scripts/
-├── src/
-│   ├── controllers/
-│   ├── data/
-│   ├── dynamics/
-│   ├── evaluation/
-│   ├── models/
-│   ├── training/
-│   ├── utils/
-│   └── visualization/
-└── outputs/
-    ├── checkpoints/
-    ├── datasets/
-    ├── figures/
-    ├── metrics/
-    └── videos/
-```
+![Trajectory comparison](outputs/research/paper_best/figures/trajectory_comparison.png)
+
+### Tracking Error vs Time
+
+![Tracking error vs time](outputs/research/paper_best/figures/tracking_error_vs_time.png)
+
+### Control Signal vs Time
+
+![Control signal vs time](outputs/research/paper_best/figures/control_signal_vs_time.png)
+
+### Robustness Under Dynamics Shift
+
+![Robustness under dynamics shift](outputs/research/paper_best/figures/robustness_under_dynamics_shift.png)
+
+### RMSE Across Conditions
+
+![RMSE boxplot across conditions](outputs/research/paper_best/figures/rmse_boxplot_across_conditions.png)
+
+### Ablation Summary Dashboard
+
+![Ablation summary dashboard](outputs/research/paper_best/figures/ablation_summary_dashboard.png)
+
+### ID vs Unseen vs Compound
+
+![ID vs unseen vs compound](outputs/research/paper_best/figures/id_vs_unseen_vs_compound.png)
+
+### Bootstrap CI Forest
+
+![Bootstrap CI forest](outputs/research/paper_best/figures/bootstrap_ci_forest.png)
+
+### Uncertainty vs Correction Gain
+
+![Uncertainty vs correction gain](outputs/research/paper_best/figures/uncertainty_vs_correction_gain.png)
+
+### Compound Shift Failure Recovery
+
+![Compound shift failure recovery](outputs/research/paper_best/figures/compound_shift_failure_recovery.png)
+
+### Focus Burst Dashboard
+
+![Focus burst dashboard](outputs/research/paper_best/figures/focus_burst_dashboard.png)
+
+### Focus Burst Gap Heatmap
+
+![Focus burst gap heatmap](outputs/research/paper_best/figures/focus_burst_gap_heatmap.png)
+
+### Focus-Case Alignment Dashboard
+
+![Focus-case alignment dashboard](outputs/research/paper_best/analysis/focus_cases/figures/focus_case_alignment_dashboard.png)
+
+### Focus-Case Worst Episode Panels
+
+![Focus-case worst episode panels](outputs/research/paper_best/analysis/focus_cases/figures/focus_case_worst_episode_panels.png)
+
+### Baseline vs Adaptive GIF
+
+![Baseline vs adaptive GIF](outputs/research/paper_best/videos/baseline_vs_adaptive.gif)
+
+### Dynamics Shift Showcase GIF
+
+![Dynamics shift showcase GIF](outputs/research/paper_best/videos/dynamics_shift_showcase.gif)
+
+### Unseen Trajectory Generalization GIF
+
+![Unseen trajectory generalization GIF](outputs/research/paper_best/videos/unseen_trajectory_generalization.gif)
+
+### Compound Shift Showcase GIF
+
+![Compound shift showcase GIF](outputs/research/paper_best/videos/compound_shift_showcase.gif)
+
+### Uncertainty-Aware Recovery GIF
+
+![Uncertainty-aware recovery GIF](outputs/research/paper_best/videos/uncertainty_aware_recovery.gif)
 
 ## Notes
 
-- `recovery_time` is currently a weak metric under the default threshold.
-- The unseen split is valid but still milder than a harder out-of-distribution test.
-- The adaptive controller improves tracking but has higher control variation than the baseline.
+- PyTorch is installed separately from `requirements.txt` so the bootstrap step can choose a CUDA wheel that matches the local NVIDIA driver.
+- `scripts/check_cuda_env.py` audits the GPU, driver, installed Torch build, and the recommended PyTorch CUDA channel.
+- Hard unseen trajectories use a holdout family rather than only wider parameter ranges.
+- Compound shifts are evaluation-only and act as the main OOD robustness test.
+- The visual stack is intentionally dense and visual-first, with minimal text and no bold typography.

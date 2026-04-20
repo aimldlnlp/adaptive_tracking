@@ -1,0 +1,23 @@
+{
+  "model_name": "adaptive_mlp",
+  "model_type": "mlp",
+  "loss": "mse",
+  "selection_metric": "val_severe_focus_mse",
+  "best_selection_score": 0.5978046645487217,
+  "best_val_loss": 0.17622452544597175,
+  "best_val_mse": 0.17622452544597175,
+  "best_val_focus_mse": 1.88862622440988,
+  "best_val_severe_focus_mse": 0.5978046645487217,
+  "best_val_delay_mse": 0.3751968608137758,
+  "best_val_disturbance_mse": 0.08898707420499494,
+  "uncertainty_stats": {},
+  "device": "cuda",
+  "epochs_ran": 22,
+  "target_names": [
+    "mass_ratio",
+    "friction_ratio",
+    "delay_severity",
+    "disturbance_x",
+    "disturbance_y"
+  ]
+}

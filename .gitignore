@@ -11,15 +11,30 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Large generated artifacts
-outputs/datasets/
-outputs/checkpoints/
-outputs/metrics/rollouts/
-outputs/videos/*.mp4
+# Generated artifacts
+outputs/*
+!outputs/research/
+outputs/logs/
+outputs/**/datasets/
+outputs/**/checkpoints/
+outputs/**/metrics/rollouts/
+outputs/**/*.npz
+outputs/**/*.pt
+outputs/**/*.mp4
 
-# Keep lightweight report artifacts
-!outputs/figures/
-!outputs/figures/*.png
-!outputs/videos/*.gif
-!outputs/metrics/*.csv
-!outputs/metrics/*.json
+# Publish only the canonical best bundle
+!outputs/research/paper_best/
+!outputs/research/paper_best/figures/
+!outputs/research/paper_best/figures/*.png
+!outputs/research/paper_best/videos/
+!outputs/research/paper_best/videos/*.gif
+!outputs/research/paper_best/metrics/
+!outputs/research/paper_best/metrics/*.csv
+!outputs/research/paper_best/metrics/*.json
+!outputs/research/paper_best/analysis/
+!outputs/research/paper_best/analysis/focus_cases/
+!outputs/research/paper_best/analysis/focus_cases/figures/
+!outputs/research/paper_best/analysis/focus_cases/figures/*.png
+!outputs/research/paper_best/analysis/focus_cases/tables/
+!outputs/research/paper_best/analysis/focus_cases/tables/*.csv
+!outputs/research/paper_best/analysis/focus_cases/*.json

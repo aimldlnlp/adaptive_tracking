@@ -12,6 +12,7 @@ from src.controllers.baseline import BaselineController
 from src.dynamics.robot import EpisodeSimulator, sample_episode_spec
 from src.utils.config import get_output_dir
 from src.utils.io import ensure_dir, save_json, save_npz
+from src.utils.logging_utils import ProgressCallback
 from src.utils.math_utils import padded_stack, safe_heading_from_velocity, wrap_angle
 
 
@@ -22,6 +23,8 @@ TARGET_NAMES = [
     "disturbance_x",
     "disturbance_y",
 ]
+HISTORY_FEATURE_DIM = 17
+CONTEXT_FEATURE_DIM = 12
 
 
 @dataclass
@@ -30,24 +33,32 @@ class FeatureBuilder:
     dt: float
 
     def __post_init__(self) -> None:
-        self.feature_dim = 17
+        self.history_feature_dim = HISTORY_FEATURE_DIM
+        self.context_feature_dim = CONTEXT_FEATURE_DIM
         self.reset()
 
     def reset(self) -> None:
         self.history: deque[np.ndarray] = deque(maxlen=self.history_steps)
         self.prev_obs_state: np.ndarray | None = None
 
-    def build(
+    def build(self, *args: Any, **kwargs: Any) -> np.ndarray:
+        return self.build_inputs(*args, **kwargs)["flat_features"]
+
+    def build_inputs(
         self,
         obs_state: np.ndarray,
         ref_current: dict[str, np.ndarray | float],
         ref_next: dict[str, np.ndarray | float],
         baseline_command: np.ndarray,
         prev_command: np.ndarray,
-    ) -> np.ndarray:
-        record = self._record(obs_state, ref_current, baseline_command, prev_command)
-        history_block = padded_stack((*self.history, record), self.history_steps, self.feature_dim).reshape(-1)
-        ref_block = np.concatenate(
+    ) -> dict[str, np.ndarray]:
+        history_record = self._record(obs_state, ref_current, baseline_command, prev_command)
+        history_sequence = padded_stack(
+            (*self.history, history_record),
+            self.history_steps,
+            self.history_feature_dim,
+        ).astype(np.float32)
+        context_features = np.concatenate(
             [
                 np.asarray(ref_current["position"], dtype=np.float32),
                 np.asarray(ref_current["velocity"], dtype=np.float32),
@@ -62,8 +73,13 @@ class FeatureBuilder:
                     dtype=np.float32,
                 ),
             ]
-        )
-        return np.concatenate([history_block, ref_block], axis=0).astype(np.float32)
+        ).astype(np.float32)
+        flat_features = np.concatenate([history_sequence.reshape(-1), context_features], axis=0).astype(np.float32)
+        return {
+            "flat_features": flat_features,
+            "sequence_features": history_sequence,
+            "context_features": context_features,
+        }
 
     def push(
         self,
@@ -105,15 +121,17 @@ class FeatureBuilder:
 
 
 def get_feature_dim(history_steps: int) -> int:
-    return history_steps * 17 + 12
+    return history_steps * HISTORY_FEATURE_DIM + CONTEXT_FEATURE_DIM
 
 
 def rollout_to_supervised_samples(
     rollout: dict[str, Any],
     feature_builder: FeatureBuilder,
-) -> tuple[np.ndarray, np.ndarray]:
+) -> dict[str, np.ndarray]:
     feature_builder.reset()
-    features: list[np.ndarray] = []
+    flat_features: list[np.ndarray] = []
+    sequence_features: list[np.ndarray] = []
+    context_features: list[np.ndarray] = []
     targets: list[np.ndarray] = []
     prev_command = np.zeros(2, dtype=np.float32)
     for index in range(len(rollout["time"])):
@@ -132,7 +150,7 @@ def rollout_to_supervised_samples(
         }
         baseline_command = rollout["baseline_command"][index]
         obs_state = rollout["observed_state"][index]
-        feature = feature_builder.build(obs_state, ref_current, ref_next, baseline_command, prev_command)
+        inputs = feature_builder.build_inputs(obs_state, ref_current, ref_next, baseline_command, prev_command)
         target = np.array(
             [
                 rollout["mass_ratio"][index],
@@ -143,52 +161,85 @@ def rollout_to_supervised_samples(
             ],
             dtype=np.float32,
         )
-        features.append(feature)
+        flat_features.append(inputs["flat_features"])
+        sequence_features.append(inputs["sequence_features"])
+        context_features.append(inputs["context_features"])
         targets.append(target)
         feature_builder.push(obs_state, ref_current, baseline_command, prev_command)
         prev_command = baseline_command.astype(np.float32)
-    return np.asarray(features, dtype=np.float32), np.asarray(targets, dtype=np.float32)
+    return {
+        "features": np.asarray(flat_features, dtype=np.float32),
+        "sequence_features": np.asarray(sequence_features, dtype=np.float32),
+        "context_features": np.asarray(context_features, dtype=np.float32),
+        "targets": np.asarray(targets, dtype=np.float32),
+    }
 
 
-def generate_datasets(config: dict[str, Any]) -> dict[str, Path]:
+def generate_datasets(
+    config: dict[str, Any],
+    progress_callback: ProgressCallback | None = None,
+) -> dict[str, Path]:
     simulation_cfg = config["simulation"]
     output_dir = get_output_dir(config, "datasets")
     ensure_dir(output_dir)
     simulator = EpisodeSimulator(config)
     baseline = BaselineController(config)
     feature_builder = FeatureBuilder(
-        history_steps=simulation_cfg["history_steps"],
-        dt=simulation_cfg["dt"],
+        history_steps=int(simulation_cfg["history_steps"]),
+        dt=float(simulation_cfg["dt"]),
     )
 
     dataset_paths: dict[str, Path] = {}
     specs_payload: dict[str, list[dict[str, Any]]] = {}
+    total_episodes = (
+        int(simulation_cfg["train_episodes"])
+        + int(simulation_cfg["val_episodes"])
+        + int(simulation_cfg["test_episodes"])
+    )
+    completed_episodes = 0
+    if progress_callback is not None:
+        progress_callback(0.0, "starting dataset generation")
 
-    for split, n_episodes, seed, unseen_fraction in [
-        ("train", simulation_cfg["train_episodes"], simulation_cfg["train_seed"], 0.0),
-        ("val", simulation_cfg["val_episodes"], simulation_cfg["val_seed"], 0.15),
-        ("test", simulation_cfg["test_episodes"], simulation_cfg["test_seed"], 0.5),
-    ]:
+    split_plan = [
+        ("train", simulation_cfg["train_episodes"], simulation_cfg["train_seed"], float(simulation_cfg.get("train_unseen_fraction", 0.0))),
+        ("val", simulation_cfg["val_episodes"], simulation_cfg["val_seed"], float(simulation_cfg.get("val_unseen_fraction", 0.15))),
+        ("test", simulation_cfg["test_episodes"], simulation_cfg["test_seed"], float(simulation_cfg.get("test_unseen_fraction", 0.5))),
+    ]
+    for split, n_episodes, seed, unseen_fraction in split_plan:
         rng = np.random.default_rng(seed)
-        split_features: list[np.ndarray] = []
+        split_flat_features: list[np.ndarray] = []
+        split_sequence_features: list[np.ndarray] = []
+        split_context_features: list[np.ndarray] = []
         split_targets: list[np.ndarray] = []
         split_specs: list[dict[str, Any]] = []
-        iterator = tqdm(range(n_episodes), desc=f"generate_{split}", leave=False)
+        iterator = tqdm(range(int(n_episodes)), desc=f"generate_{split}", leave=False)
         for episode_index in iterator:
             unseen = bool(rng.random() < unseen_fraction)
             spec = sample_episode_spec(config, split=split, rng=rng, episode_index=episode_index, unseen=unseen)
             rollout = simulator.simulate_episode(spec=spec, controller=baseline)
-            features, targets = rollout_to_supervised_samples(rollout, feature_builder)
-            split_features.append(features)
-            split_targets.append(targets)
+            samples = rollout_to_supervised_samples(rollout, feature_builder)
+            split_flat_features.append(samples["features"])
+            split_sequence_features.append(samples["sequence_features"])
+            split_context_features.append(samples["context_features"])
+            split_targets.append(samples["targets"])
             split_specs.append(spec)
+            completed_episodes += 1
+            if progress_callback is not None:
+                progress_callback(
+                    completed_episodes / max(total_episodes, 1),
+                    f"{split} episode {episode_index + 1}/{n_episodes}",
+                )
 
         dataset_path = output_dir / f"{split}_dataset.npz"
         save_npz(
             dataset_path,
-            features=np.concatenate(split_features, axis=0),
+            features=np.concatenate(split_flat_features, axis=0),
+            sequence_features=np.concatenate(split_sequence_features, axis=0),
+            context_features=np.concatenate(split_context_features, axis=0),
             targets=np.concatenate(split_targets, axis=0),
-            feature_dim=np.array([get_feature_dim(simulation_cfg["history_steps"])], dtype=np.int32),
+            feature_dim=np.array([get_feature_dim(int(simulation_cfg["history_steps"]))], dtype=np.int32),
+            sequence_feature_dim=np.array([HISTORY_FEATURE_DIM], dtype=np.int32),
+            context_feature_dim=np.array([CONTEXT_FEATURE_DIM], dtype=np.int32),
             target_names=np.asarray(TARGET_NAMES),
         )
         dataset_paths[split] = dataset_path
@@ -197,4 +248,6 @@ def generate_datasets(config: dict[str, Any]) -> dict[str, Path]:
     specs_path = output_dir / "episode_specs.json"
     save_json(specs_payload, specs_path)
     dataset_paths["specs"] = specs_path
+    if progress_callback is not None:
+        progress_callback(1.0, "dataset generation complete")
     return dataset_paths

@@ -1,0 +1,9 @@
+episode_id,shift_type,shift_intensity,condition_group,rmse_primary,success_primary,mean_correction_gain,mean_estimated_uncertainty,rmse_reference,success_reference,rmse_gap_primary_minus_reference,success_gap_primary_minus_reference
+eval_2026_disturbance_burst_severe_02,disturbance_burst,severe,in_distribution_single_shift,0.2200806587934494,1.0,0.9569069147109984,0.1893333047628402,0.1814408749341964,1.0,0.038639783859253,0.0
+compound_2026_actuator_delay-disturbance_burst_medium_02,actuator_delay+disturbance_burst,medium,compound_shift_ood,0.193842276930809,1.0,0.9388655424118042,0.1900430917739868,0.1645773947238922,1.0,0.0292648822069167,0.0
+compound_2026_actuator_delay-disturbance_burst_severe_02,actuator_delay+disturbance_burst,severe,compound_shift_ood,0.2622170150279999,1.0,0.968730628490448,0.1628109365701675,0.2337733209133148,1.0,0.028443694114685,0.0
+compound_2025_actuator_delay-disturbance_burst_severe_01,actuator_delay+disturbance_burst,severe,compound_shift_ood,0.2572567760944366,1.0,0.9460798501968384,0.1859969496726989,0.228913813829422,1.0,0.0283429622650145,0.0
+compound_2024_actuator_delay-disturbance_burst_medium_01,actuator_delay+disturbance_burst,medium,compound_shift_ood,0.1952080279588699,1.0,0.9399822354316713,0.2064071893692016,0.1669602990150451,1.0,0.0282477289438247,0.0
+compound_2025_actuator_delay-disturbance_burst_medium_02,actuator_delay+disturbance_burst,medium,compound_shift_ood,0.2746521830558777,1.0,0.9524117112159728,0.1625665426254272,0.2467533648014068,1.0,0.0278988182544708,0.0
+compound_2024_actuator_delay-disturbance_burst_severe_01,actuator_delay+disturbance_burst,severe,compound_shift_ood,0.2559544742107391,1.0,0.9319120645523072,0.2084597051143646,0.2284595370292663,1.0,0.0274949371814727,0.0
+eval_2025_disturbance_burst_severe_03,disturbance_burst,severe,in_distribution_single_shift,0.1752979457378387,1.0,0.975206732749939,0.1408597528934478,0.1504475176334381,1.0,0.0248504281044005,0.0

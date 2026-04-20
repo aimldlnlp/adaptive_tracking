@@ -1,0 +1,34 @@
+{
+  "model_name": "adaptive_gru_nominal",
+  "model_type": "gru_uncertainty",
+  "loss": "gaussian_nll",
+  "selection_metric": "val_severe_focus_mse",
+  "best_selection_score": 0.5313020521124808,
+  "best_val_loss": 18.954156127872967,
+  "best_val_mse": 0.2220468131310932,
+  "best_val_focus_mse": 1.4968431814165366,
+  "best_val_severe_focus_mse": 0.5313020521124808,
+  "best_val_delay_mse": 0.5261703192115984,
+  "best_val_disturbance_mse": 0.09061815856138838,
+  "uncertainty_stats": {
+    "mean": 0.24213069677352905,
+    "median": 0.13265036046504974,
+    "floor": 0.05511391535401344,
+    "ceiling": 0.5384761095046997,
+    "structure_mean": 0.33932730555534363,
+    "structure_floor": 0.2568395733833313,
+    "structure_ceiling": 0.5709035396575928,
+    "disturbance_mean": 0.17733298242092133,
+    "disturbance_floor": 0.049787066876888275,
+    "disturbance_ceiling": 0.4624476432800293
+  },
+  "device": "cuda",
+  "epochs_ran": 31,
+  "target_names": [
+    "mass_ratio",
+    "friction_ratio",
+    "delay_severity",
+    "disturbance_x",
+    "disturbance_y"
+  ]
+}

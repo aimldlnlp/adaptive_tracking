@@ -9,14 +9,14 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.utils.config import load_config
-from src.utils.logging_utils import configure_logging
+from src.utils.logging_utils import ProgressCallback, configure_logging
 from src.visualization.videos import create_all_videos
 
 
-def run(config_path: str) -> None:
+def run(config_path: str, progress_callback: ProgressCallback | None = None) -> None:
     config = load_config(config_path)
     configure_logging()
-    create_all_videos(config)
+    create_all_videos(config, progress_callback=progress_callback)
 
 
 def main() -> None:

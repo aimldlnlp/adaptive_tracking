@@ -10,15 +10,15 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from src.training.trainer import train_from_config
 from src.utils.config import load_config
-from src.utils.logging_utils import configure_logging
+from src.utils.logging_utils import ProgressCallback, configure_logging
 from src.utils.seeding import set_seed
 
 
-def run(config_path: str) -> None:
+def run(config_path: str, progress_callback: ProgressCallback | None = None) -> None:
     config = load_config(config_path)
     configure_logging()
     set_seed(int(config["simulation"]["train_seed"]))
-    train_from_config(config)
+    train_from_config(config, progress_callback=progress_callback)
 
 
 def main() -> None:

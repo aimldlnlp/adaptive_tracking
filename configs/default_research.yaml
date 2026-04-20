@@ -1,0 +1,149 @@
+project:
+  name: adaptive_tracking_project
+
+model:
+  name: adaptive_gru_uncertainty
+  type: gru_uncertainty
+  hidden_size: 128
+  head_hidden_size: 96
+  num_layers: 2
+  dropout: 0.05
+  uncertainty_aware: true
+  use_uncertainty_calibration: true
+  structure_uncertainty_power: 2.4
+  structure_min_gain: 0.97
+  disturbance_uncertainty_power: 0.95
+  disturbance_min_gain: 0.84
+  uncertainty_smoothing: 0.74
+  delay_support_scale: 0.16
+  delay_support_power: 1.15
+  disturbance_blend_boost: 0.1
+  disturbance_response_scale: 0.8
+  focus_burst_support_scale: 0.16
+  focus_delay_burst_support_scale: 0.24
+  focus_delay_burst_power: 1.1
+
+simulation:
+  dt: 0.05
+  episode_duration: 12.0
+  control_limit: 10.0
+  nominal_mass: 1.0
+  nominal_friction: 0.18
+  observation_noise_std: 0.01
+  noise_burst_multiplier: 5.0
+  disturbance_force_base: 0.0
+  disturbance_force_max: 3.2
+  history_steps: 6
+  train_episodes: 240
+  val_episodes: 72
+  test_episodes: 96
+  train_seed: 123
+  val_seed: 456
+  test_seed: 789
+  trajectory_kinds:
+    - circle
+    - figure8
+    - spline
+    - lane_change
+    - sinusoid
+  hard_unseen_holdout_trajectory_kinds:
+    - lane_change
+  shift_types:
+    - friction_shift
+    - mass_shift
+    - actuator_delay
+    - disturbance_burst
+  shift_intensities:
+    mild: 0.5
+    medium: 0.8
+    severe: 1.1
+  success_rmse_threshold: 0.45
+  success_final_error_threshold: 0.35
+  recovery_error_threshold: 0.28
+  recovery_consecutive_steps: 8
+  train_unseen_fraction: 0.0
+  val_unseen_fraction: 0.15
+  test_unseen_fraction: 0.5
+
+controller:
+  kp: 2.6
+  kd: 1.8
+  ki: 0.05
+  integral_limit: 1.5
+  delay_lead_gain: 1.1
+  correction_blend: 0.18
+  disturbance_blend: 0.28
+  mass_ratio_clip: [0.65, 2.8]
+  friction_ratio_clip: [0.35, 4.5]
+
+training:
+  batch_size: 512
+  epochs: 36
+  learning_rate: 0.0008
+  weight_decay: 0.0001
+  loss: gaussian_nll
+  selection_metric: val_severe_focus_mse
+  mse_aux_weight: 0.45
+  logvar_reg_weight: 0.03
+  severe_focus_loss_weight: 0.28
+  structure_head_loss_weight: 1.0
+  delay_head_loss_weight: 1.3
+  disturbance_head_loss_weight: 1.55
+  delay_target_focus_weight: 0.3
+  disturbance_target_focus_weight: 0.5
+  coupled_focus_weight: 0.65
+  focus_magnitude_clip: 3.2
+  severe_delay_threshold: 0.7
+  severe_disturbance_threshold: 1.15
+  severe_coupled_threshold: 0.95
+  severe_delay_focus_weight: 0.95
+  severe_disturbance_focus_weight: 1.2
+  severe_coupled_focus_weight: 1.45
+  selection_structure_head_weight: 1.0
+  selection_delay_head_weight: 1.45
+  selection_disturbance_head_weight: 1.75
+  selection_delay_target_focus_weight: 0.45
+  selection_disturbance_target_focus_weight: 0.7
+  selection_coupled_focus_weight: 0.9
+  selection_focus_magnitude_clip: 3.5
+  selection_severe_delay_threshold: 0.65
+  selection_severe_disturbance_threshold: 1.05
+  selection_severe_coupled_threshold: 0.85
+  selection_severe_delay_focus_weight: 1.15
+  selection_severe_disturbance_focus_weight: 1.45
+  selection_severe_coupled_focus_weight: 1.75
+  calibration_loss_weight: 0.28
+  calibration_target_weights: [0.55, 0.55, 1.3, 1.55, 1.55]
+  hidden_dims: [128, 128, 64]
+  dropout: 0.05
+  early_stopping_patience: 10
+  grad_clip: 1.0
+  device: auto
+
+evaluation:
+  seeds: [2024, 2025, 2026]
+  episodes_per_condition: 4
+  unseen_fraction: 0.35
+  primary_controller: adaptive_gru_uncertainty
+  compare_controllers: [baseline, adaptive_mlp, adaptive_gru_nominal, adaptive_gru_uncertainty]
+  include_compound_shifts: true
+  compound_shift_sets:
+    - [mass_shift, friction_shift]
+    - [mass_shift, disturbance_burst]
+    - [friction_shift, actuator_delay]
+    - [actuator_delay, disturbance_burst]
+  compound_episodes_per_condition: 3
+  bootstrap_samples: 700
+  correction_gain_target_low: 0.92
+  correction_gain_target_high: 0.97
+
+figures:
+  dpi: 180
+  width: 10.8
+  height: 6.4
+
+videos:
+  fps: 30
+  width: 1920
+  height: 1080
+  dpi: 100

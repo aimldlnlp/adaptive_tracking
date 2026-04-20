@@ -1,0 +1,11 @@
+{
+  "suite_name": "paper_best",
+  "suite_path": "/home/aimldl/adaptive_tracking/configs/experiments/paper_best.yaml",
+  "output_subdir": "research/paper_best",
+  "controllers": [
+    "baseline",
+    "adaptive_mlp",
+    "adaptive_gru_nominal",
+    "adaptive_gru_uncertainty"
+  ]
+}

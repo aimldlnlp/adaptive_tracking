@@ -1,0 +1,8 @@
+{
+  "analysis_dir": "/home/aimldl/adaptive_tracking/outputs/research/paper_best/analysis/focus_cases",
+  "step_traces": "/home/aimldl/adaptive_tracking/outputs/research/paper_best/analysis/focus_cases/tables/focus_case_step_traces.csv",
+  "alignment_summary": "/home/aimldl/adaptive_tracking/outputs/research/paper_best/analysis/focus_cases/tables/focus_case_alignment_summary.csv",
+  "top_episodes": "/home/aimldl/adaptive_tracking/outputs/research/paper_best/analysis/focus_cases/tables/focus_case_top_episodes.csv",
+  "alignment_dashboard": "/home/aimldl/adaptive_tracking/outputs/research/paper_best/analysis/focus_cases/figures/focus_case_alignment_dashboard.png",
+  "worst_episode_panels": "/home/aimldl/adaptive_tracking/outputs/research/paper_best/analysis/focus_cases/figures/focus_case_worst_episode_panels.png"
+}

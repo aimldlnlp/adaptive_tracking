@@ -1,0 +1,9 @@
+item,primary_controller,rmse_delta,success_rate_delta,control_smoothness_delta,mean_correction_gain,mean_structure_gain,mean_disturbance_gain,gain_target_low,gain_target_high,gain_target_hit
+primary_vs_baseline,adaptive_gru_uncertainty,-0.07293927501000111,0.12301587301587302,0.022787807819743947,0.9681932968752724,0.99787456932522,0.9681932968752724,0.92,0.97,1.0
+primary_gain_acceptance,adaptive_gru_uncertainty,0.0,0.0,0.0,0.9681932968752724,0.99787456932522,0.9681932968752724,0.92,0.97,1.0
+baseline_vs_adaptive_mlp,adaptive_gru_uncertainty,0.0582112634022321,-0.1111111111111111,-0.026592024010680025,,,,0.92,0.97,
+baseline_vs_adaptive_gru_nominal,adaptive_gru_uncertainty,0.07505398242187405,-0.13095238095238096,-0.023949831901561646,,,,0.92,0.97,
+baseline_vs_adaptive_gru_uncertainty,adaptive_gru_uncertainty,0.0729392750100011,-0.12301587301587301,-0.02278780781974395,,,,0.92,0.97,
+adaptive_mlp_vs_adaptive_gru_nominal,adaptive_gru_uncertainty,0.01684271901964195,-0.01984126984126984,0.002642192109118378,,,,0.92,0.97,
+adaptive_mlp_vs_adaptive_gru_uncertainty,adaptive_gru_uncertainty,0.01472801160776899,-0.011904761904761904,0.0038042161909360734,,,,0.92,0.97,
+adaptive_gru_nominal_vs_adaptive_gru_uncertainty,adaptive_gru_uncertainty,-0.0021147074118729623,0.007936507936507936,0.001162024081817695,,,,0.92,0.97,

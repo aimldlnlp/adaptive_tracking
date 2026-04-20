@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from copy import deepcopy
 from pathlib import Path
 from typing import Any, Dict
 
@@ -23,8 +24,27 @@ def get_project_root(config: ConfigDict) -> Path:
 
 
 def get_output_dir(config: ConfigDict, *parts: str) -> Path:
-    return get_project_root(config).joinpath("outputs", *parts)
+    project_cfg = config.get("project", {})
+    output_subdir = str(project_cfg.get("output_subdir", "")).strip().strip("/")
+    base = get_project_root(config).joinpath("outputs")
+    if output_subdir:
+        base = base.joinpath(output_subdir)
+    return base.joinpath(*parts)
 
 
 def get_config_name(config: ConfigDict) -> str:
     return Path(config["config_path"]).stem
+
+
+def merge_config(base: ConfigDict, overrides: ConfigDict) -> ConfigDict:
+    merged = deepcopy(base)
+    _merge_into(merged, overrides)
+    return merged
+
+
+def _merge_into(target: ConfigDict, updates: ConfigDict) -> None:
+    for key, value in updates.items():
+        if isinstance(value, dict) and isinstance(target.get(key), dict):
+            _merge_into(target[key], value)
+            continue
+        target[key] = deepcopy(value)

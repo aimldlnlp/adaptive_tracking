@@ -3,7 +3,6 @@ scipy>=1.10
 matplotlib>=3.8
 pandas>=2.0
 PyYAML>=6.0
-torch>=2.2
 imageio>=2.34
 imageio-ffmpeg>=0.5
 tqdm>=4.66

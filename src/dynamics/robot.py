@@ -25,12 +25,22 @@ def sample_episode_spec(
     unseen: bool = False,
     forced_shift_type: str | None = None,
     forced_intensity: str | None = None,
+    forced_compound_shift_types: list[str] | None = None,
 ) -> dict[str, Any]:
     sim_cfg = config["simulation"]
     duration = float(sim_cfg["episode_duration"])
-    shift_type = forced_shift_type or str(rng.choice(sim_cfg["shift_types"]))
+    shift_types = forced_compound_shift_types or [forced_shift_type or str(rng.choice(sim_cfg["shift_types"]))]
+    shift_label = "+".join(shift_types)
     intensity = forced_intensity or str(rng.choice(list(sim_cfg["shift_intensities"].keys())))
-    kind = str(rng.choice(sim_cfg["trajectory_kinds"]))
+    all_kinds = list(sim_cfg["trajectory_kinds"])
+    holdout_kinds = list(sim_cfg.get("hard_unseen_holdout_trajectory_kinds", []))
+    if split == "test" and unseen and holdout_kinds:
+        candidate_kinds = holdout_kinds
+    else:
+        candidate_kinds = [kind for kind in all_kinds if kind not in holdout_kinds]
+        if not candidate_kinds:
+            candidate_kinds = all_kinds
+    kind = str(rng.choice(candidate_kinds))
     shift_time = float(rng.uniform(0.28, 0.68) * duration)
     pre_mass_ratio = float(rng.uniform(0.9, 1.08))
     pre_friction_ratio = float(rng.uniform(0.8, 1.2))
@@ -46,17 +56,18 @@ def sample_episode_spec(
     burst_duration = float(rng.uniform(1.6, 2.6))
 
     level = SHIFT_INTENSITY_TO_LEVEL[intensity]
-    if shift_type == "friction_shift":
-        post_friction_ratio = float(pre_friction_ratio * (1.0 + 1.25 * level))
-    elif shift_type == "mass_shift":
-        post_mass_ratio = float(pre_mass_ratio * (1.0 + 1.15 * level))
-    elif shift_type == "actuator_delay":
-        post_delay_steps = int(np.clip(round(1 + 2 * level), 1, 3))
-        post_lag_alpha = float(max(0.25, 0.92 - 0.48 * level))
-    elif shift_type == "disturbance_burst":
-        disturbance_amplitude = float(1.0 + 1.8 * level)
-    else:
-        raise ValueError(f"Unknown shift type: {shift_type}")
+    for shift_type in shift_types:
+        if shift_type == "friction_shift":
+            post_friction_ratio = float(post_friction_ratio * (1.0 + 1.25 * level))
+        elif shift_type == "mass_shift":
+            post_mass_ratio = float(post_mass_ratio * (1.0 + 1.15 * level))
+        elif shift_type == "actuator_delay":
+            post_delay_steps = max(post_delay_steps, int(np.clip(round(1 + 2 * level), 1, 3)))
+            post_lag_alpha = float(min(post_lag_alpha, max(0.25, 0.92 - 0.48 * level)))
+        elif shift_type == "disturbance_burst":
+            disturbance_amplitude = float(max(disturbance_amplitude, 1.0 + 1.8 * level))
+        else:
+            raise ValueError(f"Unknown shift type: {shift_type}")
 
     trajectory_params = sample_trajectory_params(
         kind=kind,
@@ -68,14 +79,21 @@ def sample_episode_spec(
     initial_offset = rng.normal(0.0, 0.22 if split != "test" else 0.28, size=4).astype(np.float32)
 
     return {
-        "episode_id": f"{split}_{episode_index:04d}_{kind}_{shift_type}_{intensity}",
+        "episode_id": f"{split}_{episode_index:04d}_{kind}_{shift_label.replace('+', '-')}_{intensity}",
         "episode_seed": int(rng.integers(0, 2**31 - 1)),
         "split": split,
         "unseen": bool(unseen),
         "trajectory_kind": kind,
         "trajectory_params": trajectory_params,
-        "shift_type": shift_type,
+        "shift_type": shift_label,
+        "shift_types": shift_types,
+        "compound_shift": bool(len(shift_types) > 1),
         "shift_intensity": intensity,
+        "condition_group": (
+            "compound_shift_ood"
+            if len(shift_types) > 1
+            else ("hard_unseen_trajectory" if unseen else "in_distribution_single_shift")
+        ),
         "shift_time": shift_time,
         "burst_duration": burst_duration,
         "initial_offset": initial_offset.tolist(),
@@ -149,6 +167,12 @@ class EpisodeSimulator:
             "disturbance_force": [],
             "shift_active": [],
             "estimated_targets": [],
+            "estimated_uncertainty": [],
+            "structure_estimated_uncertainty": [],
+            "disturbance_estimated_uncertainty": [],
+            "correction_gain": [],
+            "structure_gain": [],
+            "disturbance_gain": [],
         }
 
         for index, current_time in enumerate(self.time):
@@ -208,6 +232,18 @@ class EpisodeSimulator:
             history["disturbance_force"].append(disturbance_force.astype(np.float32))
             history["shift_active"].append(float(shift_active))
             history["estimated_targets"].append(np.asarray(aux.get("estimated_targets", np.zeros(5)), dtype=np.float32))
+            history["estimated_uncertainty"].append(
+                np.asarray(aux.get("estimated_uncertainty", np.zeros(1)), dtype=np.float32)
+            )
+            history["structure_estimated_uncertainty"].append(
+                np.asarray(aux.get("structure_estimated_uncertainty", np.zeros(1)), dtype=np.float32)
+            )
+            history["disturbance_estimated_uncertainty"].append(
+                np.asarray(aux.get("disturbance_estimated_uncertainty", np.zeros(1)), dtype=np.float32)
+            )
+            history["correction_gain"].append(np.asarray(aux.get("correction_gain", np.ones(1)), dtype=np.float32))
+            history["structure_gain"].append(np.asarray(aux.get("structure_gain", np.ones(1)), dtype=np.float32))
+            history["disturbance_gain"].append(np.asarray(aux.get("disturbance_gain", np.ones(1)), dtype=np.float32))
             prev_command = command
 
         rollout = {
@@ -230,7 +266,8 @@ class EpisodeSimulator:
         disturbance_force = np.zeros(2, dtype=np.float32)
         noise_scale = self.base_noise
 
-        if spec["shift_type"] == "disturbance_burst":
+        shift_types = list(spec.get("shift_types", [spec["shift_type"]]))
+        if "disturbance_burst" in shift_types:
             burst_end = float(spec["shift_time"]) + float(spec["burst_duration"])
             if float(spec["shift_time"]) <= current_time <= burst_end:
                 phase = float(spec["disturbance_frequency"]) * (current_time - float(spec["shift_time"]))
@@ -245,8 +282,6 @@ class EpisodeSimulator:
                 disturbance_force = float(spec["disturbance_amplitude"]) * envelope * direction
                 noise_scale = self.base_noise * self.noise_burst_multiplier
                 shift_active = True
-            else:
-                shift_active = False
         return mass_ratio, friction_ratio, delay_steps, lag_alpha, disturbance_force, noise_scale, shift_active
 
     @staticmethod

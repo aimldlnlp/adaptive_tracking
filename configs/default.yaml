@@ -1,6 +1,13 @@
 project:
   name: adaptive_tracking_project
 
+model:
+  name: adaptive
+  type: mlp
+  hidden_dims: [128, 128, 64]
+  dropout: 0.05
+  uncertainty_aware: false
+
 simulation:
   dt: 0.05
   episode_duration: 12.0
@@ -24,6 +31,8 @@ simulation:
     - spline
     - lane_change
     - sinusoid
+  hard_unseen_holdout_trajectory_kinds:
+    - lane_change
   shift_types:
     - friction_shift
     - mass_shift
@@ -54,6 +63,7 @@ training:
   epochs: 20
   learning_rate: 0.001
   weight_decay: 0.0001
+  loss: mse
   hidden_dims: [128, 128, 64]
   dropout: 0.05
   early_stopping_patience: 5
@@ -64,6 +74,16 @@ evaluation:
   seeds: [2024, 2025, 2026]
   episodes_per_condition: 4
   unseen_fraction: 0.35
+  primary_controller: adaptive
+  compare_controllers: [baseline, adaptive]
+  include_compound_shifts: false
+  compound_shift_sets:
+    - [mass_shift, friction_shift]
+    - [mass_shift, disturbance_burst]
+    - [friction_shift, actuator_delay]
+    - [actuator_delay, disturbance_burst]
+  compound_episodes_per_condition: 3
+  bootstrap_samples: 500
 
 figures:
   dpi: 180

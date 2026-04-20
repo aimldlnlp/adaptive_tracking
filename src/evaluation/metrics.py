@@ -38,6 +38,18 @@ def compute_episode_metrics(config: dict[str, Any], rollout: dict[str, Any]) -> 
     control_diff = np.diff(rollout["command"], axis=0)
     control_smoothness = float(np.mean(np.linalg.norm(control_diff, axis=1))) if len(control_diff) else 0.0
     control_energy_proxy = float(np.mean(np.sum(rollout["command"] ** 2, axis=1)))
+    estimated_uncertainty = rollout.get("estimated_uncertainty", np.zeros((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
+    structure_estimated_uncertainty = rollout.get(
+        "structure_estimated_uncertainty",
+        np.zeros((len(rollout["time"]), 1), dtype=np.float32),
+    ).reshape(-1)
+    disturbance_estimated_uncertainty = rollout.get(
+        "disturbance_estimated_uncertainty",
+        np.zeros((len(rollout["time"]), 1), dtype=np.float32),
+    ).reshape(-1)
+    correction_gain = rollout.get("correction_gain", np.ones((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
+    structure_gain = rollout.get("structure_gain", np.ones((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
+    disturbance_gain = rollout.get("disturbance_gain", np.ones((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
     return {
         "rmse": rmse,
         "mae": mae,
@@ -50,12 +62,22 @@ def compute_episode_metrics(config: dict[str, Any], rollout: dict[str, Any]) -> 
         "peak_error_after_shift": float(np.max(position_error[shift_index:])),
         "mean_error_after_shift": float(np.mean(position_error[shift_index:])),
         "robustness_score": float(np.exp(-rmse) * (0.6 + 0.4 * success)),
+        "mean_estimated_uncertainty": float(np.mean(estimated_uncertainty)),
+        "peak_estimated_uncertainty": float(np.max(estimated_uncertainty)),
+        "mean_structure_uncertainty": float(np.mean(structure_estimated_uncertainty)),
+        "mean_disturbance_uncertainty": float(np.mean(disturbance_estimated_uncertainty)),
+        "mean_correction_gain": float(np.mean(correction_gain)),
+        "post_shift_correction_gain": float(np.mean(correction_gain[shift_index:])),
+        "mean_structure_gain": float(np.mean(structure_gain)),
+        "post_shift_structure_gain": float(np.mean(structure_gain[shift_index:])),
+        "mean_disturbance_gain": float(np.mean(disturbance_gain)),
+        "post_shift_disturbance_gain": float(np.mean(disturbance_gain[shift_index:])),
     }
 
 
 def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     aggregate = (
-        metrics_frame.groupby(["controller", "shift_type", "shift_intensity"], as_index=False)
+        metrics_frame.groupby(["controller", "condition_group", "shift_type", "shift_intensity"], as_index=False)
         .agg(
             rmse_mean=("rmse", "mean"),
             rmse_std=("rmse", "std"),
@@ -67,6 +89,12 @@ def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             control_smoothness_mean=("control_smoothness", "mean"),
             control_energy_proxy_mean=("control_energy_proxy", "mean"),
             robustness_score_mean=("robustness_score", "mean"),
+            mean_estimated_uncertainty=("mean_estimated_uncertainty", "mean"),
+            mean_structure_uncertainty=("mean_structure_uncertainty", "mean"),
+            mean_disturbance_uncertainty=("mean_disturbance_uncertainty", "mean"),
+            mean_correction_gain=("mean_correction_gain", "mean"),
+            mean_structure_gain=("mean_structure_gain", "mean"),
+            mean_disturbance_gain=("mean_disturbance_gain", "mean"),
         )
         .fillna(0.0)
     )
@@ -82,6 +110,12 @@ def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             control_smoothness_mean=("control_smoothness", "mean"),
             control_energy_proxy_mean=("control_energy_proxy", "mean"),
             robustness_score_mean=("robustness_score", "mean"),
+            mean_estimated_uncertainty=("mean_estimated_uncertainty", "mean"),
+            mean_structure_uncertainty=("mean_structure_uncertainty", "mean"),
+            mean_disturbance_uncertainty=("mean_disturbance_uncertainty", "mean"),
+            mean_correction_gain=("mean_correction_gain", "mean"),
+            mean_structure_gain=("mean_structure_gain", "mean"),
+            mean_disturbance_gain=("mean_disturbance_gain", "mean"),
         )
         .fillna(0.0)
     )

@@ -8,7 +8,7 @@ import pandas as pd
 from src.utils.math_utils import moving_average, safe_heading_from_velocity, wrap_angle
 
 
-def compute_episode_metrics(config: dict[str, Any], rollout: dict[str, Any]) -> dict[str, float]:
+def compute_episode_metrics(config: dict[str, Any], rollout: dict[str, Any]) -> dict[str, float | str]:
     sim_cfg = config["simulation"]
     position_error = np.linalg.norm(rollout["ref_position"] - rollout["true_state"][:, :2], axis=1)
     rmse = float(np.sqrt(np.mean(position_error**2)))
@@ -28,7 +28,7 @@ def compute_episode_metrics(config: dict[str, Any], rollout: dict[str, Any]) -> 
     )
     shift_time = float(json_metadata(rollout)["shift_time"])
     shift_index = int(np.searchsorted(rollout["time"], shift_time))
-    recovery_time = _compute_recovery_time(
+    recovery = _compute_recovery_metrics(
         errors=position_error,
         time=rollout["time"],
         shift_index=shift_index,
@@ -56,7 +56,7 @@ def compute_episode_metrics(config: dict[str, Any], rollout: dict[str, Any]) -> 
         "final_position_error": final_position_error,
         "heading_error": heading_error,
         "success": success,
-        "recovery_time": recovery_time,
+        **recovery,
         "control_smoothness": control_smoothness,
         "control_energy_proxy": control_energy_proxy,
         "peak_error_after_shift": float(np.max(position_error[shift_index:])),
@@ -86,6 +86,8 @@ def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             heading_error_mean=("heading_error", "mean"),
             success_rate=("success", "mean"),
             recovery_time_mean=("recovery_time", "mean"),
+            recovery_needed_rate=("recovery_needed", "mean"),
+            recovery_success_rate=("recovery_success", "mean"),
             control_smoothness_mean=("control_smoothness", "mean"),
             control_energy_proxy_mean=("control_energy_proxy", "mean"),
             robustness_score_mean=("robustness_score", "mean"),
@@ -96,7 +98,7 @@ def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             mean_structure_gain=("mean_structure_gain", "mean"),
             mean_disturbance_gain=("mean_disturbance_gain", "mean"),
         )
-        .fillna(0.0)
+        .fillna({"rmse_std": 0.0})
     )
     summary = (
         metrics_frame.groupby(["controller"], as_index=False)
@@ -107,6 +109,8 @@ def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             heading_error_mean=("heading_error", "mean"),
             success_rate=("success", "mean"),
             recovery_time_mean=("recovery_time", "mean"),
+            recovery_needed_rate=("recovery_needed", "mean"),
+            recovery_success_rate=("recovery_success", "mean"),
             control_smoothness_mean=("control_smoothness", "mean"),
             control_energy_proxy_mean=("control_energy_proxy", "mean"),
             robustness_score_mean=("robustness_score", "mean"),
@@ -117,7 +121,6 @@ def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             mean_structure_gain=("mean_structure_gain", "mean"),
             mean_disturbance_gain=("mean_disturbance_gain", "mean"),
         )
-        .fillna(0.0)
     )
     return aggregate, summary
 
@@ -144,21 +147,29 @@ def aligned_error_curve(rollout: dict[str, Any], horizon: tuple[float, float], s
     return grid, curve
 
 
-def _compute_recovery_time(
+def _compute_recovery_metrics(
     errors: np.ndarray,
     time: np.ndarray,
     shift_index: int,
     threshold: float,
     consecutive_steps: int,
-) -> float:
-    if shift_index >= len(errors):
-        return 0.0
-    count = 0
-    for index in range(shift_index, len(errors)):
-        if errors[index] <= threshold:
-            count += 1
-        else:
-            count = 0
-        if count >= consecutive_steps:
-            return float(time[index] - time[shift_index])
-    return float(time[-1] - time[shift_index])
+) -> dict[str, float | str]:
+    """Final settling, confirmed by a dwell window with no later threshold breach.
+
+    Time is defined only for recovered episodes. Success excludes no-loss episodes.
+    This offline metric accounts for delayed error spikes and subsequent relapses.
+    """
+    if consecutive_steps < 1:
+        raise ValueError("recovery_consecutive_steps must be positive")
+    breaches = np.flatnonzero(errors[shift_index:] > threshold)
+    if not len(breaches):
+        return {"recovery_status": "no_loss", "recovery_time": float("nan"),
+                "recovery_needed": 0.0, "recovery_success": float("nan")}
+    confirmation_index = shift_index + int(breaches[-1]) + consecutive_steps
+    recovered = confirmation_index < len(errors)
+    return {
+        "recovery_status": "recovered" if recovered else "failed",
+        "recovery_time": float(time[confirmation_index] - time[shift_index]) if recovered else float("nan"),
+        "recovery_needed": 1.0,
+        "recovery_success": float(recovered),
+    }

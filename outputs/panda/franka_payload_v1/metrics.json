@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "rmse_m": 0.027067598884849293,
+    "pre_shift_rmse_m": 0.003941500099217761,
+    "post_shift_rmse_m": 0.03410170965225162,
+    "peak_error_m": 0.04734252072762358,
+    "orientation_rmse_deg": 0.5492995455923207,
+    "torque_saturation_fraction": 0.0,
+    "recovery_status": "failed",
+    "recovery_time": null,
+    "recovery_needed": 1.0,
+    "recovery_success": 0.0
+  },
+  "adaptive_gru": {
+    "rmse_m": 0.008257445875178644,
+    "pre_shift_rmse_m": 0.003975392442652889,
+    "post_shift_rmse_m": 0.009980702017721332,
+    "peak_error_m": 0.013008317168923382,
+    "orientation_rmse_deg": 0.5430394682000557,
+    "torque_saturation_fraction": 0.0,
+    "recovery_status": "no_loss",
+    "recovery_time": null,
+    "recovery_needed": 0.0,
+    "recovery_success": null
+  }
+}

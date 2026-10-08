@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
@@ -160,7 +161,9 @@ def train_from_config(
         if score < best_score:
             best_score = score
             best_state = {
-                "model_state": model.state_dict(),
+                "model_state": deepcopy(model.state_dict()),
+                "best_epoch": epoch + 1,
+                "best_selection_score": best_score,
                 "model_type": model_type,
                 "model_name": model_name,
                 "output_dim": y_train.shape[1],
@@ -215,6 +218,7 @@ def train_from_config(
             "loss": loss_name,
             "selection_metric": selection_metric,
             "best_selection_score": best_score,
+            "best_epoch": best_state["best_epoch"],
             "best_val_loss": best_state["best_val_loss"],
             "best_val_mse": best_state["best_val_mse"],
             "best_val_focus_mse": best_state.get("best_val_focus_mse"),

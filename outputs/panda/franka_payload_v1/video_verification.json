@@ -1,0 +1,29 @@
+{
+  "adaptive_gru.mp4": {
+    "size": [
+      960,
+      1080
+    ],
+    "fps": 30.0,
+    "duration": 26.0,
+    "bytes": 1801948
+  },
+  "baseline.mp4": {
+    "size": [
+      960,
+      1080
+    ],
+    "fps": 30.0,
+    "duration": 26.0,
+    "bytes": 1822222
+  },
+  "comparison.mp4": {
+    "size": [
+      1920,
+      1080
+    ],
+    "fps": 30.0,
+    "duration": 26.0,
+    "bytes": 3574045
+  }
+}

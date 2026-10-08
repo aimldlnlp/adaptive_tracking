@@ -1,0 +1,25 @@
+seed: 8102026
+physics_dt: 0.002
+control_dt: 0.02
+duration: 24.0
+payload_time: 9.0
+payload_kg: 1.5
+push_time: 16.0
+push_duration: 2.0
+push_force: [8.0, -10.0, 0.0]
+position_kp: 450.0
+position_kd: 45.0
+orientation_kp: 35.0
+orientation_kd: 8.0
+force_limit: 35.0
+sensor_velocity_noise: 0.002
+history_steps: 12
+train_episodes: 48
+val_episodes: 12
+training_duration: 12.0
+epochs: 35
+hidden_size: 48
+batch_size: 256
+learning_rate: 0.001
+fps: 30
+recovery_threshold_m: 0.015

@@ -1,0 +1,15 @@
+{
+  "duration": 24.0,
+  "payload_time": 9.0,
+  "payload_kg": 1.5,
+  "push_time": 16.0,
+  "push_duration": 2.0,
+  "push_force": [
+    8.0,
+    -10.0,
+    0.0
+  ],
+  "noise_seed": 20261008,
+  "amplitude": 1.0,
+  "speed": 1.0
+}

@@ -1,40 +1,40 @@
-# Python
+# Python environments and caches
 .venv/
+.panda-venv/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 .pytest_cache/
 .mypy_cache/
 
-# OS / editor
+# Downloaded models and local analysis
+third_party/
+graphify-out/
+.graphifyignore
+*.log
+
+# Operating system files
 .DS_Store
 Thumbs.db
 
-# Generated artifacts
+# Generated runs: publish only the reproducible demonstration below.
 outputs/*
-!outputs/research/
-outputs/logs/
-outputs/**/datasets/
-outputs/**/checkpoints/
-outputs/**/metrics/rollouts/
-outputs/**/*.npz
-outputs/**/*.pt
-outputs/**/*.mp4
-
-# Publish only the canonical best bundle
-!outputs/research/paper_best/
-!outputs/research/paper_best/figures/
-!outputs/research/paper_best/figures/*.png
-!outputs/research/paper_best/videos/
-!outputs/research/paper_best/videos/*.gif
-!outputs/research/paper_best/metrics/
-!outputs/research/paper_best/metrics/*.csv
-!outputs/research/paper_best/metrics/*.json
-!outputs/research/paper_best/analysis/
-!outputs/research/paper_best/analysis/focus_cases/
-!outputs/research/paper_best/analysis/focus_cases/figures/
-!outputs/research/paper_best/analysis/focus_cases/figures/*.png
-!outputs/research/paper_best/analysis/focus_cases/tables/
-!outputs/research/paper_best/analysis/focus_cases/tables/*.csv
-!outputs/research/paper_best/analysis/focus_cases/*.json
+!outputs/panda/
+outputs/panda/*
+!outputs/panda/franka_payload_v1/
+outputs/panda/franka_payload_v1/*
+!outputs/panda/franka_payload_v1/comparison.mp4
+!outputs/panda/franka_payload_v1/baseline.mp4
+!outputs/panda/franka_payload_v1/adaptive_gru.mp4
+!outputs/panda/franka_payload_v1/poster.png
+!outputs/panda/franka_payload_v1/tracking_summary.png
+!outputs/panda/franka_payload_v1/tracking_summary.svg
+!outputs/panda/franka_payload_v1/metrics.json
+!outputs/panda/franka_payload_v1/manifest.json
+!outputs/panda/franka_payload_v1/resolved_config.json
+!outputs/panda/franka_payload_v1/demo_scenario.json
+!outputs/panda/franka_payload_v1/training_history.json
+!outputs/panda/franka_payload_v1/train_scenarios.json
+!outputs/panda/franka_payload_v1/val_scenarios.json
+!outputs/panda/franka_payload_v1/video_verification.json
+!outputs/panda/franka_payload_v1/panda_gru.pt
+!outputs/panda/franka_payload_v1/*_rollout.npz

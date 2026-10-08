@@ -1,0 +1,35 @@
+{
+  "mujoco": "3.6.0",
+  "torch": "2.2.0+cu118",
+  "seed": 8102026,
+  "best_epoch": 27,
+  "validation_force_rmse_n": 0.3580990436612577,
+  "model": "Franka Emika Panda",
+  "scenario": {
+    "duration": 24.0,
+    "payload_time": 9.0,
+    "payload_kg": 1.5,
+    "push_time": 16.0,
+    "push_duration": 2.0,
+    "push_force": [
+      8.0,
+      -10.0,
+      0.0
+    ],
+    "noise_seed": 20261008,
+    "amplitude": 1.0,
+    "speed": 1.0
+  },
+  "asset_xml_sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273",
+  "asset_git_revision": "0059d4335f8156206f63a35662313385f7ad6d74",
+  "checkpoint_sha256": "6e498db1ebfbe33b33761dd490c90b2523fbc9421da30531f9f714d891e616d1",
+  "source_sha256": {
+    "src/panda/tracking.py": "a1cb3dd4322c30de4d1a37ea783dd074102af894b89e845adf62fd1faaf34339",
+    "src/panda/render.py": "2e7a2a631ce2abd455fa89ae2efecfff85b60c4c411037178086b1cb230ea65f",
+    "scripts/run_panda.py": "d327f19e2911588613e5d4f953235a63a1b1cf6cec2d1e2ae4c084773dd930b4",
+    "configs/panda.yaml": "430449ff13784064dec87cb263819afc21bbad6331ca3e8bf148cdc3939c53ba"
+  },
+  "fairness": "same reference, event schedule, sensor noise seed, impedance gains, nominal model, and torque limits",
+  "limitations": "new Panda residual GRU; not the XY checkpoint; one showcase is not a broad robotics benchmark",
+  "source_hash_encoding": "UTF-8 with LF newlines"
+}

@@ -1,172 +1,122 @@
-# Adaptive Trajectory Tracking under Dynamic Shifts
+# Adaptive Trajectory Tracking
 
-Research benchmark for 2D trajectory tracking under mid-episode dynamics shifts. The repo now keeps one canonical result bundle, `outputs/research/paper_best`, which captures the strongest full-suite run and all final visuals.
+**Physics-informed control meets recurrent residual estimation.** A torque-driven Franka Panda follows a Cartesian trajectory while its payload and external forces change. This project connects system modelling, feedback control, supervised learning, reproducible experiments, and scientific visualization.
 
-The controller set is:
+## Demonstration
 
-- `baseline`
-- `adaptive_mlp`
-- `adaptive_gru_nominal`
-- `adaptive_gru_uncertainty`
+<!-- Playable video attachment -->
 
-`adaptive_gru_nominal` is the current overall RMSE winner in the canonical bundle, while `adaptive_gru_uncertainty` remains the main uncertainty-aware method and hits the intended gain band.
+[![Panda tracking comparison](outputs/panda/franka_payload_v1/poster.png)](outputs/panda/franka_payload_v1/comparison.mp4)
 
-## Snapshot
+**26 seconds · 1920 × 1080 · H.264 · 30 fps.** A 3D figure-eight with fixed end-effector orientation, a **1.5 kg payload added at 9 s**, and a **12.8 N peak external push during 16–18 s**. Blue marks the reference; orange and green mark nominal and adaptive paths. Events, error, estimated compensation, and shared-scale plots remain visible throughout.
 
-| Item | Value |
-|---|---:|
-| Plant | 2D point mass |
-| Baseline controller | Feedforward + PD + I |
-| Learned estimators | `MLP`, `GRU + Gaussian NLL`, `GRU + uncertainty gating` |
-| Shift modes | 4 single-shift modes + 4 compound OOD combinations |
-| Trajectory families | 5 with hard unseen holdout |
-| Canonical suite config | `configs/experiments/paper_best.yaml` |
-| Canonical result bundle | `outputs/research/paper_best/` |
+[Nominal controller](outputs/panda/franka_payload_v1/baseline.mp4) · [Adaptive controller](outputs/panda/franka_payload_v1/adaptive_gru.mp4) · [Metrics](outputs/panda/franka_payload_v1/metrics.json)
 
-## Canonical Results
+## Engineering contribution
 
-Source files:
+The challenge is to preserve accurate motion when the dynamics assumed by the controller become wrong. Shared Cartesian impedance supplies nominal behaviour. A compact GRU estimates corrective force from recent measurements and nominal inverse-dynamics residuals. The correction reaches physical torque actuators through the end-effector Jacobian.
 
-- `outputs/research/paper_best/metrics/controller_summary.csv`
-- `outputs/research/paper_best/metrics/controller_comparison.csv`
-- `outputs/research/paper_best/metrics/bootstrap_intervals.csv`
-- `outputs/research/paper_best/metrics/condition_breakdown.csv`
-- `outputs/research/paper_best/metrics/suite_summary.csv`
+- **Seven bounded torque actuators:** physics at 500 Hz, control at 50 Hz.
+- **Position and orientation impedance:** nominal gravity compensation and a nullspace posture term for the redundant arm.
+- **48-unit GRU, 240 ms history:** 48 randomized training episodes; best weights selected using 12 held-out validation episodes.
+- **Causal inference:** joint velocity, end-effector state, previous torque, nominal dynamics, and nominal task force. Event time, changed mass, and applied-force truth never enter observer inputs.
+- **Paired evaluation:** identical references, disturbances, noise seeds, impedance gains, nominal models, and torque limits.
 
-Headline numbers from the canonical run:
+Only the plant receives changed payload mass/inertia and external force. The nominal model and network weights stay fixed during an episode; residual estimates update online.
 
-| Controller | RMSE | Success Rate | Mean Disturbance Gain |
-|---|---:|---:|---:|
-| `adaptive_gru_nominal` | `0.1257` | `99.60%` | `1.0000` |
-| `adaptive_gru_uncertainty` | `0.1278` | `98.81%` | `0.9682` |
-| `adaptive_mlp` | `0.1426` | `97.62%` | `1.0000` |
-| `baseline` | `0.2008` | `86.51%` | `1.0000` |
+## Measured results
+
+### Panda showcase
+
+| Metric | Nominal impedance | Impedance + residual GRU |
+|---|---:|---:|
+| Pre-change position RMSE | 3.94 mm | 3.98 mm |
+| Post-change position RMSE | 34.10 mm | **9.98 mm** |
+| Peak position error | 47.34 mm | **13.01 mm** |
+| Orientation RMSE | 0.55° | 0.54° |
+| Torque saturation | 0% | 0% |
+
+**Post-change RMSE decreases by 70.7%** in this fixed demonstration. Adaptive tracking stays within the 15 mm loss threshold; nominal tracking fails to settle within it. Similar pre-change error separates disturbance compensation from nominal tracking quality.
+
+This is a reproducible showcase, not a broad manipulation benchmark. Payload attachment is an ideal instantaneous mass/inertia change that preserves state without modelling attachment impact.
+
+![Scientific tracking summary](outputs/panda/franka_payload_v1/tracking_summary.png)
+
+### Original 2D benchmark
+
+The NumPy plant supports controlled learning experiments with mass, viscous friction, actuator delay, and disturbance shifts, including held-out trajectories and compound shifts.
+
+| Controller | RMSE, mean ± training-seed std | Success |
+|---|---:|---:|
+| Nominal controller | 0.20078 m | 86.51% |
+| Adaptive MLP | 0.14088 ± 0.00154 m | 98.15% |
+| GRU, nominal inference | **0.12708 ± 0.00261 m** | **98.68%** |
+| GRU, uncertainty-aware inference | 0.12826 ± 0.00027 m | 98.28% |
+
+Three training seeds use fixed datasets and **252 identical scenarios**: 108 in-distribution, 36 held-out trajectory, and 108 compound-shift cases. GRU variants share identical weights within each seed and differ in the uncertainty-enabled inference branch. Their average RMSE difference is small; its exploratory paired interval includes zero.
+
+[Seed summary](results/xy_multiseed_summary.csv) · [Paired comparisons](results/xy_paired_comparison.csv)
+
+Historical `outputs/research/paper_best` artifacts predate checkpoint snapshot and recovery corrections. They are retained as legacy evidence and are not substituted for the corrected numbers above.
 
 ## Reproduce
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-python scripts/install_torch.py --mode auto --require-cuda-if-available
-python scripts/check_cuda_env.py
-```
-
-Run the canonical suite:
+Use Python 3.12 in a virtual environment:
 
 ```bash
-python scripts/run_suite.py --suite configs/experiments/paper_best.yaml
+pip install -r requirements-panda.txt
+python scripts/install_torch.py --mode auto
+git clone --filter=blob:none --sparse https://github.com/google-deepmind/mujoco_menagerie.git third_party/menagerie
+git -C third_party/menagerie sparse-checkout set franka_emika_panda
+git -C third_party/menagerie checkout 0059d4335f8156206f63a35662313385f7ad6d74
 ```
 
-Run with progress logging:
+Reproduce the videos using the included 49 KB checkpoint:
 
 ```bash
-python scripts/run_suite_with_progress.py --suite configs/experiments/paper_best.yaml
+python scripts/run_panda.py --model-dir third_party/menagerie/franka_emika_panda --output outputs/panda/franka_payload_v1 --reuse-checkpoint outputs/panda/franka_payload_v1/panda_gru.pt
 ```
 
-Run in `tmux`:
+Train a fresh Panda observer and produce three videos:
 
 ```bash
-bash scripts/run_suite_tmux.sh --suite configs/experiments/paper_best.yaml
+python scripts/run_panda.py --model-dir third_party/menagerie/franka_emika_panda --output outputs/panda/new_run
 ```
 
-Focus-case analysis for the canonical suite:
+Smoke checks and regression tests:
 
 ```bash
-python scripts/analyze_focus_cases.py --suite configs/experiments/paper_best.yaml
+python scripts/run_panda.py --model-dir third_party/menagerie/franka_emika_panda --output outputs/panda/smoke --smoke --skip-render
+python -m unittest discover -s tests -v
 ```
 
-Legacy single-model pipeline remains available:
+Rendering uses GLFW on Windows and EGL on Linux. Bundled **Latin Modern Roman 10** supplies reproducible typography; the white layout and colourblind-friendly palette emphasize measurements. Rendering replays physical states. Live control never forces `qpos` to a reference. MP4s use H.264, YUV420p, and fast-start metadata.
+
+The original benchmark is independently runnable:
 
 ```bash
-python scripts/run_all.py --config configs/default.yaml
+python scripts/smoke_p0.py
+python scripts/run_multiseed.py --seeds 123 124 125 --device cuda --output-subdir research/new_multiseed_run
 ```
 
-## Visual Gallery
+## Repository map
 
-All visuals below are served directly from the canonical `paper_best` bundle.
+| Location | Responsibility |
+|---|---|
+| `src/panda/tracking.py` | Torque plant, controller, causal features, GRU training |
+| `src/panda/render.py` | Scientific video layout, trails, event annotations |
+| `scripts/run_panda.py` | Paired rollout, metrics, provenance, MP4 generation |
+| `configs/panda.yaml` | Clocks, gains, events, training settings |
+| `src/dynamics/`, `src/controllers/` | Original 2D plant and controllers |
+| `src/training/`, `src/evaluation/` | Training and paired benchmark evaluation |
+| `tests/` | Snapshot, recovery, pairing, payload continuity, torque checks |
 
-### Trajectory Comparison
+## Validation and limits
 
-![Trajectory comparison](outputs/research/paper_best/figures/trajectory_comparison.png)
+Checkpoint selection copies the best validation weights. Recovery distinguishes no loss, successful final settling, and failure; undefined times stay undefined. The Panda check verifies state continuity, unchanged nominal dynamics, exact zero-residual parity, and bounded torque.
 
-### Tracking Error vs Time
+Config, sampled training scenarios, validation history, rollouts, checkpoint, and hashes accompany the demonstration. The learned force label represents payload gravity minus external push, not complete identification of arm dynamics. The GRU is a learned residual observer, not online weight optimization. Stronger evidence would add an analytical disturbance observer, more training seeds, unseen payload/force combinations, sensor delays, and contact tasks.
 
-![Tracking error vs time](outputs/research/paper_best/figures/tracking_error_vs_time.png)
+## Attribution
 
-### Control Signal vs Time
-
-![Control signal vs time](outputs/research/paper_best/figures/control_signal_vs_time.png)
-
-### Robustness Under Dynamics Shift
-
-![Robustness under dynamics shift](outputs/research/paper_best/figures/robustness_under_dynamics_shift.png)
-
-### RMSE Across Conditions
-
-![RMSE boxplot across conditions](outputs/research/paper_best/figures/rmse_boxplot_across_conditions.png)
-
-### Ablation Summary Dashboard
-
-![Ablation summary dashboard](outputs/research/paper_best/figures/ablation_summary_dashboard.png)
-
-### ID vs Unseen vs Compound
-
-![ID vs unseen vs compound](outputs/research/paper_best/figures/id_vs_unseen_vs_compound.png)
-
-### Bootstrap CI Forest
-
-![Bootstrap CI forest](outputs/research/paper_best/figures/bootstrap_ci_forest.png)
-
-### Uncertainty vs Correction Gain
-
-![Uncertainty vs correction gain](outputs/research/paper_best/figures/uncertainty_vs_correction_gain.png)
-
-### Compound Shift Failure Recovery
-
-![Compound shift failure recovery](outputs/research/paper_best/figures/compound_shift_failure_recovery.png)
-
-### Focus Burst Dashboard
-
-![Focus burst dashboard](outputs/research/paper_best/figures/focus_burst_dashboard.png)
-
-### Focus Burst Gap Heatmap
-
-![Focus burst gap heatmap](outputs/research/paper_best/figures/focus_burst_gap_heatmap.png)
-
-### Focus-Case Alignment Dashboard
-
-![Focus-case alignment dashboard](outputs/research/paper_best/analysis/focus_cases/figures/focus_case_alignment_dashboard.png)
-
-### Focus-Case Worst Episode Panels
-
-![Focus-case worst episode panels](outputs/research/paper_best/analysis/focus_cases/figures/focus_case_worst_episode_panels.png)
-
-### Baseline vs Adaptive GIF
-
-![Baseline vs adaptive GIF](outputs/research/paper_best/videos/baseline_vs_adaptive.gif)
-
-### Dynamics Shift Showcase GIF
-
-![Dynamics shift showcase GIF](outputs/research/paper_best/videos/dynamics_shift_showcase.gif)
-
-### Unseen Trajectory Generalization GIF
-
-![Unseen trajectory generalization GIF](outputs/research/paper_best/videos/unseen_trajectory_generalization.gif)
-
-### Compound Shift Showcase GIF
-
-![Compound shift showcase GIF](outputs/research/paper_best/videos/compound_shift_showcase.gif)
-
-### Uncertainty-Aware Recovery GIF
-
-![Uncertainty-aware recovery GIF](outputs/research/paper_best/videos/uncertainty_aware_recovery.gif)
-
-## Notes
-
-- PyTorch is installed separately from `requirements.txt` so the bootstrap step can choose a CUDA wheel that matches the local NVIDIA driver.
-- `scripts/check_cuda_env.py` audits the GPU, driver, installed Torch build, and the recommended PyTorch CUDA channel.
-- Hard unseen trajectories use a holdout family rather than only wider parameter ranges.
-- Compound shifts are evaluation-only and act as the main OOD robustness test.
-- The visual stack is intentionally dense and visual-first, with minimal text and no bold typography.
+Panda uses the Apache-2.0 [MuJoCo Menagerie model](https://github.com/google-deepmind/mujoco_menagerie/tree/main/franka_emika_panda), pinned to the revision above. Unmodified Latin Modern fonts by Bogusław Jackowski and Janusz M. Nowacki use the [GUST Font License](assets/fonts/latin-modern/GUST-FONT-LICENSE.txt).

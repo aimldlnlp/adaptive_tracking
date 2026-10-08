@@ -4,9 +4,9 @@
 
 ## Demonstration
 
-<!-- Playable video attachment -->
+https://github.com/user-attachments/assets/0226c782-a70d-4f6a-8761-5ebfdaa67fc4
 
-[![Panda tracking comparison](outputs/panda/franka_payload_v1/poster.png)](outputs/panda/franka_payload_v1/comparison.mp4)
+[Download comparison MP4](outputs/panda/franka_payload_v1/comparison.mp4)
 
 **26 seconds · 1920 × 1080 · H.264 · 30 fps.** A 3D figure-eight with fixed end-effector orientation, a **1.5 kg payload added at 9 s**, and a **12.8 N peak external push during 16–18 s**. Blue marks the reference; orange and green mark nominal and adaptive paths. Events, error, estimated compensation, and shared-scale plots remain visible throughout.
 

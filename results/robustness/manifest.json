@@ -1,0 +1,137 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-27T10:56:23.527113+00:00",
+  "config": {
+    "seed": 8102026,
+    "physics_dt": 0.002,
+    "control_dt": 0.02,
+    "duration": 24.0,
+    "payload_time": 9.0,
+    "payload_kg": 1.5,
+    "push_time": 16.0,
+    "push_duration": 2.0,
+    "push_force": [
+      8.0,
+      -10.0,
+      0.0
+    ],
+    "position_kp": 450.0,
+    "position_kd": 45.0,
+    "orientation_kp": 35.0,
+    "orientation_kd": 8.0,
+    "force_limit": 35.0,
+    "sensor_velocity_noise": 0.002,
+    "history_steps": 12,
+    "train_episodes": 48,
+    "val_episodes": 12,
+    "training_duration": 12.0,
+    "epochs": 35,
+    "hidden_size": 48,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "fps": 30,
+    "recovery_threshold_m": 0.015
+  },
+  "pilot": {
+    "seed": 20261027,
+    "scenarios": 18,
+    "integral_gain": 2560.0,
+    "observer_cutoff_hz": 8.0,
+    "conditions": [
+      {
+        "name": "nominal",
+        "sensor_velocity_noise": 0.002,
+        "actuator_delay_steps": 0
+      },
+      {
+        "name": "velocity_noise",
+        "sensor_velocity_noise": 0.01,
+        "actuator_delay_steps": 0
+      },
+      {
+        "name": "delay_20ms",
+        "sensor_velocity_noise": 0.002,
+        "actuator_delay_steps": 1
+      },
+      {
+        "name": "delay_40ms",
+        "sensor_velocity_noise": 0.002,
+        "actuator_delay_steps": 2
+      }
+    ]
+  },
+  "scenario_protocol": {
+    "seed": 20261027,
+    "scenarios": 18,
+    "duration": 24.0,
+    "calibration_episodes": 6,
+    "integral_gain_candidates": [
+      80.0,
+      160.0,
+      320.0,
+      640.0,
+      1280.0,
+      2560.0,
+      5120.0
+    ],
+    "observer_cutoff_candidates_hz": [
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "payload_range_kg": [
+      0.4,
+      2.4
+    ],
+    "payload_time_range_s": [
+      6.0,
+      10.0
+    ],
+    "push_peak_range_n": [
+      6.0,
+      16.0
+    ],
+    "push_time_range_s": [
+      15.0,
+      18.0
+    ],
+    "push_duration_range_s": [
+      1.0,
+      3.0
+    ],
+    "amplitude_range": [
+      0.8,
+      1.2
+    ],
+    "speed_range": [
+      0.7,
+      1.3
+    ]
+  },
+  "planned_rollouts": 288,
+  "checkpoint_sha256": "6e498db1ebfbe33b33761dd490c90b2523fbc9421da30531f9f714d891e616d1",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "numpy": "1.26.3",
+  "pandas": "2.2.3",
+  "torch": "2.2.0+cpu",
+  "mujoco": "3.6.0",
+  "inference_device": "cpu",
+  "asset_revision": "0059d4335f8156206f63a35662313385f7ad6d74",
+  "source_sha256": {
+    "src/panda/tracking.py": "3c223817374e103ddb9fc33fa0ec52ee04b6a1a035c8892f0a9c6d001ff83400",
+    "scripts/benchmark_panda_robustness.py": "529554e29e8b7b23d3e3ea75c9962aae4f30145d9a4a17e93a32e15f073fd820",
+    "scripts/benchmark_panda.py": "e460d7fa5706fe4adebd8ce3df5cf6d53d315f480dee7ebb4274f4d28608edf4",
+    "scripts/report_multiseed.py": "41d5d30fe44eab4630a632b55cf806f4ba036f563b87311d33d06048e4bd1c01",
+    "src/evaluation/metrics.py": "4ede632cb8d0da04dcbc7bd36019ed01f8335bc6b34e54a1c5d5624ba117e62d",
+    "configs/panda.yaml": "430449ff13784064dec87cb263819afc21bbad6331ca3e8bf148cdc3939c53ba",
+    "configs/panda_benchmark.yaml": "f03561420d16f87dc6e6f9c12057caf38b2135dc1a532f04f230c4f212cfec97",
+    "configs/panda_robustness.yaml": "557b04976158636430aa3c104f8edda6c223fef318ebaa35102761fdc0d582c4"
+  },
+  "delay_semantics": "Whole episode, control-step FIFO initialized to zero; residual uses issued command, never delayed torque truth",
+  "limitations": "Development pilot; fixed parameters, one checkpoint; unstable attempts retained, not assigned successful metrics",
+  "completed_attempts": 288,
+  "finished_utc": "2026-10-27T10:59:53.348705+00:00",
+  "unstable_attempts": 0
+}

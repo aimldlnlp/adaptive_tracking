@@ -1,0 +1,38 @@
+# Environments, caches, editor files
+.venv/
+.panda-venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Downloaded models and generated experiments
+third_party/
+outputs/
+graphify-out/
+.graphifyignore
+
+# Curated documentation, media, checkpoints and evidence
+docs/*
+!docs/method.md
+!docs/reproduce.md
+assets/*
+!assets/benchmark.png
+!assets/demo.mp4
+results/*
+!results/robustness/
+!results/xy_multiseed_summary.csv
+!results/xy_paired_comparison.csv
+checkpoints/*
+!checkpoints/panda_gru.pt
+!checkpoints/README.md

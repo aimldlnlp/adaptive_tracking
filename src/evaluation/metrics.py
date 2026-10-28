@@ -1,0 +1,175 @@
+from __future__ import annotations
+
+from typing import Any
+
+import numpy as np
+import pandas as pd
+
+from src.utils.math_utils import moving_average, safe_heading_from_velocity, wrap_angle
+
+
+def compute_episode_metrics(config: dict[str, Any], rollout: dict[str, Any]) -> dict[str, float | str]:
+    sim_cfg = config["simulation"]
+    position_error = np.linalg.norm(rollout["ref_position"] - rollout["true_state"][:, :2], axis=1)
+    rmse = float(np.sqrt(np.mean(position_error**2)))
+    mae = float(np.mean(np.abs(position_error)))
+    final_position_error = float(position_error[-1])
+    headings = np.array(
+        [
+            safe_heading_from_velocity(rollout["true_state"][i, 2:4], float(rollout["ref_heading"][i]))
+            for i in range(len(rollout["time"]))
+        ],
+        dtype=np.float32,
+    )
+    heading_error = float(np.mean(np.abs(wrap_angle(rollout["ref_heading"] - headings))))
+    success = float(
+        rmse <= float(sim_cfg["success_rmse_threshold"])
+        and final_position_error <= float(sim_cfg["success_final_error_threshold"])
+    )
+    shift_time = float(json_metadata(rollout)["shift_time"])
+    shift_index = int(np.searchsorted(rollout["time"], shift_time))
+    recovery = _compute_recovery_metrics(
+        errors=position_error,
+        time=rollout["time"],
+        shift_index=shift_index,
+        threshold=float(sim_cfg["recovery_error_threshold"]),
+        consecutive_steps=int(sim_cfg["recovery_consecutive_steps"]),
+    )
+    control_diff = np.diff(rollout["command"], axis=0)
+    control_smoothness = float(np.mean(np.linalg.norm(control_diff, axis=1))) if len(control_diff) else 0.0
+    control_energy_proxy = float(np.mean(np.sum(rollout["command"] ** 2, axis=1)))
+    estimated_uncertainty = rollout.get("estimated_uncertainty", np.zeros((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
+    structure_estimated_uncertainty = rollout.get(
+        "structure_estimated_uncertainty",
+        np.zeros((len(rollout["time"]), 1), dtype=np.float32),
+    ).reshape(-1)
+    disturbance_estimated_uncertainty = rollout.get(
+        "disturbance_estimated_uncertainty",
+        np.zeros((len(rollout["time"]), 1), dtype=np.float32),
+    ).reshape(-1)
+    correction_gain = rollout.get("correction_gain", np.ones((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
+    structure_gain = rollout.get("structure_gain", np.ones((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
+    disturbance_gain = rollout.get("disturbance_gain", np.ones((len(rollout["time"]), 1), dtype=np.float32)).reshape(-1)
+    return {
+        "rmse": rmse,
+        "mae": mae,
+        "final_position_error": final_position_error,
+        "heading_error": heading_error,
+        "success": success,
+        **recovery,
+        "control_smoothness": control_smoothness,
+        "control_energy_proxy": control_energy_proxy,
+        "peak_error_after_shift": float(np.max(position_error[shift_index:])),
+        "mean_error_after_shift": float(np.mean(position_error[shift_index:])),
+        "robustness_score": float(np.exp(-rmse) * (0.6 + 0.4 * success)),
+        "mean_estimated_uncertainty": float(np.mean(estimated_uncertainty)),
+        "peak_estimated_uncertainty": float(np.max(estimated_uncertainty)),
+        "mean_structure_uncertainty": float(np.mean(structure_estimated_uncertainty)),
+        "mean_disturbance_uncertainty": float(np.mean(disturbance_estimated_uncertainty)),
+        "mean_correction_gain": float(np.mean(correction_gain)),
+        "post_shift_correction_gain": float(np.mean(correction_gain[shift_index:])),
+        "mean_structure_gain": float(np.mean(structure_gain)),
+        "post_shift_structure_gain": float(np.mean(structure_gain[shift_index:])),
+        "mean_disturbance_gain": float(np.mean(disturbance_gain)),
+        "post_shift_disturbance_gain": float(np.mean(disturbance_gain[shift_index:])),
+    }
+
+
+def aggregate_metrics(metrics_frame: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    aggregate = (
+        metrics_frame.groupby(["controller", "condition_group", "shift_type", "shift_intensity"], as_index=False)
+        .agg(
+            rmse_mean=("rmse", "mean"),
+            rmse_std=("rmse", "std"),
+            mae_mean=("mae", "mean"),
+            final_position_error_mean=("final_position_error", "mean"),
+            heading_error_mean=("heading_error", "mean"),
+            success_rate=("success", "mean"),
+            recovery_time_mean=("recovery_time", "mean"),
+            recovery_needed_rate=("recovery_needed", "mean"),
+            recovery_success_rate=("recovery_success", "mean"),
+            control_smoothness_mean=("control_smoothness", "mean"),
+            control_energy_proxy_mean=("control_energy_proxy", "mean"),
+            robustness_score_mean=("robustness_score", "mean"),
+            mean_estimated_uncertainty=("mean_estimated_uncertainty", "mean"),
+            mean_structure_uncertainty=("mean_structure_uncertainty", "mean"),
+            mean_disturbance_uncertainty=("mean_disturbance_uncertainty", "mean"),
+            mean_correction_gain=("mean_correction_gain", "mean"),
+            mean_structure_gain=("mean_structure_gain", "mean"),
+            mean_disturbance_gain=("mean_disturbance_gain", "mean"),
+        )
+        .fillna({"rmse_std": 0.0})
+    )
+    summary = (
+        metrics_frame.groupby(["controller"], as_index=False)
+        .agg(
+            rmse_mean=("rmse", "mean"),
+            mae_mean=("mae", "mean"),
+            final_position_error_mean=("final_position_error", "mean"),
+            heading_error_mean=("heading_error", "mean"),
+            success_rate=("success", "mean"),
+            recovery_time_mean=("recovery_time", "mean"),
+            recovery_needed_rate=("recovery_needed", "mean"),
+            recovery_success_rate=("recovery_success", "mean"),
+            control_smoothness_mean=("control_smoothness", "mean"),
+            control_energy_proxy_mean=("control_energy_proxy", "mean"),
+            robustness_score_mean=("robustness_score", "mean"),
+            mean_estimated_uncertainty=("mean_estimated_uncertainty", "mean"),
+            mean_structure_uncertainty=("mean_structure_uncertainty", "mean"),
+            mean_disturbance_uncertainty=("mean_disturbance_uncertainty", "mean"),
+            mean_correction_gain=("mean_correction_gain", "mean"),
+            mean_structure_gain=("mean_structure_gain", "mean"),
+            mean_disturbance_gain=("mean_disturbance_gain", "mean"),
+        )
+    )
+    return aggregate, summary
+
+
+def json_metadata(rollout: dict[str, Any]) -> dict[str, Any]:
+    raw = rollout["metadata_json"]
+    if isinstance(raw, np.ndarray):
+        raw = raw.item()
+    if isinstance(raw, bytes):
+        raw = raw.decode("utf-8")
+    import json
+
+    return json.loads(raw)
+
+
+def aligned_error_curve(rollout: dict[str, Any], horizon: tuple[float, float], step: float) -> tuple[np.ndarray, np.ndarray]:
+    metadata = json_metadata(rollout)
+    shift_time = float(metadata["shift_time"])
+    relative_time = rollout["time"] - shift_time
+    error = np.linalg.norm(rollout["ref_position"] - rollout["true_state"][:, :2], axis=1)
+    smoothed = moving_average(error, window=3)
+    grid = np.arange(horizon[0], horizon[1] + 1e-9, step)
+    curve = np.interp(grid, relative_time, smoothed, left=smoothed[0], right=smoothed[-1])
+    return grid, curve
+
+
+def _compute_recovery_metrics(
+    errors: np.ndarray,
+    time: np.ndarray,
+    shift_index: int,
+    threshold: float,
+    consecutive_steps: int,
+) -> dict[str, float | str]:
+    """Final settling, confirmed by a dwell window with no later threshold breach.
+
+    Time is defined only for recovered episodes. Success excludes no-loss episodes.
+    This offline metric accounts for delayed error spikes and subsequent relapses.
+    """
+    if consecutive_steps < 1:
+        raise ValueError("recovery_consecutive_steps must be positive")
+    breaches = np.flatnonzero(errors[shift_index:] > threshold)
+    if not len(breaches):
+        return {"recovery_status": "no_loss", "recovery_time": float("nan"),
+                "recovery_needed": 0.0, "recovery_success": float("nan")}
+    confirmation_index = shift_index + int(breaches[-1]) + consecutive_steps
+    recovered = confirmation_index < len(errors)
+    return {
+        "recovery_status": "recovered" if recovered else "failed",
+        "recovery_time": float(time[confirmation_index] - time[shift_index]) if recovered else float("nan"),
+        "recovery_needed": 1.0,
+        "recovery_success": float(recovered),
+    }

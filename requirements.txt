@@ -1,0 +1,5 @@
+numpy>=1.24,<2
+scipy>=1.10
+pandas>=2.0
+PyYAML>=6.0
+tqdm>=4.66

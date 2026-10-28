@@ -1,0 +1,60 @@
+suite:
+  name: paper_best
+  base_config: configs/default_research.yaml
+  output_subdir: research/paper_best
+  experiments:
+    - name: adaptive_mlp
+      model:
+        name: adaptive_mlp
+        type: mlp
+        hidden_dims: [128, 128, 64]
+        dropout: 0.05
+        uncertainty_aware: false
+      training:
+        loss: mse
+        epochs: 22
+    - name: adaptive_gru_nominal
+      model:
+        name: adaptive_gru_nominal
+        type: gru_uncertainty
+        hidden_size: 128
+        head_hidden_size: 96
+        num_layers: 2
+        dropout: 0.05
+        uncertainty_aware: false
+      training:
+        loss: gaussian_nll
+        selection_metric: val_severe_focus_mse
+        mse_aux_weight: 0.45
+        logvar_reg_weight: 0.03
+        epochs: 34
+    - name: adaptive_gru_uncertainty
+      model:
+        name: adaptive_gru_uncertainty
+        type: gru_uncertainty
+        hidden_size: 128
+        head_hidden_size: 96
+        num_layers: 2
+        dropout: 0.05
+        uncertainty_aware: true
+        use_uncertainty_calibration: true
+        structure_uncertainty_power: 2.4
+        structure_min_gain: 0.97
+        disturbance_uncertainty_power: 0.95
+        disturbance_min_gain: 0.84
+        uncertainty_smoothing: 0.74
+        delay_support_scale: 0.16
+        delay_support_power: 1.15
+        disturbance_blend_boost: 0.1
+        disturbance_response_scale: 0.8
+        focus_burst_support_scale: 0.16
+        focus_delay_burst_support_scale: 0.24
+        focus_delay_burst_power: 1.1
+      training:
+        loss: gaussian_nll
+        selection_metric: val_severe_focus_mse
+        mse_aux_weight: 0.45
+        logvar_reg_weight: 0.03
+        calibration_loss_weight: 0.28
+        calibration_target_weights: [0.55, 0.55, 1.3, 1.55, 1.55]
+        epochs: 36

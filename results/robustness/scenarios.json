@@ -1,0 +1,344 @@
+[
+  {
+    "id": 0,
+    "group": "payload_only",
+    "duration": 24.0,
+    "payload_kg": 1.2862674380694017,
+    "payload_time": 7.5331448474190275,
+    "push_time": 15.42565694084815,
+    "push_duration": 1.4552356319659483,
+    "push_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "amplitude": 0.9120668233026035,
+    "speed": 0.8220448020906609,
+    "trajectory": "figure_eight",
+    "noise_seed": 1487698608,
+    "event_time": 7.5331448474190275
+  },
+  {
+    "id": 1,
+    "group": "payload_only",
+    "duration": 24.0,
+    "payload_kg": 2.1407514504344385,
+    "payload_time": 9.266656005174841,
+    "push_time": 15.391573659711275,
+    "push_duration": 1.0479536408494177,
+    "push_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "amplitude": 1.0308685639976252,
+    "speed": 0.8949972925812428,
+    "trajectory": "circle",
+    "noise_seed": 1059321307,
+    "event_time": 9.266656005174841
+  },
+  {
+    "id": 2,
+    "group": "payload_only",
+    "duration": 24.0,
+    "payload_kg": 1.118426681399952,
+    "payload_time": 6.1890573299628056,
+    "push_time": 17.715361961123165,
+    "push_duration": 1.7797100728770905,
+    "push_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "amplitude": 1.0018675632795706,
+    "speed": 0.8730368889471735,
+    "trajectory": "tilted_ellipse",
+    "noise_seed": 142695556,
+    "event_time": 6.1890573299628056
+  },
+  {
+    "id": 3,
+    "group": "payload_only",
+    "duration": 24.0,
+    "payload_kg": 2.3789647489881864,
+    "payload_time": 6.84958297714198,
+    "push_time": 16.703212983917933,
+    "push_duration": 1.706344922542764,
+    "push_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "amplitude": 1.005666060280751,
+    "speed": 1.228257669860648,
+    "trajectory": "figure_eight",
+    "noise_seed": 1572725618,
+    "event_time": 6.84958297714198
+  },
+  {
+    "id": 4,
+    "group": "payload_only",
+    "duration": 24.0,
+    "payload_kg": 0.42128124947483847,
+    "payload_time": 7.9769859600489905,
+    "push_time": 17.64423607344127,
+    "push_duration": 2.9175655414772166,
+    "push_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "amplitude": 1.1231158469261115,
+    "speed": 0.9326896339787979,
+    "trajectory": "circle",
+    "noise_seed": 975641697,
+    "event_time": 7.9769859600489905
+  },
+  {
+    "id": 5,
+    "group": "payload_only",
+    "duration": 24.0,
+    "payload_kg": 1.0538702606928152,
+    "payload_time": 8.923568635014421,
+    "push_time": 15.027941714012872,
+    "push_duration": 2.9394678754798074,
+    "push_force": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "amplitude": 1.1393088969257865,
+    "speed": 0.8862601325011858,
+    "trajectory": "tilted_ellipse",
+    "noise_seed": 2142839320,
+    "event_time": 8.923568635014421
+  },
+  {
+    "id": 6,
+    "group": "push_only",
+    "duration": 24.0,
+    "payload_kg": 0.0,
+    "payload_time": 8.078409504276866,
+    "push_time": 17.455447979693027,
+    "push_duration": 1.238666120621507,
+    "push_force": [
+      6.2888736945695305,
+      -1.677048031571325,
+      1.2458845466416786
+    ],
+    "amplitude": 0.9439955775640891,
+    "speed": 1.24982715638015,
+    "trajectory": "figure_eight",
+    "noise_seed": 997636169,
+    "event_time": 17.455447979693027
+  },
+  {
+    "id": 7,
+    "group": "push_only",
+    "duration": 24.0,
+    "payload_kg": 0.0,
+    "payload_time": 8.51543853915431,
+    "push_time": 16.249982590862082,
+    "push_duration": 2.7527799006072065,
+    "push_force": [
+      7.9440628672486655,
+      7.857983877246495,
+      4.677542836858555
+    ],
+    "amplitude": 1.1469617369793466,
+    "speed": 0.8202806621804971,
+    "trajectory": "circle",
+    "noise_seed": 1929581662,
+    "event_time": 16.249982590862082
+  },
+  {
+    "id": 8,
+    "group": "push_only",
+    "duration": 24.0,
+    "payload_kg": 0.0,
+    "payload_time": 9.56976898371252,
+    "push_time": 15.512276564181347,
+    "push_duration": 1.8393762570055379,
+    "push_force": [
+      -4.813990672719554,
+      -5.40038534179356,
+      6.549326423614946
+    ],
+    "amplitude": 0.8296859881122918,
+    "speed": 0.9310746812771331,
+    "trajectory": "tilted_ellipse",
+    "noise_seed": 1835934588,
+    "event_time": 15.512276564181347
+  },
+  {
+    "id": 9,
+    "group": "push_only",
+    "duration": 24.0,
+    "payload_kg": 0.0,
+    "payload_time": 8.566830001581925,
+    "push_time": 17.595652211801152,
+    "push_duration": 2.0058388989722538,
+    "push_force": [
+      -3.334663481170393,
+      3.538383187042243,
+      12.112204878166168
+    ],
+    "amplitude": 1.1362750292594628,
+    "speed": 1.2596841698775696,
+    "trajectory": "figure_eight",
+    "noise_seed": 1511878676,
+    "event_time": 17.595652211801152
+  },
+  {
+    "id": 10,
+    "group": "push_only",
+    "duration": 24.0,
+    "payload_kg": 0.0,
+    "payload_time": 8.709088993467041,
+    "push_time": 17.790664068695875,
+    "push_duration": 1.0802030519635273,
+    "push_force": [
+      9.544516173536408,
+      3.1914452672336973,
+      -1.8385412701137556
+    ],
+    "amplitude": 1.124073886166514,
+    "speed": 0.8067674947668031,
+    "trajectory": "circle",
+    "noise_seed": 1034926735,
+    "event_time": 17.790664068695875
+  },
+  {
+    "id": 11,
+    "group": "push_only",
+    "duration": 24.0,
+    "payload_kg": 0.0,
+    "payload_time": 7.0064655824528135,
+    "push_time": 17.5850569588311,
+    "push_duration": 2.0251163867401596,
+    "push_force": [
+      -2.7004584293547476,
+      0.9875281533024366,
+      -6.405456033325185
+    ],
+    "amplitude": 1.0223590548449968,
+    "speed": 0.9784367970245845,
+    "trajectory": "tilted_ellipse",
+    "noise_seed": 1562161709,
+    "event_time": 17.5850569588311
+  },
+  {
+    "id": 12,
+    "group": "compound",
+    "duration": 24.0,
+    "payload_kg": 1.2844930032499118,
+    "payload_time": 7.408543971768458,
+    "push_time": 16.173215982015027,
+    "push_duration": 2.5362274652999677,
+    "push_force": [
+      -11.965459058593149,
+      2.3564016469989078,
+      3.2065810876821383
+    ],
+    "amplitude": 1.1088306340068161,
+    "speed": 0.8196732952975797,
+    "trajectory": "figure_eight",
+    "noise_seed": 1908833940,
+    "event_time": 7.408543971768458
+  },
+  {
+    "id": 13,
+    "group": "compound",
+    "duration": 24.0,
+    "payload_kg": 2.1942827450414524,
+    "payload_time": 9.17211485147605,
+    "push_time": 15.567909169062593,
+    "push_duration": 1.3576212212128633,
+    "push_force": [
+      -4.999256269878531,
+      6.2198475626401875,
+      -3.658271881367745
+    ],
+    "amplitude": 0.9264738377950488,
+    "speed": 0.8811042902093505,
+    "trajectory": "circle",
+    "noise_seed": 1280776759,
+    "event_time": 9.17211485147605
+  },
+  {
+    "id": 14,
+    "group": "compound",
+    "duration": 24.0,
+    "payload_kg": 1.2933656703945968,
+    "payload_time": 6.921420883117321,
+    "push_time": 17.159649680750398,
+    "push_duration": 2.137218953326613,
+    "push_force": [
+      -13.922335043878087,
+      -0.24412002872752717,
+      2.8225081356538224
+    ],
+    "amplitude": 1.153579870186519,
+    "speed": 0.7349381101273639,
+    "trajectory": "tilted_ellipse",
+    "noise_seed": 2029711978,
+    "event_time": 6.921420883117321
+  },
+  {
+    "id": 15,
+    "group": "compound",
+    "duration": 24.0,
+    "payload_kg": 1.4827109133798904,
+    "payload_time": 9.760587376636801,
+    "push_time": 16.499365640748877,
+    "push_duration": 2.4837041982691943,
+    "push_force": [
+      -1.9663562117596012,
+      6.381526580946855,
+      3.128531335401264
+    ],
+    "amplitude": 0.8790637488477145,
+    "speed": 0.7456197864972246,
+    "trajectory": "figure_eight",
+    "noise_seed": 1867867235,
+    "event_time": 9.760587376636801
+  },
+  {
+    "id": 16,
+    "group": "compound",
+    "duration": 24.0,
+    "payload_kg": 2.280032803399045,
+    "payload_time": 6.56124484436668,
+    "push_time": 16.133562104811453,
+    "push_duration": 2.1420081522900074,
+    "push_force": [
+      -7.928722526721306,
+      -11.22338116903897,
+      6.011584454365026
+    ],
+    "amplitude": 0.810773019058667,
+    "speed": 0.7036386910273055,
+    "trajectory": "circle",
+    "noise_seed": 23151184,
+    "event_time": 6.56124484436668
+  },
+  {
+    "id": 17,
+    "group": "compound",
+    "duration": 24.0,
+    "payload_kg": 1.9008519666710466,
+    "payload_time": 8.011082609456954,
+    "push_time": 17.899408283407297,
+    "push_duration": 1.0417501560208628,
+    "push_force": [
+      -6.6487964987167345,
+      9.640414194258705,
+      -5.050197026737215
+    ],
+    "amplitude": 0.8009533702983647,
+    "speed": 1.246285449266136,
+    "trajectory": "tilted_ellipse",
+    "noise_seed": 26658067,
+    "event_time": 8.011082609456954
+  }
+]

@@ -1,0 +1,13 @@
+seed: 20261009
+scenarios: 30
+duration: 24.0
+calibration_episodes: 6
+integral_gain_candidates: [80.0, 160.0, 320.0, 640.0, 1280.0, 2560.0, 5120.0]
+observer_cutoff_candidates_hz: [1.0, 2.0, 4.0, 8.0]
+payload_range_kg: [0.4, 2.4]
+payload_time_range_s: [6.0, 10.0]
+push_peak_range_n: [6.0, 16.0]
+push_time_range_s: [15.0, 18.0]
+push_duration_range_s: [1.0, 3.0]
+amplitude_range: [0.8, 1.2]
+speed_range: [0.7, 1.3]

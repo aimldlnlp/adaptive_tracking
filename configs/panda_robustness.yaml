@@ -1,0 +1,10 @@
+# Development pilot: fixed gains/checkpoint; not a confirmatory holdout.
+seed: 20261027
+scenarios: 18
+integral_gain: 2560.0
+observer_cutoff_hz: 8.0
+conditions:
+  - {name: nominal, sensor_velocity_noise: 0.002, actuator_delay_steps: 0}
+  - {name: velocity_noise, sensor_velocity_noise: 0.01, actuator_delay_steps: 0}
+  - {name: delay_20ms, sensor_velocity_noise: 0.002, actuator_delay_steps: 1}
+  - {name: delay_40ms, sensor_velocity_noise: 0.002, actuator_delay_steps: 2}
